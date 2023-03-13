@@ -3,8 +3,8 @@ function hover () {
 }
 
 function noHover () {
-   let width = Math.floor(Math.random()* window.innerHeight);
-    height = Math.floor(Math.random()* window.innerWidth) ;
+   let width = (Math.random(0.1)* window.innerHeight/10);
+    height = (Math.random(0.1)* window.innerWidth/10) ;
     document.getElementById("noButton").style.left=width+"px";
     document.getElementById("noButton").style.top=height+"px";
     console.log(width);
