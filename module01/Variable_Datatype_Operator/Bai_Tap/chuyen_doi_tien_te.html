@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            position: relative;
+        }
+        table{
+            position: absolute;
+            left: 50%;
+            margin-left: -100px;
+        }
+        td{
+            margin: 5px 50px 20px 20px;
+        }
+        select{
+            width: 100px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" id="change">
+        <table>
+            <tr>
+                <th><label for="amout">Amout</label></th>
+                <th><label for="from-currency">From Currency</label></th>
+                <th><label for="to-currency">To Currency</label></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td> 
+                    <input id="Amout" type="number">
+                </td>
+                <td>
+                    <select id="fromCurrency">
+                        <option value="Viet-Nam">VietNam</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <select  id="toCurrency">
+                        <option value="USD">USD</option>      
+                        <option value="Viet-Nam">VietNam</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="button" onclick="convert()">
+                        Convert 
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="result"> </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script src="chuyen_doi_tien_te.js"></script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            position: relative;
+            color: rgb(68, 68, 245);
+        }
+        form{
+            position: absolute;
+            left: 50%;
+            width: 1000px;
+            height: 1000px;
+        }
+        table{
+            width: 30%;
+            height: 30%;
+            color: rgb(68, 68, 245);
+        }
+        td,th{
+            width: 30px;
+            height: 30px;
+            color: rgb(68, 68, 245);
+            margin-left: 10px;  
+            font-size: larger;
+        }
+        th{
+            border: 1px solid black;
+        }
+        button{
+            color: rgb(68, 68, 245);  
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;  
+            font-size: larger;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" >
+        <table style="border: 2px solid black;">
+            <tr>
+                <th colspan="4">
+                    <input type="text" readonly id="output">
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" id="number_1" onclick="inputValue('1')">1</button>
+                </td>
+                <td>
+                    <button type="button" id="number_2"onclick="inputValue('2')">2</button>
+                </td>
+                <td>
+                    <button type="button" id="number_3"onclick="inputValue('3')">3</button>
+                </td>
+                <td>
+                    <button type="button" id="plus"onclick="inputValue('+')">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button"id="number_4"onclick="inputValue('4')">4</button>
+                </td>
+                <td>
+                    <button type="button" id="number_5"onclick="inputValue('5')">5</button>
+                </td>
+                <td>
+                    <button type="button" id="number_6"onclick="inputValue('6')">6</button>
+                </td>
+                <td>
+                    <button type="button" id="minus"onclick="inputValue('-')">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button"id="number_7" onclick="inputValue('7')">7</button>
+                </td>
+                <td>
+                    <button type="button" id="number_8"onclick="inputValue('8')">8</button>
+                </td>
+                <td>
+                    <button type="button"id="number_9" onclick="inputValue('9')">9</button>
+                </td>
+                <td>
+                    <button type="button" id="multiply"onclick="inputValue('*')">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="removeValue()">C</button>
+                </td>
+                <td>
+                    <button type="button"id="number_0" onclick="inputValue('0')">0</button>
+                </td>
+                <td>
+                    <button type="button" id="result"onclick="calculate()">=</button>
+                </td>
+                <td>
+                    <button type="button"id="div" onclick="inputValue('/')">/</button>
+                </td>
+            </tr>
+            
+
+        </table>
+    </form>
+</body>
+<script src="may_tinh_don_gian.js"></script>
+</html>
