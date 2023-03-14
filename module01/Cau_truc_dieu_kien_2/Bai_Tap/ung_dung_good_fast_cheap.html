@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" onclick="option(1)" id="good"> GOOD
+    <br>
+    <input type="checkbox" onclick="option(2)" id="cheap"> CHEAP
+    <br>
+    <input type="checkbox" onclick="option(3)" id="fast"> FAST
+</body>
+<script >
+    let Good = document.getElementById("good");
+    let Cheap = document.getElementById("cheap");
+    let Fast = document.getElementById("fast");
+    function option(number) {
+        switch (number) {
+            case 1:
+                if (Good.checked && Cheap.checked) {
+                    Fast.checked=false;
+                }
+                break;
+            case 2:
+                if (Cheap.checked && Fast.checked) {
+                    Good.checked = false;
+                }
+                break;
+            case 3:
+                if (Cheap.checked && Fast.checked) {
+                    Cheap.checked= false;
+                    break;
+                }
+        }
+    }
+</script>
+</html>

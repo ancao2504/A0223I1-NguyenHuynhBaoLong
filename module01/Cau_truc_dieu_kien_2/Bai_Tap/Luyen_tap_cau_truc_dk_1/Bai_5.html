@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 150px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <input type="number" id="kiem_tra" placeholder="Điểm kiểm tra">
+        <input type="number" id="giua_ky" placeholder="Điểm giữa kỳ">
+        <input type="number" id="cuoi_ky" placeholder="Điểm cuối kỳ">
+        <button type="button" onclick="check()">Tính điểm</button>
+        <div id="result"></div>
+    </form>
+</body>
+    <script>
+        function check() {
+            let a=parseInt(document.getElementById("kiem_tra").value);
+            let b=parseInt(document.getElementById("giua_ky").value);
+            let c=parseInt(document.getElementById("cuoi_ky").value);
+            let result= (a + b*2 + c*3)/6
+            console.log(result)
+            if (result >6.5) {
+                let mess=document.getElementById("result").innerHTML="Học lực giỏi";
+            } else if (5.0< result && result <= 6.5 ) {
+                mess=document.getElementById("result").innerHTML="Học lực khá";
+            } else if (result < 5.0) {
+                mess=document.getElementById("result").innerHTML="Học lực trung bình";
+            }
+        }
+    </script>
+</html>

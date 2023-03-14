@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <label for="revenue">Revenue of this month :</label>
+        <input type="text" id="revenue">
+        <button type="button" onclick="poundage()">Poundage</button>
+        <div id="result"></div>
+    </form>
+</body>
+<script>
+    function poundage() {
+
+        let money = parseInt(document.getElementById("revenue").value);
+        console.log(money)
+        let poundage =money*5/100;
+        console.log(poundage);
+        document.getElementById("result").innerHTML=poundage+" VND"
+    }
+</script>
+</html>
