@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <input type="number" id="he_so_a" placeholder="Nhập hệ số a">
+        <input type="number" id="he_so_b" placeholder="Nhập hệ số b">
+        <button type="button" onclick="tinh()">Giải phương trình</button>
+        <h1 id="result"></h1>
+    </form>
+    
+</body>
+<script>
+    function tinh() {
+        let a=parseInt(document.getElementById("he_so_a").value);
+        let b=parseInt(document.getElementById("he_so_b").value);
+        if (a == 0 && b != 0) {
+            document.getElementById("result").innerHTML="Phương trình vô nghiêm!";
+        } else if (a != 0 ) {
+            let x = -b/a;
+            document.getElementById("result").innerHTML="Nghiệm phương trình là: " + x;
+        } else if (a == 0 && b == 0) {
+            document.getElementById("result").innerHTML="Phương trình vô số nghiêm!";
+
+        }
+        
+    }
+</script>
+</html>

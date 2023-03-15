@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <!-- <label for="value">Chuyển đổi độ dài</label> -->
+        <input type="number" id="chieu_cao" placeholder="Nhập độ dài chiều cao ">
+        <input type="number" id="canh_day" placeholder="Nhập độ dài cạnh đáy ">
+        <button type="button" onclick="change()" >Click to change</button>
+        <h1 id="result"></h1>
+    </form>
+</body>
+<script>
+    function change() {
+        let a=parseInt(document.getElementById("chieu_cao").value);
+        let b=parseInt(document.getElementById("canh_day").value);
+        let S = 1/2*a*b;
+        document.getElementById("result").innerHTML="Diện tích hình tam giác là: " + S;
+    }
+
+</script>
+</html>

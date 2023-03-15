@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <!-- <label for="value">Chuyển đổi độ dài</label> -->
+        <input type="number" id="chieu_dai" placeholder="Nhập độ dài chiều dài ">
+        <input type="number" id="chieu_rong" placeholder="Nhập độ dài chiều rộng ">
+        <button type="button" onclick="change()" >Click to change</button>
+        <h1 id="result"></h1>
+    </form>
+</body>
+<script>
+    function change() {
+        let a=parseInt(document.getElementById("chieu_dai").value);
+        let b=parseInt(document.getElementById("chieu_rong").value);
+        let S = a*b;
+        document.getElementById("result").innerHTML="Diện tích hình chữ nhật là: " + S;
+    }
+
+</script>
+</html>

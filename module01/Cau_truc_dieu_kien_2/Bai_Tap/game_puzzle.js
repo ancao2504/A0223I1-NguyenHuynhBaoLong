@@ -14,6 +14,7 @@ function setUp(numer) {
             } else if (cat_1.getAttribute("src") === "img\\panda_1.jpg") {
                 src = "img\\cat_1.jpg"
             }
+            cat_1.setAttribute("src",src);
             break;
         case 2:
             if (cat_2.getAttribute("src")==="img\\cat_2.jpg") {
@@ -23,6 +24,7 @@ function setUp(numer) {
             } else if (cat_2.getAttribute("src") === "img\\panda_2.jpg") {
                 src = "img\\cat_2.jpg"
             }
+            cat_2.setAttribute("src",src);
             break;
         case 3:
             if (cat_3.getAttribute("src")==="img\\cat_3.jpg") {
@@ -32,6 +34,8 @@ function setUp(numer) {
             } else if (cat_3.getAttribute("src") === "img\\panda_3.jpg") {
                 src = "img\\cat_3.jpg"
             }
+            cat_3.setAttribute("src",src);
+
             break;
          case 4:
             if (cat_4.getAttribute("src")==="img\\cat_4.jpg") {
@@ -41,6 +45,8 @@ function setUp(numer) {
             } else if (cat_4.getAttribute("src") === "img\\panda_4.jpg") {
                 src = "img\\cat_4.jpg"
             }
+            cat_4.setAttribute("src",src);
+
             break;
          case 5:
             if (cat_5.getAttribute("src")==="img\\cat_5.jpg") {
@@ -50,6 +56,8 @@ function setUp(numer) {
             } else if (cat_5.getAttribute("src") === "img\\panda_5.jpg") {
                 src = "img\\cat_5.jpg"
             }
+            cat_5.setAttribute("src",src);
+
             break;
     }   
 }

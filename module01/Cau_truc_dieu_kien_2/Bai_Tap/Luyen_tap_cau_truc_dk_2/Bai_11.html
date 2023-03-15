@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="tinh()">Thuế thu nhập cá nhân</button>
+</body>
+<script>
+    function tinh() {
+        let TN = parseInt(prompt("Thu nhập hằng tháng của bạn là: ",""));
+        if (TN < 5000000) {
+            alert("Thuế cá nhân: " + (TN *5/100));
+        } else if (5000000 < TN <= 10000000) {
+            alert("Thuế cá nhân: " +((TN *10/100)-0.25000000));
+        } else if (10000000 < TN <= 18000000) {
+            alert("Thuế cá nhân: " +((TN *15/100)-0.75000000));
+        } else if (18000000 < TN <= 32000000) {
+            alert("Thuế cá nhân: " +((TN *20/100)-1.65000000));
+        } else if (32000000 < TN <= 52000000) {
+            alert("Thuế cá nhân: " +((TN *25/100)-3.25000000));
+        } else if (52000000 < TN <= 80000000) {
+            alert("Thuế cá nhân: " +((TN *30/100)-5.85000000));
+        } else if (Tn > 80000000) {
+            alert("Thuế cá nhân: " +((TN *35/100)-9.85000000));
+        } 
+    }
+</script>
+</html>
