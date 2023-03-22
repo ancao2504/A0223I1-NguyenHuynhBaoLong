@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function isPrime(x) {
+        if (x<2) {
+            return false;
+        } else {
+            let cnt=0;
+            for ( i=2; i<=Math.sqrt(x); i++ ) {
+                if (x%i==0) {
+                    cnt++;
+                }
+            }
+            if (cnt==0) {
+                return true;
+            }else {
+                return false;
+            }
+        }
+    } 
+		
+    let number=parseInt(prompt("Enter number"));
+    let count=0;
+    let N=2;
+    while (count <= number) {
+        if (isPrime(N) == true) {
+            document.write(N +"<br>"); 
+        }
+        N++;
+        count++;
+    }
+</script>
+</html>

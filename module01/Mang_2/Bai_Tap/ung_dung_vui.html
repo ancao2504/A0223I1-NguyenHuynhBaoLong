@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Type anything slowly</h2>
+    <textarea id="outPut" cols="30" rows="10" onkeydown="change()"></textarea>
+</body>
+<script>
+    let myArr=["T","ô","i"," ","l","à"," ","đ","ồ"," ","n","g","ố","c","!"];
+    myArr.join('');
+    function change() {
+        let result="";
+        let text =document.getElementById("outPut").value;
+        let j = text.length;
+        if (j > 0) {
+            for (let i = 0;i < j;i++) {
+                result+=myArr[i];
+                if (j > myArr.length) {
+                    break;
+                }
+            }
+        }
+        document.getElementById("outPut").value=result;
+    }
+</script>
+</html>

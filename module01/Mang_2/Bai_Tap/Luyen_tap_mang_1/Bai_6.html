@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr=[];
+    let check=false;
+    for (let i = 0;i < 10;i++) {
+        arr[i]=prompt("Nhập số");
+    }
+    let number=+prompt("Nhập số bất kì ");
+    for (let i = 0;i < 10;i++) {
+        if (number == arr[i]) {
+            check=true
+            break;
+        } else {
+            check=false;
+        }
+    }
+    if (check) {
+        alert(number+" is in the array");
+    } else {
+        alert(number+" is not in the array")
+    }
+</script>
+</html>

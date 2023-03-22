@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> Game caro</h3>
+    <p id="caro"></p>
+</body>
+<script>
+    let boardCaro= new Array();
+    let isChecked=true;
+    function init() {   
+        for (let i = 0; i < 5; i ++) {
+            boardCaro[i] = new Array();
+            for (let j = 0; j < 5; j++) {
+                boardCaro[i][j] = "";
+            }
+        }
+    }
+    function displayCaro() {
+        let temp = "<table border='1' cellpadding='20'>";
+        for (let i = 0;i < 5;i++) {
+            temp+="<tr>";
+                for (let j = 0;j < 5;j++) {
+                    temp+="<td id='td_" + i + "_" + j + "' onclick=change("+i+","+j+")>"+boardCaro[i][j] +"</td>";
+                }
+            temp+="</tr>";
+        }
+        temp+="</table>";
+        document.write(temp);
+    }
+    function change(x, y) {
+    if (isChecked) {
+        boardCaro[x][y] = "X";
+        isWinner("x");
+        isChecked = false;
+    } else {
+        boardCaro[x][y] = "O";
+        isWinner("O");
+        isChecked = true;
+    }
+    document.body.innerHTML = "";
+        displayCaro();
+}
+    function isWinner (temp) {
+        for (let i = 0;i < 5;i++) {
+            for (let j = 0;j < 5;j++) {
+                if ((boardCaro[i][j] === temp && boardCaro[i][j + 1] === temp && boardCaro[i][j + 2] === temp) ||
+                    (boardCaro[i][j] === temp && boardCaro[i + 1][j] === temp && boardCaro[i + 2][j] === temp) ||
+                    (boardCaro[i][j] === temp && boardCaro[i + 1][j + 1] === temp && boardCaro[i + 2][j + 2] === temp) ||
+                    (boardCaro[i][j] === temp && boardCaro[i + 1][j - 1] === temp && boardCaro[i + 2][j - 2] === temp)){
+                        alert( temp + "win");
+                        init();
+                        displayCaro();
+                }
+            }
+        }
+    }
+    init();
+    displayCaro();
+</script>
+</html>

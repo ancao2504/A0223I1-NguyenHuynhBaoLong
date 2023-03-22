@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="play()">Play</button>
+</body>
+<script>
+    function play() {
+        let radom;
+        let fromNumber=parseInt(prompt("Enter a range from(> 0)",""));
+        let toNumber=parseInt(prompt("Enter a range to(< 100)",""));
+        if (toNumber > 10 ) {
+             radom=Math.floor(Math.random(fromNumber,toNumber)*100);
+            console.log(radom);
+        } else {
+             radom=Math.floor(Math.random(fromNumber,toNumber)*10);
+            console.log(radom);
+        }
+        
+        let guessNum=parseInt(prompt("Guess number",""));
+        let cnt=0;
+        if (guessNum == radom) {
+            alert("Congratulations");
+        } else {
+            while ( cnt <3) {
+                cnt++;
+                if (guessNum < radom) {
+                     guessNum=parseInt(prompt("Guess bigger number",""));
+                    if (guessNum == radom) {
+                     alert("Congratulations");
+                     break;
+                    } 
+                } else {
+                     guessNum=parseInt(prompt("Guess smaller number",""));
+                    if (guessNum == radom) {
+                     alert("Congratulations");
+                     break;
+                    } 
+                }
+               
+            }
+        }
+    }
+</script>
+</html>
