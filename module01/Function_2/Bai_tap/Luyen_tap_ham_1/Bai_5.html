@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="find()">Bài tập 5</button>
+</body>
+<script>
+    let start=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe","Regulus"];
+    let constellation=["Ursa Minor","Tarurus","Cygnus", "Lyra","Aquila","Ursa Major","Leo"];
+    let count=0;
+    let result;
+    function find(name) {
+        name=prompt("Enter a name of start");
+        for (let i = 0;i < start.length;i++) {
+            count++;
+            if (start[i] === name) {
+             result =constellation[i];
+            } 
+            console.log(count);
+        }
+        if (count != start.length) {
+            alert("Can't find " +name);
+        } else {
+            alert(result);
+
+        }
+    }
+</script>
+</html>

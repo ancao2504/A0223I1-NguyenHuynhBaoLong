@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="#">
+    <input type="number" id="feet" placeholder="feets" oninput="footToMeters()">
+    <p id="result_1"></p>
+    <input type="number"  id="meters" placeholder="meters" oninput="meterToFoot()">
+    <p id="result_2"></p>
+   </form>
+</body>
+<script>
+    function footToMeters() {
+        let value_1 = document.getElementById("feet").value;
+        let meter = 0.305 * value_1;
+        console.log(meter);
+        document.getElementById("result_1").innerHTML=value_1 +" change to meters is " +meter;
+    }
+    function meterToFoot() {
+        let value_2 = document.getElementById("meters").value;
+        let foot = 3.279 * value_2;
+        document.getElementById("result_2").innerHTML=value_2 +" change to meters is " +foot;
+
+    }
+
+</script>
+</html>
