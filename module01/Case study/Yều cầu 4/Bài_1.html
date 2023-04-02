@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let string = " nGuyen  hUỳnh Bảo  loNg";
+    console.log("============", string.length);
+    for (let i = 1; i < string.length; i++) {
+      if (string[i - 1] === " ") {
+        string =
+          string.substring(0, i) + string[i].toLocaleUpperCase() + string.substring(i + 1);
+      } else {
+        string =
+          string.substring(0, i) + string[i].toLocaleLowerCase() + string.substring(i + 1);
+      }
+    }
+    for (let i = 0; i < string.length; i++) {
+      if (string[i] === " " && string[i + 1] === " ") {
+        string = string.replace(/  /g, " ");
+      }
+    }
+    console.log(string.length);
+  </script>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        position: relative;
+      }
+      table,
+      th,
+      td {
+        border-collapse: collapse;
+        border: 1px solid black;
+      }
+      table {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+      }
+      input {
+        position: absolute;
+        left: 50%;
+        margin-top: 300px;
+        margin-left: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#">
+      <table>
+        <tr>
+          <th>STT</th>
+          <th colspan="2">MENU</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Cafe</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Cam vắt</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Nước ép ổi</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Nước ép cà chua</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Nước lọc</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Nước dừa</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Thanh toán</td>
+        </tr>
+      </table>
+      <input
+        type="number"
+        id="drink"
+        placeholder="Nhập STT để chọn món"
+        onchange="chooseDrink()"
+      />
+    </form>
+  </body>
+  <script>
+    let answer = true;
+    let quantity = 0;
+    let total = 0;
+    function chooseDrink() {
+      let number = document.getElementById("drink").value;
+      do {
+        if (number == 1) {
+          answer = confirm("Cafe: " + 20000);
+          if (answer) {
+            quantity = prompt("Số lượng", quantity);
+            total += quantity * 20000;
+          }
+          break;
+        } else if (number == 2) {
+          answer = confirm("Cam Vắt: " + 30000);
+          if (answer) {
+            quantity = prompt("Số lượng", quantity);
+            total += quantity * 30000;
+          }
+          break;
+        } else if (number == 3) {
+          answer = confirm("Nước ép cà rốt: " + 40000);
+          if (answer) {
+            quantity = prompt("Số lượng", quantity);
+            total += quantity * 40000;
+          }
+          break;
+        } else if (number == 4) {
+          answer = confirm("Nước ép cà chua: " + 40000);
+          if (answer) {
+            quantity = prompt("Số lượng", quantity);
+            total += quantity * 40000;
+          }
+          break;
+        } else if (number == 5) {
+          answer = confirm("Nước lọc: " + 12000);
+          if (answer) {
+            quantity = prompt("Số lượng", quantity);
+            total += quantity * 12000;
+          }
+          break;
+        } else if (number == 6) {
+          answer = confirm("Nước dừa: " + 35000);
+          if (answer) {
+            quantity = prompt("Số lượng", quantity);
+            total += quantity * 35000;
+          }
+          break;
+        } else if (number == 7) {
+          pay();
+          break;
+        }
+      } while (number != 7);
+    }
+    function pay() {
+      alert("Tổng bill là: " + total);
+      return (total = 0);
+    }
+  </script>
+</html>

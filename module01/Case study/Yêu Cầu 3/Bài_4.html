@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let numberToWords = {
+        0: 'không',
+        1: 'một',
+        2: 'hai',
+        3: 'ba',
+        4: 'bốn',
+        5: 'năm',
+        6: 'sáu',
+        7: 'bảy',
+        8: 'tám',
+        9: 'chín'
+    }
+    function change(numbrs) {
+        let digits = numbrs.toString();
+        let word='';
+        for (let i = 0;i < digits.length;i++) {
+            word+= numberToWords[digits[i]] +' ';
+            console.log(digits);
+        }
+        return word;
+    }
+    let input=prompt("Nhập vào 1 số bất kì");
+    let output =change(input);
+    console.log(output);
+  </script>
+</html>
