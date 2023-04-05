@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
-<script>
-  let myString = "bcacb";
-  for (let i = 0;i < myString.length;i++) {
-    if (myString[i] >= myString[i+1]) {
-      
+  </head>
+  <body></body>
+  <script>
+    let myString = "bcacbdare";
+    let i = 0;
+    let j = myString.length - 1;
+    let count = 0;
+    while (j != i) {
+      if (myString[i] !== myString[j]) {
+        count++;
+      }
+      j--;
     }
-  }
-</script>
+    console.log("=== số kí tự khác nhau ===", count);
+  </script>
 </html>

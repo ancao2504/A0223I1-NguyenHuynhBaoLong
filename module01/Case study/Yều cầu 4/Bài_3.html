@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body></body>
+<script>
+  let myString1 = "aabbcc";
+  let myString2 = "adcaa";
+  function commonCharacterCount(myString1,myString2) {
+    let count=0;
+    for (let i =0;i < myString1.length;i++) {
+      if (myString1[i] === myString1[i+1]) {
+       continue;
+      } else {
+        for (let j =0;j<myString2.length;j++) {
+          if (myString1[i] === myString2[j]) {
+            count++;
+          }
+        }
+        if (count != 0) {
+          console.log(myString1[i] +" "+ count);
+          count=0;
+        }
+      }
+      }
+  }
+  commonCharacterCount(myString1,myString2)
+</script>
+</html>

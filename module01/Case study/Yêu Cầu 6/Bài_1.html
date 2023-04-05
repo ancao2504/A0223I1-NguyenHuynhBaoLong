@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Bài_1.css" />
+  </head>
+  <body>
+    <button type="button" id="buyTicket" onclick="buyTicket()">Mua Vé</button>
+    <button type="button" id="result" onclick="seeResult(value)">Xem Kết Quả</button>
+    <p id="table" style="width: 100px"></p>
+    
+    <button id="displayFirstNum" class="display">Số</button>
+    <button id="displaySecondNum" class="display">Số</button>
+    <button id="displayThirdNum" class="display">Số</button>
+    <button id="displayFourthNum" class="display">Số</button>
+    <button id="displayFifthNum" class="display">Số</button>
+    <button id="displaySixNum" class="display">Số</button>
+  </body>
+  <script>
+    class Lottery {
+      constructor(number_1, number_2, number_3, number_4, number_5, number_6) {
+        this.number_1 = number_1;
+        this.number_2 = number_2;
+        this.number_3 = number_3;
+        this.number_4 = number_4;
+        this.number_5 = number_5;
+        this.number_6 = number_6;
+      }
+    }
+    function tableNumber() {
+      let temp = "<table>";
+      let count = 0;
+      for (let i = 0; i < 100; i++) {
+        if (count < 10) {
+          temp +=
+            " <td onclick='chooseNumber(" +
+            i +
+            ")' class='number'>  " +
+            i +
+            "&nbsp;&nbsp; </td>";
+          count++;
+        } else {
+          count = 0;
+          temp += "</tr>";
+        }
+      }
+      document.getElementById("table").innerHTML = temp;
+    }
+    function buyTicket() {
+      let status = prompt(
+        "Bạn có 2 lựa chọn: \n " +
+          "1. Bạn tự nhập số \n " +
+          "2. Hệ thống random"
+      );
+      if (status == 1) {
+        tableNumber();
+      } else {
+        let ticket = new Lottery(
+          (firstNum = Math.floor(Math.random() * 100)),
+          (secondNum = Math.floor(Math.random() * 100)),
+          (thirdNum = Math.floor(Math.random() * 100)),
+          (fourtNum = Math.floor(Math.random() * 100)),
+          (fifthNum = Math.floor(Math.random() * 100)),
+          (sixNum = Math.floor(Math.random() * 100))
+        );
+        console.log(ticket);
+        document.getElementById("displayFirstNum").innerHTML = firstNum;
+        document.getElementById("displaySecondNum").innerHTML = secondNum;
+        document.getElementById("displayThirdNum").innerHTML = thirdNum;
+        document.getElementById("displayFourthNum").innerHTML = fourtNum;
+        document.getElementById("displayFifthNum").innerHTML = fifthNum;
+        document.getElementById("displaySixNum").innerHTML = sixNum;
+      }
+    }
+    let x=1;
+    function chooseNumber(value) {
+      let num = value;
+      switch(x){
+        case 1:
+        document.getElementById("displayFirstNum").innerText = num;
+          break;
+        case 2:
+        document.getElementById("displaySecondNum").innerText = num;
+          break;
+        case 3:
+        document.getElementById("displayThirdNum").innerText = num;
+          break;
+        case 4:
+        document.getElementById("displayFourthNum").innerText = num;
+          break;
+        case 5:
+        document.getElementById("displayFifthNum").innerText = num;
+          break;
+        case 6:
+        document.getElementById("displaySixNum").innerText = num;
+          break;
+      }
+      x++;
+    }
+    function seeResult(ticket) {
+      let resultTicket = new Lottery(
+          (firstNum = Math.floor(Math.random() * 100)),
+          (secondNum = Math.floor(Math.random() * 100)),
+          (thirdNum = Math.floor(Math.random() * 100)),
+          (fourtNum = Math.floor(Math.random() * 100)),
+          (fifthNum = Math.floor(Math.random() * 100)),
+          (sixNum = Math.floor(Math.random() * 100))
+        );
+        console.log("=========Result=====",resultTicket);
+        if (ticket.fifthNum === this.fifthNum &&
+           ticket.secondNum === this.secondNum &&
+           ticket.thirdNum === this.thirdNum &&
+           ticket.fourtNum === this.fourtNum &&
+           ticket.fifthNum === this.fifthNum) {
+          alert("Giải Nhất");
+        } else if (ticket.secondNum === this.secondNum &&
+                  ticket.thirdNum === this.thirdNum &&
+                  ticket.fourtNum === this.fourtNum &&
+                  ticket.fifthNum === this.fifthNum){
+          alert("Giải Nhì");
+          } else if (ticket.thirdNum === this.thirdNum &&
+                  ticket.fourtNum === this.fourtNum &&
+                  ticket.fifthNum === this.fifthNum) {
+                    alert("Giải Ba");
+            } else {
+              alert("Chúc Bạn May Mắn Lần Sau");
+            }
+    }
+  </script>
+</html>
