@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function check(s) {
+      for (let i = 0; i < s.length; i++) {
+        if (s[i] == " ") {
+          return true;
+        }
+      }
+      return false;
+    }
+    function change(s) {
+      let result = "";
+      if (check(s)) {
+        result += s[0];
+        for (let i = 0; i < s.length; i++) {
+          if (s[i] === " ") {
+            result += s[i + 1];
+          }
+        }
+        result = result.toLocaleUpperCase();
+        result = result.replace(/ /g, "");
+      } else {
+        alert("không có kí tự viết tắt");
+      }
+      console.log(result);
+    }
+    const val = prompt();
+    change(val);
+  </script>
+</html>
