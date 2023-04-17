@@ -1,0 +1,26 @@
+body{
+    position: relative;
+}
+table{
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    border-collapse:collapse;
+    margin-top: 30px;
+}
+td, th {
+    padding: 10px;
+    border: 2px solid black;
+}
+.buttonItem{
+    position: absolute;
+    left: 50%;
+    /* border: 2px; */
+    font-size: 15px;
+}
+#newComputer {
+    margin-left: -200px;
+}
+#display{
+    margin-left: -80px;
+}

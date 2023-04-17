@@ -1,0 +1,50 @@
+body{
+    position: relative;
+    font-size: larger;
+}
+table{
+    position: absolute;
+    left: 40%;
+    margin-top: 7%;
+    border-collapse:collapse;
+
+}
+#addProduct{
+    width: 250px;
+    height: 30px;
+    position: absolute;
+    left: 40%;
+    background-color: silver;
+    text-align: center;
+    padding-top: 20px;
+    margin-top:3%
+}
+h2{
+    position: absolute;
+    left: 40%;
+}
+button{
+    background-color: rgb(10, 148, 10);
+    color: white;
+}
+td,th{
+    padding: 5px;
+}
+table tr:nth-child(odd) {
+    background-color: Silver;
+}
+table tr:nth-child(even) {
+    background-color:white
+}
+table th:nth-child(1) {
+    background-color:white
+}
+table th:nth-child(2) {
+    background-color:white
+}
+table th:nth-child(3) {
+    background-color:white
+}
+table th:nth-child(4) {
+    background-color:white
+}

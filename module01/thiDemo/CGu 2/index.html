@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    function KiemTra2SoThanThiet(a, b) {
+        let TongUocCuaA = 0;
+        let TongUocCuaB = 0;
+
+        for (let i = 1; i < a; i++) {
+            if (a % i == 0) {
+                TongUocCuaA += i;
+            }
+        }
+
+        for (let i = 1; i < b; i++) {
+            if (b % i == 0) {
+                TongUocCuaB += i;
+            }
+        }
+
+        if (TongUocCuaA == b && TongUocCuaB == a) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let a = +prompt("Nhập số thứ nhất: ");
+    let b = +prompt("Nhập số thứ hai: ");
+
+    alert("Hai số vừa nhập là 2 số thân thiết là: " + KiemTra2SoThanThiet(a, b));
+
+</script>
+</body>
+</html>
