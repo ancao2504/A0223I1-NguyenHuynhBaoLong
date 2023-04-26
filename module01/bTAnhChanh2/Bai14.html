@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function checkString(str) {
+        let countUpper=0;
+        let countLower=0;
+        for (let i = 0;i < str.length;i++) {
+            let a = str[i].toLocaleUpperCase();
+            if (a === str[i]) {
+                countUpper++;
+            } else{
+                countLower++;
+            }
+        }
+        if ( countLower == countUpper) {
+            console.log("=======result=======","true");
+        } else {
+            console.log("=======result=======","false");
+
+        }
+    }
+    let str = "LOng";
+    checkString(str);
+</script>
+</html>

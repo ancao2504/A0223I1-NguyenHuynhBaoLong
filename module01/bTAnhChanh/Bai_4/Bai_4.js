@@ -38,10 +38,12 @@ class Computer {
     return this.cost;
   }
 }
+
 let computer1 = new Computer("001", "Acer", "Aspire", 100);
 let computer2 = new Computer("002", "Dell", "GAM", 150);
 let computer3 = new Computer("003", "Mac", "Apple", 30);
 let computerList = [computer1, computer2, computer3];
+
 function display() {
   let temp = "<table>";
   temp +=

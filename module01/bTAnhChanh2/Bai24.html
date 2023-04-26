@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="display"></p>
+    <p id="newDisplay"></p>
+  </body>
+  <script>
+    function calculate(value) {
+      let sum = 0;
+      for (let i = 1; i < value; i++) {
+        // console.log(typeof value);
+        if (value % i == 0) {
+          sum += i;
+        }
+      }
+      value = parseInt(value); // chuyển kiểu string của value sang kiểu number
+      console.log(typeof value);
+      sum = sum + value;
+      console.log("======sum======", sum);
+      return sum;
+    }
+    let arr = [];
+    function display() {
+      let n = prompt("Enter length of array");
+      for (let i = 0; i < n; i++) {
+        arr[i] = prompt("Enter element of array");
+        console.log("======arr[i]=========" + typeof arr[i]);
+      }
+      document.getElementById("display").innerHTML = "Mảng mới nhập là: " + arr;
+    }
+    function newDisplay() {
+      let myArr = [];
+      for (let i = 0; i < arr.length; i++) {
+        let total = calculate(arr[i]);
+        // console.log(total);
+        myArr.push(total);
+      }
+      document.getElementById("newDisplay").innerHTML = "Mảng mới là: " + myArr;
+    }
+    display();
+    newDisplay();
+  </script>
+</html>
