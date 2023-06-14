@@ -1,0 +1,35 @@
+body{
+    position: relative;
+    font-size: larger;
+}
+table{
+    position: absolute;
+    left: 40%;
+    margin-top: 7%;
+    border-collapse:collapse;
+
+}
+#soMoi{
+    position: absolute;
+    left: 40%;
+    padding-top: 20px;
+    margin-top:3%
+}
+#del{
+    position: absolute;
+    left: 40%;
+    margin-top:3%
+}
+#themSo{
+    position: absolute;
+    left: 50%;
+    margin-top: 60px;
+}
+
+button{
+    background-color: rgb(10, 148, 10);
+    color: white;
+}
+th,td{
+    border: 1px solid black;
+}

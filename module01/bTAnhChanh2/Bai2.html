@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let arr = [1, 2, 3, 1, 4, 9];
+    let length = arr.length;
+    function myArry() {
+      for (let i = 0; i < 3; i++) {
+        if (arr[i] *arr[i] != arr[i + 3]) {
+          return false;
+        } else {
+          continue;
+        }
+      }
+      return true;
+    }
+    function check(a) {
+      if (a == true) {
+        alert("true");
+      } else {
+        alert("false");
+      }
+    }
+    check(myArry());
+  </script>
+</html>

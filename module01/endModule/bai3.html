@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bai3.css" />
+  </head>
+  <body>
+    <p id="display"></p>
+    <button id="themSo" onclick="themSo()">Thêm Sổ mới</button>
+    <!-- <button id="del" onclick="btnDelete()">xóa Sổ tiết kiệm</button> -->
+  </body>
+  <script>
+    class SoTietKiem {
+      constructor(maSo, loaiTietKiem, hoVaTen, chungMinhNhanDan, ngayMoSo, soTienGui) {
+        this.maSo = maSo;
+        this.loaiTietKiem = loaiTietKiem;
+        this.hoVaTen = hoVaTen;
+        this.chungMinhNhanDan = chungMinhNhanDan;
+        this.ngayMoSo = ngayMoSo;
+        this.soTienGui = soTienGui;
+      };
+
+      setMaSo = function (maSo) {
+        this.maSo = maSo;
+      };
+
+      setLoaiTietKiem = function (loaiTietKiem) {
+        this.loaiTietKiem = loaiTietKiem;
+      };
+
+      setHoVaTen = function (hoVaTen) {
+        this.hoVaTen = hoVaTen;
+      };
+
+      setChungMinhNhanDan = function (chungMinhNhanDan) {
+        this.chungMinhNhanDan = chungMinhNhanDan;
+      };
+
+      setNgayMoSo = function (ngayMoSo) {
+        this.ngayMoSo = ngayMoSo;
+      };
+
+      setSoTienGui = function (soTienGui) {
+        this.soTienGui = soTienGui;
+      };
+
+      getMaSo() {
+        return this.maSo;
+      };
+
+      getLoaiTietKiem() {
+        return this.loaiTietKiem;
+      };
+
+      getHoVaTen() {
+        return this.hoVaTen;
+      };
+
+      getChungMinhNhanDan() {
+        return this.chungMinhNhanDan;
+      };
+
+      getNgayMoSo() {
+        return this.ngayMoSo;
+      };
+
+      getSoTienGui() {
+        return this.soTienGui;
+      };
+
+    }
+
+    let so1 = new SoTietKiem("1", "6 tháng", "nguyễn văn a", "012343", "28/04/2023", 2000);
+    let so2 = new SoTietKiem("2", "6 tháng", "nguyễn văn b", "012343", "28/04/2023", 5000);
+
+    let bang = [so1, so2];
+
+    function display() {
+      let temp =
+        "<table>" +
+        "<tr> <th>Mã Số</th> <th>Loại Tiết Kiệm</th> <th>Họ và tên</th> <th>CCCD</th> <th>Ngày Mở Sổ</th> <th>Số Tiền Gửi</th> ";
+      for (let i = 0; i < bang.length; i++) {
+        temp +=
+          "<tr> " +
+          "<td>" +
+          bang[i].maSo +
+          "</td>" +
+          "<td>" +
+          bang[i].loaiTietKiem +
+          "</td>" +
+          "<td>" +
+          bang[i].hoVaTen +
+          "</td>" +
+          "<td>" +
+          bang[i].chungMinhNhanDan +
+          "</td>" +
+          "<td>" +
+          bang[i].ngayMoSo +
+          "</td>" +
+          "<td>" +
+          bang[i].soTienGui +
+          "</td>" +
+          " <td> <button onclick='btnDelete(" +
+          i +
+          ")'>Delete</button> </td>" +
+          "</tr>";
+      }
+      temp += "</table>";
+      document.getElementById("display").innerHTML = temp;
+    }
+    display();
+    function themSo() {
+      let maSo = prompt("Nhập mã số");
+      for (let i = 0; i < bang.length; i++) {
+        while (bang[i].maSo == maSo) {
+          maSo = +prompt("Mã số tiết kiệm đã có vui lòng nhập lại");
+        }
+      }
+      let loaiTietKiem = prompt("Nhập loại tiết kiệm");
+      while (loaiTietKiem.length > 10) {
+        loaiTietKiem = prompt("Vui lòng nhập không qua 10 ký tự");
+      }
+      let hoVaTen = prompt("Nhập họ và tên");
+      while (hoVaTen.length > 30) {
+        loaiTietKiem = prompt("Vui lòng nhập không qua 30 ký tự");
+      }
+      let chungMinhNhanDan = +prompt("Nhập CCCD");
+      let ngayMoSo = prompt("Nhập ngày mở sổ", "28/04/2023");
+      let soTienGui = +prompt("Nhập số tiền gửi");
+      let soMoi = new SoTietKiem(
+        maSo,
+        loaiTietKiem,
+        hoVaTen,
+        chungMinhNhanDan,
+        ngayMoSo,
+        soTienGui
+      );
+      bang.push(soMoi);
+      display();
+    }
+    function btnDelete(value) {
+      let xacNhan = confirm("Bạn có muốn xóa không ?");
+      if (xacNhan) {
+        bang.splice(value, 1);
+      }
+      display();
+    }
+  </script>
+</html>
