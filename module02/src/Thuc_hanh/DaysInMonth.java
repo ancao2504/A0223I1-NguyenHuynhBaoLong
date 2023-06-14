@@ -1,7 +1,5 @@
-package ss1.thuc_hanh;
-
+package Thuc_hanh;
 import java.util.Scanner;
-
 public class DaysInMonth {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -26,16 +24,17 @@ public class DaysInMonth {
             case 6:
             case 9:
             case 11:
-                dayInmonth ="30";
+                dayInmonth = "30";
                 break;
             default:
-                dayInmonth ="";
+                dayInmonth = "";
         }
 
         if (!dayInmonth.equals("")) {
-            System.out.printf("The month %d has %s days",month,dayInmonth);
+            System.out.printf("The month %d has %s days", month, dayInmonth);
         } else {
             System.out.println("Invalid input!");
         }
     }
 }
+

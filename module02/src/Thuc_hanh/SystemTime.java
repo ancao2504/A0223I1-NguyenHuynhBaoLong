@@ -1,7 +1,5 @@
-package ss1.thuc_hanh;
-
+package Thuc_hanh;
 import java.util.Date;
-
 public class SystemTime {
     public static void main (String[] args) {
         Date now =new Date();

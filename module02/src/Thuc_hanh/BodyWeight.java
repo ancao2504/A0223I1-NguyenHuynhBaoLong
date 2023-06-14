@@ -1,4 +1,4 @@
-package ss1.thuc_hanh;
+package Thuc_hanh;
 
 import java.util.Scanner;
 
@@ -23,5 +23,6 @@ public class BodyWeight {
         } else {
             System.out.println("Obese");
         }
+        }
     }
-}
+

@@ -1,7 +1,5 @@
-package ss1.thuc_hanh;
-
+package Thuc_hanh;
 import java.util.Scanner;
-
 public class Operator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -9,7 +7,7 @@ public class Operator {
         float weight;
         float height;
 
-        System.out.println("Enter weight = " );
+        System.out.println("Enter weight = ");
         weight = scanner.nextFloat();
 
         System.out.println("Enter height = ");

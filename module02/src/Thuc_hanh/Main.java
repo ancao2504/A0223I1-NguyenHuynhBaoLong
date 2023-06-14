@@ -1,7 +1,5 @@
-package ss1.thuc_hanh;
-
+package Thuc_hanh;
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 

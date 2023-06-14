@@ -1,8 +1,6 @@
-package ss1.thuc_hanh;
-
+package Thuc_hanh;
 import java.util.Scanner;
-
-public class leapYear {
+public class LeapYear {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a year: ");
@@ -23,4 +21,5 @@ public class leapYear {
 
         }
     }
+
 }

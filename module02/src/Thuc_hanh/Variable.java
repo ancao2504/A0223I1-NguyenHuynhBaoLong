@@ -1,4 +1,4 @@
-package ss1.thuc_hanh;
+package Thuc_hanh;
 
 public class Variable {
     public static void main(String[] args) {
