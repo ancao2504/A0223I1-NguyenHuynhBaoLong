@@ -3,27 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c883bec0-e202-40d0-829a-37e0da8d650e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/Bai_tap/ChangeMoney.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/Bai_tap/NumberToWorld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/Thuc_hanh/BodyWeight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/Thuc_hanh/DaysInMonth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/Thuc_hanh/LeapYear.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/Thuc_hanh/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/Thuc_hanh/Operator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/Thuc_hanh/SystemTime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/Thuc_hanh/Variable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss1/bai_tap/Bai1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss1/bai_tap/Bai1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss1/bai_tap/Bai2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss1/bai_tap/Bai2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bai_tap/ChangeMoney.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bai_tap/NumberToWorld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thuc_hanh/BodyWeight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thuc_hanh/DaysInMonth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thuc_hanh/LeapYear.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thuc_hanh/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thuc_hanh/Operator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thuc_hanh/SystemTime.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thuc_hanh/Variable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss1/bai_tap/Bai2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss1/bai_tap/Bai2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +34,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Print">
-    <configuration name="ChangeMoney" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss1.bai_tap.ChangeMoney" />
+  <component name="RunManager" selected="Application.Minvalue">
+    <configuration name="DelElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.DelElement" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss1.bai_tap.*" />
+          <option name="PATTERN" value="ss3_Array_Method.Bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,12 +48,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckPrimeNum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss2_loop.thuc_hanh.CheckPrimeNum" />
+    <configuration name="GopMang" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.GopMang" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss2_loop.thuc_hanh.*" />
+          <option name="PATTERN" value="ss3_Array_Method.Bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,12 +61,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Print" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss2_loop.Bai_tap.Print" />
+    <configuration name="MinElement2D" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.MinElement2D" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss2_loop.Bai_tap.*" />
+          <option name="PATTERN" value="ss3_Array_Method.Bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,12 +74,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="greate_common_factor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss2_loop.thuc_hanh.greate_common_factor" />
+    <configuration name="Minvalue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.Minvalue" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss2_loop.thuc_hanh.*" />
+          <option name="PATTERN" value="ss3_Array_Method.Bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,12 +87,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="interst_calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss2_loop.thuc_hanh.interst_calculator" />
+    <configuration name="PlusElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.PlusElement" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss2_loop.thuc_hanh.*" />
+          <option name="PATTERN" value="ss3_Array_Method.Bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,11 +102,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Print" />
-        <item itemvalue="Application.greate_common_factor" />
-        <item itemvalue="Application.interst_calculator" />
-        <item itemvalue="Application.CheckPrimeNum" />
-        <item itemvalue="Application.ChangeMoney" />
+        <item itemvalue="Application.Minvalue" />
+        <item itemvalue="Application.MinElement2D" />
+        <item itemvalue="Application.GopMang" />
+        <item itemvalue="Application.PlusElement" />
+        <item itemvalue="Application.DelElement" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +120,10 @@
       <updated>1686744685549</updated>
       <workItem from="1686744687391" duration="4662000" />
       <workItem from="1686749581750" duration="3199000" />
-      <workItem from="1686795002282" duration="589000" />
+      <workItem from="1686795002282" duration="1910000" />
+      <workItem from="1687144851246" duration="2278000" />
+      <workItem from="1687158306411" duration="4555000" />
+      <workItem from="1687163084796" duration="252000" />
     </task>
     <servers />
   </component>
@@ -159,5 +141,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
