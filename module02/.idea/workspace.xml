@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c883bec0-e202-40d0-829a-37e0da8d650e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss1/bai_tap/Bai1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss1/bai_tap/Bai1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +35,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Minvalue">
-    <configuration name="DelElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.DelElement" />
+  <component name="RunManager" selected="Application.DuongCheoChinh">
+    <configuration name="Bai1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss1.bai_tap.Bai1" />
+      <module name="module02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss1.bai_tap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DuongCheoChinh" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.DuongCheoChinh" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
@@ -48,12 +62,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GopMang" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.GopMang" />
+    <configuration name="Fan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss4_OOP.Bai_tap.Fan" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss3_Array_Method.Bai_tap.*" />
+          <option name="PATTERN" value="ss4_OOP.Bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -61,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MinElement2D" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.MinElement2D" />
+    <configuration name="StopWatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss4_OOP.Bai_tap.StopWatch" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss3_Array_Method.Bai_tap.*" />
+          <option name="PATTERN" value="ss4_OOP.Bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -74,25 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Minvalue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.Minvalue" />
+    <configuration name="SystemTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss1.thuc_hanh.SystemTime" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss3_Array_Method.Bai_tap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlusElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.PlusElement" />
-      <module name="module02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ss3_Array_Method.Bai_tap.*" />
+          <option name="PATTERN" value="ss1.thuc_hanh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,11 +103,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Minvalue" />
-        <item itemvalue="Application.MinElement2D" />
-        <item itemvalue="Application.GopMang" />
-        <item itemvalue="Application.PlusElement" />
-        <item itemvalue="Application.DelElement" />
+        <item itemvalue="Application.DuongCheoChinh" />
+        <item itemvalue="Application.Bai1" />
+        <item itemvalue="Application.Fan" />
+        <item itemvalue="Application.StopWatch" />
+        <item itemvalue="Application.SystemTime" />
       </list>
     </recent_temporary>
   </component>
@@ -124,6 +125,7 @@
       <workItem from="1687144851246" duration="2278000" />
       <workItem from="1687158306411" duration="4555000" />
       <workItem from="1687163084796" duration="252000" />
+      <workItem from="1687174981875" duration="8822000" />
     </task>
     <servers />
   </component>
