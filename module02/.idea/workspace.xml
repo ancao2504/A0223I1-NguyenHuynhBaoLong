@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c883bec0-e202-40d0-829a-37e0da8d650e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss1/bai_tap/Bai1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss1/bai_tap/Bai1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss3_Array_Method/Bai_tap/CountChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss3_Array_Method/Bai_tap/CountChar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +35,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Application.DuongCheoChinh">
-    <configuration name="Bai1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss1.bai_tap.Bai1" />
+  <component name="RunManager" selected="Application.Test (1)">
+    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss5_Inheritance.Thuc_Hanh.Test" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss1.bai_tap.*" />
+          <option name="PATTERN" value="ss5_Inheritance.Thuc_Hanh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -49,12 +49,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DuongCheoChinh" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.DuongCheoChinh" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss5_Access_Modifier.Bai_tap.Test" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss3_Array_Method.Bai_tap.*" />
+          <option name="PATTERN" value="ss5_Access_Modifier.Bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -62,12 +62,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Fan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss4_OOP.Bai_tap.Fan" />
+    <configuration name="TestCircle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss5_Access_Modifier.Bai_tap.TestCircle" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss4_OOP.Bai_tap.*" />
+          <option name="PATTERN" value="ss5_Access_Modifier.Bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -75,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StopWatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss4_OOP.Bai_tap.StopWatch" />
+    <configuration name="TestStaticMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss5_Access_Modifier.Thuc_hanh.TestStaticMethod" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss4_OOP.Bai_tap.*" />
+          <option name="PATTERN" value="ss5_Access_Modifier.Thuc_hanh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SystemTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss1.thuc_hanh.SystemTime" />
+    <configuration name="TestStaticProperty" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss5_Access_Modifier.Thuc_hanh.TestStaticProperty" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss1.thuc_hanh.*" />
+          <option name="PATTERN" value="ss5_Access_Modifier.Thuc_hanh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,11 +103,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DuongCheoChinh" />
-        <item itemvalue="Application.Bai1" />
-        <item itemvalue="Application.Fan" />
-        <item itemvalue="Application.StopWatch" />
-        <item itemvalue="Application.SystemTime" />
+        <item itemvalue="Application.Test (1)" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.TestCircle" />
+        <item itemvalue="Application.TestStaticProperty" />
+        <item itemvalue="Application.TestStaticMethod" />
       </list>
     </recent_temporary>
   </component>
@@ -126,6 +126,9 @@
       <workItem from="1687158306411" duration="4555000" />
       <workItem from="1687163084796" duration="252000" />
       <workItem from="1687174981875" duration="8822000" />
+      <workItem from="1687252681932" duration="750000" />
+      <workItem from="1687331584404" duration="2142000" />
+      <workItem from="1687349950586" duration="3325000" />
     </task>
     <servers />
   </component>
