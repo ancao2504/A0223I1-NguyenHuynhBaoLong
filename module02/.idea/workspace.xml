@@ -3,7 +3,34 @@
   <component name="ChangeListManager">
     <list default="true" id="c883bec0-e202-40d0-829a-37e0da8d650e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss2_loop/Bai_tap/PrintPrime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss2_loop/Bai_tap/PrintPrime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Bai_Tap/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Bai_Tap/Cylinder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Bai_Tap/MoveablePoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Bai_Tap/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Bai_Tap/Point2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Bai_Tap/Point3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Bai_Tap/TestCircle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Bai_Tap/TestMovePoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Bai_Tap/TestPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Shape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Square.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Bai_Tap/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Bai_Tap/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Cylinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Bai_Tap/MoveablePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/MoveablePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Bai_Tap/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Bai_Tap/Point2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Point2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Bai_Tap/Point3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Point3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Bai_Tap/TestCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/TestCircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Bai_Tap/TestMovePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/TestMovePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Bai_Tap/TestPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/TestPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Thuc_Hanh/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Thuc_Hanh/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Thuc_Hanh/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Thuc_Hanh/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Thuc_Hanh/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +62,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Application.PrintPrime">
+  <component name="RunManager" selected="Application.Sum">
+    <configuration name="MinElement2D" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.MinElement2D" />
+      <module name="module02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss3_Array_Method.Bai_tap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PrintPrime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ss2_loop.Bai_tap.PrintPrime" />
       <module name="module02" />
@@ -49,25 +89,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss5_Inheritance.Thuc_Hanh.Test" />
+    <configuration name="Sum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss3_Array_Method.Bai_tap.Sum" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss5_Inheritance.Thuc_Hanh.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestCircle (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss5_Inheritance.Bai_Tap.TestCircle" />
-      <module name="module02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ss5_Inheritance.Bai_Tap.*" />
+          <option name="PATTERN" value="ss3_Array_Method.Bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,11 +103,11 @@
       </method>
     </configuration>
     <configuration name="TestMovePoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss5_Inheritance.Bai_Tap.TestMovePoint" />
+      <option name="MAIN_CLASS_NAME" value="ss6_Inheritance.Bai_Tap.TestMovePoint" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss5_Inheritance.Bai_Tap.*" />
+          <option name="PATTERN" value="ss6_Inheritance.Bai_Tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,11 +116,11 @@
       </method>
     </configuration>
     <configuration name="TestPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss5_Inheritance.Bai_Tap.TestPoint" />
+      <option name="MAIN_CLASS_NAME" value="ss6_Inheritance.Bai_Tap.TestPoint" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss5_Inheritance.Bai_Tap.*" />
+          <option name="PATTERN" value="ss6_Inheritance.Bai_Tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Sum" />
+        <item itemvalue="Application.MinElement2D" />
         <item itemvalue="Application.PrintPrime" />
         <item itemvalue="Application.TestMovePoint" />
         <item itemvalue="Application.TestPoint" />
-        <item itemvalue="Application.TestCircle (1)" />
-        <item itemvalue="Application.Test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -133,7 +160,7 @@
       <workItem from="1687506795010" duration="2458000" />
       <workItem from="1687517156638" duration="6221000" />
       <workItem from="1687784231441" duration="27000" />
-      <workItem from="1687784276538" duration="284000" />
+      <workItem from="1687784276538" duration="1114000" />
     </task>
     <servers />
   </component>
