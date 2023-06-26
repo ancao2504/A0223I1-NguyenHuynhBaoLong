@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c883bec0-e202-40d0-829a-37e0da8d650e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Circle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Rectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Shape.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Square.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss2_loop/Bai_tap/PrintPrime2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss2_loop/Bai_tap/PrintPrime2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss2_loop/Bai_tap/PrintPrime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss2_loop/Bai_tap/PrintPrime.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +35,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Application.TestMovePoint">
-    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss5_Inheritance.Thuc_Hanh.Test" />
+  <component name="RunManager" selected="Application.PrintPrime">
+    <configuration name="PrintPrime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss2_loop.Bai_tap.PrintPrime" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss5_Inheritance.Thuc_Hanh.*" />
+          <option name="PATTERN" value="ss2_loop.Bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -59,12 +49,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss5_Access_Modifier.Bai_tap.Test" />
+    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss5_Inheritance.Thuc_Hanh.Test" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss5_Access_Modifier.Bai_tap.*" />
+          <option name="PATTERN" value="ss5_Inheritance.Thuc_Hanh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,11 +103,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PrintPrime" />
         <item itemvalue="Application.TestMovePoint" />
         <item itemvalue="Application.TestPoint" />
         <item itemvalue="Application.TestCircle (1)" />
         <item itemvalue="Application.Test (1)" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +133,7 @@
       <workItem from="1687506795010" duration="2458000" />
       <workItem from="1687517156638" duration="6221000" />
       <workItem from="1687784231441" duration="27000" />
-      <workItem from="1687784276538" duration="30000" />
+      <workItem from="1687784276538" duration="284000" />
     </task>
     <servers />
   </component>
