@@ -1,23 +1,21 @@
 package ss5_Inheritance.Thuc_Hanh;
 
 public class Rectangle extends Shape{
-    private double width = 1.0;
+    private double width =1.0;
     private double length = 1.0;
 
     public Rectangle() {
-    }
 
-    public Rectangle(double width, double length) {
-        this.width = width;
-        this.length = length;
     }
-
-    public Rectangle(double width, double length, String color, boolean filled) {
+    public Rectangle(double width, double height) {
+        this.width=width;
+        this.length=length;
+    }
+    public Rectangle(double width, double length, String color, Boolean filled) {
         super(color, filled);
-        this.width = width;
-        this.length = length;
+        this.width=width;
+        this.length=length;
     }
-
     public double getWidth() {
         return width;
     }

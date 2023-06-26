@@ -3,7 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="c883bec0-e202-40d0-829a-37e0da8d650e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss3_Array_Method/Bai_tap/CountChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss3_Array_Method/Bai_tap/CountChar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Circle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Rectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Shape.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Square.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss5_Inheritance/Thuc_Hanh/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss2_loop/Bai_tap/PrintPrime2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss2_loop/Bai_tap/PrintPrime2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss5_Inheritance/Thuc_Hanh/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +45,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Test (1)">
+  <component name="RunManager" selected="Application.TestMovePoint">
     <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ss5_Inheritance.Thuc_Hanh.Test" />
       <module name="module02" />
@@ -62,12 +72,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCircle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss5_Access_Modifier.Bai_tap.TestCircle" />
+    <configuration name="TestCircle (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss5_Inheritance.Bai_Tap.TestCircle" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss5_Access_Modifier.Bai_tap.*" />
+          <option name="PATTERN" value="ss5_Inheritance.Bai_Tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -75,12 +85,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestStaticMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss5_Access_Modifier.Thuc_hanh.TestStaticMethod" />
+    <configuration name="TestMovePoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss5_Inheritance.Bai_Tap.TestMovePoint" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss5_Access_Modifier.Thuc_hanh.*" />
+          <option name="PATTERN" value="ss5_Inheritance.Bai_Tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,12 +98,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestStaticProperty" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss5_Access_Modifier.Thuc_hanh.TestStaticProperty" />
+    <configuration name="TestPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss5_Inheritance.Bai_Tap.TestPoint" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss5_Access_Modifier.Thuc_hanh.*" />
+          <option name="PATTERN" value="ss5_Inheritance.Bai_Tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,11 +113,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestMovePoint" />
+        <item itemvalue="Application.TestPoint" />
+        <item itemvalue="Application.TestCircle (1)" />
         <item itemvalue="Application.Test (1)" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.TestCircle" />
-        <item itemvalue="Application.TestStaticProperty" />
-        <item itemvalue="Application.TestStaticMethod" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +138,12 @@
       <workItem from="1687174981875" duration="8822000" />
       <workItem from="1687252681932" duration="750000" />
       <workItem from="1687331584404" duration="2142000" />
-      <workItem from="1687349950586" duration="3325000" />
+      <workItem from="1687349950586" duration="4203000" />
+      <workItem from="1687357058131" duration="120000" />
+      <workItem from="1687506795010" duration="2458000" />
+      <workItem from="1687517156638" duration="6221000" />
+      <workItem from="1687784231441" duration="27000" />
+      <workItem from="1687784276538" duration="30000" />
     </task>
     <servers />
   </component>

@@ -2,37 +2,34 @@ package ss5_Inheritance.Thuc_Hanh;
 
 public class Shape {
     private String color = "Green";
-    private Boolean filled = true;
+    private Boolean fill = true;
 
-    public Shape() {
+    public Shape () {
 
     }
 
     public Shape(String color, Boolean filled) {
         this.color = color;
-        this.filled = filled;
+        this.fill = filled;
     }
 
     public String getColor() {
         return this.color;
     }
-
     public void setColor(String color) {
         this.color = color;
     }
-
-    public boolean isFilled() {
-        return this.filled;
+    public Boolean isFilled() {
+        return this.fill;
     }
-
-    public void setFilled(Boolean filled) {
-        this.filled = filled;
+    public void setColor(Boolean filled) {
+        this.fill = filled;
     }
-
+    @Override
     public String toString() {
-        return "A shape with color "
-                + this.getColor()
+        return "A shape with color is "
+                + getColor()
                 + " and "
-                + (this.isFilled()?"filled":"not filled");
+                +(isFilled()?"filled" :"not filled");
     }
 }

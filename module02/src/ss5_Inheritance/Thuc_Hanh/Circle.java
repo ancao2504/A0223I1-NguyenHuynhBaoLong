@@ -1,20 +1,24 @@
 package ss5_Inheritance.Thuc_Hanh;
 
 public class Circle extends Shape{
-    private double radius = 1.0;
+    private double radius =1.0;
 
     public Circle() {
-    }
 
-    public Circle(double radius) {
+    }
+    public  Circle(double radius) {
         this.radius = radius;
     }
-
-    public Circle(double radius, String color, boolean filled) {
+    public  Circle(double radius, String color, Boolean filled) {
         super(color, filled);
-        this.radius = radius;
+        this.radius= radius;
     }
-
+    public double getArea () {
+        return Math.pow(radius,2) * Math.PI;
+    }
+    public double getPerimeter() {
+        return 2*radius*Math.PI;
+    }
     public double getRadius() {
         return radius;
     }
@@ -22,19 +26,11 @@ public class Circle extends Shape{
     public void setRadius(double radius) {
         this.radius = radius;
     }
-
-    public double getArea() {
-        return radius * radius * Math.PI;
-    }
-
-    public double getPerimeter() {
-        return 2 * radius * Math.PI;
-    }
-
-    public String toString() {
-        return "A Circle with radius="
+    @Override
+    public String toString () {
+        return "A circle with radius "
                 + getRadius()
-                + ", which is a subclass of "
+                +" , which is a subclass of "
                 + super.toString();
     }
 }
