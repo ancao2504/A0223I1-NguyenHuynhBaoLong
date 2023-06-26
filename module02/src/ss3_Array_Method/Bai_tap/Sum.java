@@ -14,5 +14,6 @@ public class Sum {
             sum+=arr[i][2];
         }
         System.out.println(sum);
+
     }
 }
