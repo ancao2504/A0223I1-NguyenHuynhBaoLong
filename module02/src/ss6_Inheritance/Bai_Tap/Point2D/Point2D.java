@@ -1,4 +1,4 @@
-package ss6_Inheritance.Bai_Tap;
+package ss6_Inheritance.Bai_Tap.Point2D;
 
 public class Point2D {
     private float x = 0.0f;
@@ -14,7 +14,7 @@ public class Point2D {
     }
 
     public float getX() {
-        return this.x;
+        return x;
     }
 
     public void setX(float x) {
@@ -22,7 +22,7 @@ public class Point2D {
     }
 
     public float getY() {
-        return this.y;
+        return y;
     }
 
     public void setY(float y) {

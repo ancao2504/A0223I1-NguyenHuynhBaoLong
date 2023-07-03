@@ -1,4 +1,6 @@
-package ss6_Inheritance.Bai_Tap;
+package ss6_Inheritance.Bai_Tap.Point_MoveablePoint;
+
+import ss6_Inheritance.Bai_Tap.Point_MoveablePoint.Point;
 
 public class MoveablePoint extends Point {
     private float xSpeed = 0.0f;

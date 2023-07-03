@@ -1,4 +1,7 @@
-package ss6_Inheritance.Bai_Tap;
+package ss6_Inheritance.Bai_Tap.Point2D;
+
+import ss6_Inheritance.Bai_Tap.Point2D.Point2D;
+import ss6_Inheritance.Bai_Tap.Point2D.Point3D;
 
 public class TestPoint {
     public static void main(String[] args) {

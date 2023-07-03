@@ -1,4 +1,4 @@
-package ss6_Inheritance.Bai_Tap;
+package ss6_Inheritance.Bai_Tap.Point_MoveablePoint;
 
 public class Point {
     private float x = 0.0f;

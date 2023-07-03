@@ -1,6 +1,8 @@
-package ss6_Inheritance.Bai_Tap;
+package ss6_Inheritance.Bai_Tap.Point2D;
 
-public class Point3D extends  Point2D{
+import ss6_Inheritance.Bai_Tap.Point2D.Point2D;
+
+public class Point3D extends Point2D {
     private float z = 0.0f;
 
     public Point3D() {

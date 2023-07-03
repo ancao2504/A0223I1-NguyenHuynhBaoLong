@@ -1,4 +1,7 @@
-package ss6_Inheritance.Bai_Tap;
+package ss6_Inheritance.Bai_Tap.Point_MoveablePoint;
+
+import ss6_Inheritance.Bai_Tap.Point_MoveablePoint.MoveablePoint;
+import ss6_Inheritance.Bai_Tap.Point_MoveablePoint.Point;
 
 public class TestMovePoint {
     public static void main(String[] args) {
