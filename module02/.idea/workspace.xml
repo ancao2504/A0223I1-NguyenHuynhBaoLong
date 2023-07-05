@@ -2,70 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c883bec0-e202-40d0-829a-37e0da8d650e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CG-DN CaseStudy Furama Resort Module 2_v3.0_TrungDP.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Bai_tap/colorable/Circle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Bai_tap/colorable/IColorable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Bai_tap/colorable/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Bai_tap/colorable/Rectangle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Bai_tap/colorable/Shape.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Bai_tap/colorable/Square.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Bai_tap/shape/Circle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Bai_tap/shape/IResizeable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Bai_tap/shape/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Bai_tap/shape/Rectangle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Bai_tap/shape/Shape.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Thuc_hanh/Comparable/ComparableCircle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Thuc_hanh/Comparable/ComparableCircleTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Thuc_hanh/animal/AbstractAndInterfaceTests.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Thuc_hanh/animal/Animal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Thuc_hanh/animal/Apple.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Thuc_hanh/animal/Chicken.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Thuc_hanh/animal/Fruit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Thuc_hanh/animal/IEdible.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss7_Abstract_Class_Interface/Thuc_hanh/animal/Tiger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss8_clean_code_refactoring/practise/Refactoring_method/Cylinder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss8_clean_code_refactoring/practise/Refactoring_method/CylinderTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss8_clean_code_refactoring/practise/Refactoring_name_const/Calculator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss8_clean_code_refactoring/practise/Refactoring_name_const/CalculatorTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss8_clean_code_refactoring/practise/Refactoring_variable/fizzBuzz.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/module02/ss8_clean_code_refactoring/practise/Refactoring_variable/fizzBuzzTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Bai_tap/colorable/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Bai_tap/colorable/IColorable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Bai_tap/colorable/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Bai_tap/colorable/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Bai_tap/colorable/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Bai_tap/colorable/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Bai_tap/shape/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Bai_tap/shape/IResizeable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Bai_tap/shape/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Bai_tap/shape/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Bai_tap/shape/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Thuc_hanh/Comparable/ComparableCircle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Thuc_hanh/Comparable/ComparableCircleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Thuc_hanh/animal/AbstractAndInterfaceTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Thuc_hanh/animal/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Thuc_hanh/animal/Apple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Thuc_hanh/animal/Chicken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Thuc_hanh/animal/Fruit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Thuc_hanh/animal/IEdible.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Abstract_Class_Interface/Thuc_hanh/animal/Tiger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss8_clean_code_refactoring/exercise/TennisGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss8_clean_code_refactoring/practise/Refactoring_method/Cylinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss8_clean_code_refactoring/practise/Refactoring_method/CylinderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss8_clean_code_refactoring/practise/Refactoring_name_const/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss8_clean_code_refactoring/practise/Refactoring_name_const/CalculatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss8_clean_code_refactoring/practise/Refactoring_variable/fizzBuzz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss8_clean_code_refactoring/practise/Refactoring_variable/fizzBuzzTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/module02.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss3_Array_Method/Bai_tap/CountChar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss3_Array_Method/Bai_tap/CountChar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/MoveablePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Point_MoveablePoint/MoveablePoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Point_MoveablePoint/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Point2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Point2D/Point2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Point3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Point2D/Point3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/TestMovePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Point_MoveablePoint/TestMovePoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/TestPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_Inheritance/Bai_Tap/Point2D/TestPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss6_Inheritance/Bai_Tap/MoveablePoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss6_Inheritance/Bai_Tap/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss6_Inheritance/Bai_Tap/Point2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss6_Inheritance/Bai_Tap/Point3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss6_Inheritance/Bai_Tap/TestMovePoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss6_Inheritance/Bai_Tap/TestPoint.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -103,13 +47,18 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
-  <component name="RunManager" selected="JUnit.CylinderTest">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss7_Abstract_Class_Interface.Bai_tap.colorable.Main" />
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ss10_DSA_list.exercise.ArrayList" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="LinkListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss10_DSA_list.practice.link_list_basic.LinkListTest" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss7_Abstract_Class_Interface.Bai_tap.colorable.*" />
+          <option name="PATTERN" value="ss10_DSA_list.practice.link_list_basic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,74 +66,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss10_DSA_list.exercise.LinkList.LinkedListTest" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss8_clean_code_refactoring.practise.Refactoring_name_const.*" />
+          <option name="PATTERN" value="ss10_DSA_list.exercise.LinkList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ss8_clean_code_refactoring.practise.Refactoring_name_const" />
-      <option name="MAIN_CLASS_NAME" value="ss8_clean_code_refactoring.practise.Refactoring_name_const.CalculatorTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CylinderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ListTesst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss10_DSA_list.practice.list_basic.ListTesst" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss8_clean_code_refactoring.practise.Refactoring_method.*" />
+          <option name="PATTERN" value="ss10_DSA_list.practice.list_basic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ss8_clean_code_refactoring.practise.Refactoring_method" />
-      <option name="MAIN_CLASS_NAME" value="ss8_clean_code_refactoring.practise.Refactoring_method.CylinderTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="fizzBuzzTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MVC.view.Main" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss8_clean_code_refactoring.practise.Refactoring_variable.*" />
+          <option name="PATTERN" value="MVC.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ss8_clean_code_refactoring.practise.Refactoring_variable" />
-      <option name="MAIN_CLASS_NAME" value="ss8_clean_code_refactoring.practise.Refactoring_variable.fizzBuzzTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="fizzBuzzTest.testBuzz5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss10_DSA_list.exercise.ArrayList.MyListTest" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss8_clean_code_refactoring.practise.Refactoring_variable.*" />
+          <option name="PATTERN" value="ss10_DSA_list.exercise.ArrayList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ss8_clean_code_refactoring.practise.Refactoring_variable" />
-      <option name="MAIN_CLASS_NAME" value="ss8_clean_code_refactoring.practise.Refactoring_variable.fizzBuzzTest" />
-      <option name="METHOD_NAME" value="testBuzz5" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CylinderTest" />
-        <item itemvalue="JUnit.CalculatorTest" />
-        <item itemvalue="JUnit.fizzBuzzTest.testBuzz5" />
-        <item itemvalue="JUnit.fizzBuzzTest" />
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.LinkedListTest" />
+        <item itemvalue="Application.MyListTest" />
+        <item itemvalue="Application.ListTesst" />
+        <item itemvalue="Application.LinkListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -215,6 +155,11 @@
       <workItem from="1687954254854" duration="7593000" />
       <workItem from="1688126701931" duration="6174000" />
       <workItem from="1688382103857" duration="191000" />
+      <workItem from="1688382549793" duration="11773000" />
+      <workItem from="1688528827242" duration="5497000" />
+      <workItem from="1688546604742" duration="1059000" />
+      <workItem from="1688560179462" duration="718000" />
+      <workItem from="1688560949635" duration="5485000" />
     </task>
     <servers />
   </component>
