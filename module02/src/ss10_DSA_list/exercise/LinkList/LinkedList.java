@@ -91,4 +91,63 @@ public class LinkedList <E> {
         }
         return returnLinkedList;
     }
+
+    public E getFirst() {
+        Node temp=head;
+        if (numNodes == 0) {
+            throw new NullPointerException("This linked list return null");
+        }
+        return (E) temp.getData();
+    }
+
+    public E getLast() {
+        Node temp = head;
+        if (numNodes == 0) {
+            throw new NullPointerException("this linked list return null");
+        }
+        while (temp != null) {
+            temp=temp.next;
+        }
+        return (E) temp.getData();
+    }
+
+    public void clear() {
+        head = null;
+        numNodes=0;
+    }
+
+    public int size() {
+        return numNodes;
+    }
+
+    public Boolean contain(E e) {
+        Node temp=head;
+        while (temp!=null){
+            if (e == temp.data) {
+                return true;
+            } else {
+                temp=temp.next;
+            }
+        }
+        return false;
+    }
+
+    public int indexOf(E e) {
+        Node temp = head;
+        for (int i = 0; i < numNodes; i++) {
+            if(e == temp.data) {
+                return Integer.parseInt("index is: "+i);
+            }
+            temp=temp.next;
+        }
+        return -1;
+    }
+
+    public E get(int i) {
+        Node temp = head;
+        for (int j = 0; j < i; j++) {
+            temp= temp.next;
+        }
+        return (E) temp.data;
+    }
 }

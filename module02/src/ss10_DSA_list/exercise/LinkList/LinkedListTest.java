@@ -9,11 +9,14 @@ public class LinkedListTest {
         ll.add(4,5);
         ll.addFirst(100);
         ll.addLast(200);
-        System.out.println("data remove "+ll.remove(1));
+//        System.out.println("data remove "+ll.remove(1));
+//        ll.printList();
+//
+//        System.out.println(ll.clone());
+//
+//        ll.clear();
         ll.printList();
-
-        System.out.println(ll.clone());
-
+        System.out.println(ll.get(0));
 
     }
 }

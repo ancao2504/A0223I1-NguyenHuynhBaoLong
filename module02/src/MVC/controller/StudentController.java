@@ -13,8 +13,8 @@ public class StudentController {
         System.out.println("1.Thêm học sinh");
         System.out.println("2.Xóa học sinh");
         System.out.println("3.Hiển thị danh sách");
-        int choise = Integer.parseInt(scanner.nextLine());
-        switch (choise) {
+        int choice = Integer.parseInt(scanner.nextLine());
+        switch (choice) {
             case 1:
                 iStudentService.addStudent();
                 break;
