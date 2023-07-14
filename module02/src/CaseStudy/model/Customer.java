@@ -12,6 +12,11 @@ public class Customer extends Person{
         this.address = address;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() +" \n địa chỉ: "+this.address+" \n loại khách: "+this.typeOfGuest+"\n";
+    }
+
     public Customer(String name, String dateOfBirth, String sex, int ID, int phoneNumber, String email, String typeOfGuest, String address) {
         super(name, dateOfBirth, sex, ID, phoneNumber, email);
         this.typeOfGuest = typeOfGuest;

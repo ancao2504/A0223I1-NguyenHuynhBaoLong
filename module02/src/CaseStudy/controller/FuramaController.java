@@ -1,40 +1,42 @@
 package CaseStudy.controller;
 
+import CaseStudy.service.ICustomerService;
 import CaseStudy.service.IEmployeeService;
-import CaseStudy.service.impl.EmployeeService;
+import CaseStudy.service.IFacilityService;
+import CaseStudy.service.impl.CustomerServiceImpl;
+import CaseStudy.service.impl.EmployeeServiceImpl;
+import CaseStudy.service.impl.FacilityServiceImpl;
 
 
 import java.util.Scanner;
 
 public class FuramaController {
-    private static IEmployeeService iEmployeeService = new EmployeeService();
+    private static IEmployeeService iEmployeeService = new EmployeeServiceImpl();
+    private static ICustomerService iCustomerService = new CustomerServiceImpl();
+    private static IFacilityService iFacilityService = new FacilityServiceImpl();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void displayMainMenu() {
         Boolean check = true;
         while (check == true) {
+            System.out.println("---------Main menu------------");
             System.out.println("1.Employee Management");
             System.out.println("2.Customer Management");
             System.out.println("3.Facility Management");
             System.out.println("4.Booking Management");
             System.out.println("5.Promotion Management");
             System.out.println("6.Exit");
+            System.out.println("-----------------------------");
             int choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
                 case 1:
-                    iEmployeeService.menuOfEmployees();
+                    iEmployeeService.displayMenu();
                     break;
                 case 2:
-                    System.out.println("1.Display list customers");
-                    System.out.println("2.Add new customer");
-                    System.out.println("3.Edit customer");
-                    System.out.println("4.Return main menu");
+                   iCustomerService.displayMenu();
                     break;
                 case 3:
-                    System.out.println("1.Display list facility");
-                    System.out.println("2.Add new facility");
-                    System.out.println("3.Edit facility");
-                    System.out.println("4.Return main menu");
+                   iFacilityService.displayMenu();
                     break;
                 case 4:
                     System.out.println("1.Add new booking");
