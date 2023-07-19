@@ -4,39 +4,10 @@
     <list default="true" id="c883bec0-e202-40d0-829a-37e0da8d650e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/controller/FuramaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/controller/FuramaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/IRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/IRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/impl/Repository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/IEmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/IEmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/IService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/IService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/Service.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10/DemoSet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10/mvc/controller/StudentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10/mvc/model/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10/mvc/model/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10/mvc/repository/IStudentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10/mvc/repository/impl/StudentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10/mvc/service/IStudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10/mvc/service/impl/StudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10/mvc/view/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/controller/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/controller/FuramaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/repository/IRepositoryEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/repository/IRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/repository/impl/RepositoryEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/repository/impl/RepositoryEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/service/IEmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/IService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/service/IService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/impl/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/impl/Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10/DemoSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss10_DemoMVC/DemoSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10/mvc/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10/mvc/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10/mvc/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10/mvc/repository/IStudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/repository/IStudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10/mvc/repository/impl/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/repository/impl/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10/mvc/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/service/IStudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10/mvc/service/impl/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/service/impl/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10/mvc/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/view/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/EmployeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Access_Modifier/Bai_tap/TestCircle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss5_Access_Modifier/Bai_tap/TestCircle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss5_Access_Modifier/Bai_tap/TestCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss5_Access_Modifier/Bai_tap/TestCircle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,13 +61,13 @@
       <recent name="ss10_DSA_list.exercise.ArrayList" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
-    <configuration name="DemoComparable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss12_Map_Tree.DemoComparable" />
+  <component name="RunManager" selected="Application.FindString">
+    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss13_algorithm_search.practice.BinarySearch" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss12_Map_Tree.*" />
+          <option name="PATTERN" value="ss13_algorithm_search.practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss12_Map_Tree.exercise.view.Main" />
+    <configuration name="CountChar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss11_DSA_stack_queue.exercise.CountChar" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss12_Map_Tree.exercise.view.*" />
+          <option name="PATTERN" value="ss11_DSA_stack_queue.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CaseStudy.view.Main" />
+    <configuration name="FindString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss13_algorithm_search.exercise.FindString" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="CaseStudy.view.*" />
+          <option name="PATTERN" value="ss13_algorithm_search.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss12_Map_Tree.practice.hashMap_hashSet.Main" />
+    <configuration name="Recursive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss13_algorithm_search.practice.optional.Recursive" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss12_Map_Tree.practice.hashMap_hashSet.*" />
+          <option name="PATTERN" value="ss13_algorithm_search.practice.optional.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss12_Map_Tree.practice.TestMap" />
+    <configuration name="TestCircle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss5_Access_Modifier.Bai_tap.TestCircle" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss12_Map_Tree.practice.*" />
+          <option name="PATTERN" value="ss5_Access_Modifier.Bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -158,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.DemoComparable" />
-        <item itemvalue="Application.TestMap" />
+        <item itemvalue="Application.FindString" />
+        <item itemvalue="Application.CountChar" />
+        <item itemvalue="Application.Recursive" />
+        <item itemvalue="Application.BinarySearch" />
+        <item itemvalue="Application.TestCircle" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +183,10 @@
       <workItem from="1689233339751" duration="5296000" />
       <workItem from="1689243755256" duration="4099000" />
       <workItem from="1689247948545" duration="196000" />
-      <workItem from="1689331595313" duration="10409000" />
+      <workItem from="1689331595313" duration="11957000" />
+      <workItem from="1689412433730" duration="145000" />
+      <workItem from="1689595233119" duration="8627000" />
+      <workItem from="1689643514754" duration="2916000" />
     </task>
     <servers />
   </component>
