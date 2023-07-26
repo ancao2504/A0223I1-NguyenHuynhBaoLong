@@ -14,6 +14,7 @@ public class Repository implements IRepository {
     private static Map<Integer, Product> map = new HashMap<>();
 
 
+
     @Override
     public void add(Product product) {
         if (list.isEmpty()) {

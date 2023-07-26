@@ -1,45 +1,67 @@
 package CaseStudy.model;
 
 public class Employee extends Person{
-    private int code;
-    private String level;
-    private String nominee;
+    private String codeEmployee;
+    private String standard;
+    private double salary;
+    private String position;
+
     public Employee() {
     }
 
-    public Employee(String name, String dateOfBirth, String sex, long ID, int phoneNumber, String email, int code, String level, String nominee) {
-        super( name, dateOfBirth, sex, ID, phoneNumber, email);
-        this.code = code;
-        this.level = level;
-        this.nominee=nominee;
+    public Employee(String name, long phoneNumber, String email, String gender, String dateOfBirth, String iD, String codeEmployee, String standard, double salary, String position) {
+        super(name, phoneNumber, email, gender, dateOfBirth, iD);
+        this.codeEmployee = codeEmployee;
+        this.standard = standard;
+        this.salary = salary;
+        this.position = position;
     }
 
-    public int getCode() {
-        return code;
+    public String getCodeEmployee() {
+        return codeEmployee;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setCodeEmployee(String codeEmployee) {
+        this.codeEmployee = codeEmployee;
     }
 
-    public String getLevel() {
-        return level;
+    public String getStandard() {
+        return standard;
     }
 
-    public void setLevel(String level) {
-        this.level = level;
+    public void setStandard(String standard) {
+        this.standard = standard;
     }
 
-    public String getNominee() {
-        return nominee;
+    public double getSalary() {
+        return salary;
     }
 
-    public void setNominee(String nominee) {
-        this.nominee = nominee;
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 
     @Override
     public String toString() {
-        return super.toString() +" \n level: "+this.level+" \n mã: "+this.code+"\n vị trí: "+this.nominee +"\n";
+
+        return  "name: " +this.getName()+'\n'+
+                "ID:" +this.getID()+'\n'+
+                "date of birth: " + this.getDateOfBirth()+"\n"+
+                 "gender:  "+this.getGender()+ '\n'+
+                "codeEmployee=" + this.getCodeEmployee()+ '\n' +
+                "standard=" + standard + '\n' +
+                "salary=" + salary +
+                " position=" + position + '\n' +
+                "phone number= " +this.getPhoneNumber()+"\n" +
+                "email: " + this.getEmail()+ "\n" +
+                "-------------------------------";
     }
 }

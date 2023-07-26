@@ -2,24 +2,22 @@ package CaseStudy.model;
 
 public abstract class Person {
     private String name;
-    private String dateOfBirth;
-    private String sex;
-    private long ID;
-    private int phoneNumber;
+    private long phoneNumber;
     private String email;
+    private String gender;
+    private String dateOfBirth;
+    private String ID;
 
-
-    public Person() {
-    }
-
-    public Person(String name, String dateOfBirth, String sex, long ID, int phoneNumber, String email) {
+    public Person(String name, long phoneNumber, String email, String gender, String dateOfBirth, String iD) {
         this.name = name;
-        this.dateOfBirth = dateOfBirth;
-        this.sex = sex;
-        this.ID = ID;
         this.phoneNumber = phoneNumber;
         this.email = email;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.ID = iD;
+    }
 
+    public Person() {
     }
 
     public String getName() {
@@ -30,35 +28,11 @@ public abstract class Person {
         this.name = name;
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public long getID() {
-        return ID;
-    }
-
-    public void setID(long ID) {
-        this.ID = ID;
-    }
-
-    public int getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -70,7 +44,37 @@ public abstract class Person {
         this.email = email;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    @Override
     public String toString() {
-        return "tên: " + this.name + "\n số điện thoại: " + this.phoneNumber + "\n CMND: " + this.ID + "\n Giới tính: " + this.sex + "\n ngày sinh: " + this.dateOfBirth + "\n Email: " + this.email ;
+        return "name='" + name + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", email='" + email + '\'' +
+                ", gender='" + gender + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", iD='" + ID + '\'';
     }
 }

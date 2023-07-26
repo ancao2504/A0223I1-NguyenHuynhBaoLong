@@ -3,11 +3,77 @@
   <component name="ChangeListManager">
     <list default="true" id="c883bec0-e202-40d0-829a-37e0da8d650e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/controller/FuramaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/controller/FuramaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/CustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/EmployeeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss5_Access_Modifier/Bai_tap/TestCircle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss5_Access_Modifier/Bai_tap/TestCircle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss5_Access_Modifier/Bai_tap/TestCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss5_Access_Modifier/Bai_tap/TestCircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG-DN CaseStudy Furama Resort Module 2_v3.0_TrungDP.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/controller/FuramaController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Booking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Contract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Facility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Facility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/House.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Villa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/IRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/IRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/IRepositoryCustomer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/IRepositoryEmployee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/impl/RepositoryCustomer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/impl/RepositoryEmployee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/IBookingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/IContractService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/ICustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/IEmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/IEmployeeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/IFacilityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/IService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/CustomerServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/EmployeeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/FacilityServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/view/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/view/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/MVC/controller/StudentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/MVC/model/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/MVC/model/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/MVC/repository/IStudentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/MVC/repository/impl/StudentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/MVC/service/IStudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/MVC/service/impl/StudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/MVC/view/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/repository/impl/StudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/repository/impl/StudentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss12_Map_Tree/exercise/repository/impl/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss12_Map_Tree/exercise/repository/impl/Repository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/controller/FuramaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Booking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Contract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/model/Facility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/House.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Room.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Villa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/repository/IRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/repository/IEmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/repository/IRepositoryCustomer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/repository/IRepositoryEmployee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/repository/impl/RepositoryCustomer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/repository/impl/RepositoryEmployee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/IBookingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/IContractService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/ICustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/service/IEmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/IFacilityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/IService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/impl/CustomerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/impl/EmployeeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/impl/FacilityServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/view/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/model/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/model/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/repository/IStudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/repository/impl/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/service/IStudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/service/impl/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/view/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/repository/impl/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/repository/impl/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss12_Map_Tree/exercise/repository/impl/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss12_Map_Tree/exercise/repository/impl/Repository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,17 +123,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="CaseStudy.controller" />
       <recent name="CaseStudy.repository" />
       <recent name="ss10_DSA_list.exercise.ArrayList" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FindString">
-    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss13_algorithm_search.practice.BinarySearch" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="IllegalTriangleException" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss15_exception.exercise.IllegalTriangleException" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss13_algorithm_search.practice.*" />
+          <option name="PATTERN" value="ss15_exception.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -75,12 +142,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountChar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss11_DSA_stack_queue.exercise.CountChar" />
+    <configuration name="InsertionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss14_algorithm_sort.exercise.InsertionSort" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss11_DSA_stack_queue.exercise.*" />
+          <option name="PATTERN" value="ss14_algorithm_sort.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,12 +155,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss13_algorithm_search.exercise.FindString" />
+    <configuration name="InsertionSortStep" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss14_algorithm_sort.exercise.InsertionSortStep" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss13_algorithm_search.exercise.*" />
+          <option name="PATTERN" value="ss14_algorithm_sort.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,12 +168,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Recursive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss13_algorithm_search.practice.optional.Recursive" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CaseStudy.view.Main" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss13_algorithm_search.practice.optional.*" />
+          <option name="PATTERN" value="CaseStudy.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,12 +181,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCircle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss5_Access_Modifier.Bai_tap.TestCircle" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss15_exception.exercise.Main" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss5_Access_Modifier.Bai_tap.*" />
+          <option name="PATTERN" value="ss15_exception.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,11 +196,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FindString" />
-        <item itemvalue="Application.CountChar" />
-        <item itemvalue="Application.Recursive" />
-        <item itemvalue="Application.BinarySearch" />
-        <item itemvalue="Application.TestCircle" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.IllegalTriangleException" />
+        <item itemvalue="Application.InsertionSortStep" />
+        <item itemvalue="Application.InsertionSort" />
       </list>
     </recent_temporary>
   </component>
@@ -187,6 +253,14 @@
       <workItem from="1689412433730" duration="145000" />
       <workItem from="1689595233119" duration="8627000" />
       <workItem from="1689643514754" duration="2916000" />
+      <workItem from="1689769891488" duration="3649000" />
+      <workItem from="1689942978448" duration="6552000" />
+      <workItem from="1689998444259" duration="3673000" />
+      <workItem from="1690076806817" duration="3956000" />
+      <workItem from="1690186272269" duration="82000" />
+      <workItem from="1690201451665" duration="2625000" />
+      <workItem from="1690204119915" duration="3006000" />
+      <workItem from="1690249917205" duration="535000" />
     </task>
     <servers />
   </component>

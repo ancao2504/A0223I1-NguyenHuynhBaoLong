@@ -1,34 +1,24 @@
 package CaseStudy.model;
 
 public class Customer extends Person{
-    private String typeOfGuest;
+    private String typeOfCustomer;
     private String address;
 
-    public Customer() {
+    public Customer () {
     }
 
-    public Customer(String typeOfGuest, String address) {
-        this.typeOfGuest = typeOfGuest;
+    public Customer(String name, long phoneNumber, String email, String gender, String dateOfBirth, String iD, String typeOfCustomer, String address) {
+        super(name, phoneNumber, email, gender, dateOfBirth, iD);
+        this.typeOfCustomer = typeOfCustomer;
         this.address = address;
     }
 
-    @Override
-    public String toString() {
-        return super.toString() +" \n địa chỉ: "+this.address+" \n loại khách: "+this.typeOfGuest+"\n";
+    public String getTypeOfCustomer() {
+        return typeOfCustomer;
     }
 
-    public Customer(String name, String dateOfBirth, String sex, int ID, int phoneNumber, String email, String typeOfGuest, String address) {
-        super(name, dateOfBirth, sex, ID, phoneNumber, email);
-        this.typeOfGuest = typeOfGuest;
-        this.address = address;
-    }
-
-    public String getTypeOfGuest() {
-        return typeOfGuest;
-    }
-
-    public void setTypeOfGuest(String typeOfGuest) {
-        this.typeOfGuest = typeOfGuest;
+    public void setTypeOfCustomer(String typeOfCustomer) {
+        this.typeOfCustomer = typeOfCustomer;
     }
 
     public String getAddress() {
@@ -37,5 +27,17 @@ public class Customer extends Person{
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "typeOfCustomer=" + typeOfCustomer + '\n' +
+                "address=" + address + '\n' +
+                "name= " + this.getName() + '\n' +
+                "phoneNumber= " + this.getPhoneNumber() + '\n' +
+                ", email='" + this.getEmail() + '\n' +
+                ", gender='" + this.getGender() + '\n' +
+                ", dateOfBirth='" + this.getDateOfBirth() + '\'' +
+                ", iD='" + this.getID() + '\'';
     }
 }
