@@ -1,13 +1,13 @@
 package CaseStudy.model;
 
-public class Customer extends Person{
+public class Customer extends Person {
     private String typeOfCustomer;
     private String address;
 
-    public Customer () {
+    public Customer() {
     }
 
-    public Customer(String name, long phoneNumber, String email, String gender, String dateOfBirth, String iD, String typeOfCustomer, String address) {
+    public Customer(String name, String phoneNumber, String email, String gender, String dateOfBirth, String iD, String typeOfCustomer, String address) {
         super(name, phoneNumber, email, gender, dateOfBirth, iD);
         this.typeOfCustomer = typeOfCustomer;
         this.address = address;
@@ -31,13 +31,13 @@ public class Customer extends Person{
 
     @Override
     public String toString() {
-        return "typeOfCustomer=" + typeOfCustomer + '\n' +
-                "address=" + address + '\n' +
-                "name= " + this.getName() + '\n' +
+        return "name= " + this.getName() + '\n' +
                 "phoneNumber= " + this.getPhoneNumber() + '\n' +
-                ", email='" + this.getEmail() + '\n' +
-                ", gender='" + this.getGender() + '\n' +
-                ", dateOfBirth='" + this.getDateOfBirth() + '\'' +
-                ", iD='" + this.getID() + '\'';
+                "email='" + this.getEmail() + '\n' +
+                "gender='" + this.getGender() + '\n' +
+                "dateOfBirth='" + this.getDateOfBirth() + '\n' +
+                "ID='" + this.getID() + '\n' +
+                "typeOfCustomer=" + typeOfCustomer + '\n' +
+                "address=" + address + '\n' ;
     }
 }

@@ -2,13 +2,13 @@ package CaseStudy.model;
 
 public abstract class Person {
     private String name;
-    private long phoneNumber;
+    private String phoneNumber;
     private String email;
     private String gender;
     private String dateOfBirth;
     private String ID;
 
-    public Person(String name, long phoneNumber, String email, String gender, String dateOfBirth, String iD) {
+    public Person(String name, String phoneNumber, String email, String gender, String dateOfBirth, String iD) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
@@ -28,11 +28,11 @@ public abstract class Person {
         this.name = name;
     }
 
-    public long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

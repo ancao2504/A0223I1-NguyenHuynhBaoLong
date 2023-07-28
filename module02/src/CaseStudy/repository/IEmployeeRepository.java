@@ -7,10 +7,12 @@ import java.util.List;
 public interface IEmployeeRepository<E> {
     List<E> display();
 
-    Boolean add(E e);
+    void add(E e);
 
 
-    E edit(String id);
+    //E edit(String id);
 
-    Boolean deleteEmployee(String id);
+    void deleteEmployee(String id);
+
+    void searchEmployee(String id);
 }

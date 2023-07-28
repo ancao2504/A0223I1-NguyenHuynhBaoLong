@@ -1,7 +1,8 @@
 package CaseStudy.controller;
 
-import CaseStudy.model.Employee;
+import CaseStudy.service.ICustomerService;
 import CaseStudy.service.IEmployeeService;
+import CaseStudy.service.impl.CustomerService;
 import CaseStudy.service.impl.EmployeeService;
 
 import java.util.Scanner;
@@ -9,6 +10,7 @@ import java.util.Scanner;
 public class Controller {
     private  static Scanner scanner = new Scanner(System.in);
     private static IEmployeeService iEmployeeService = new EmployeeService();
+    private static ICustomerService iCustomerService = new CustomerService();
 
     public static void mainMenu() {
         Boolean check = true;
@@ -32,6 +34,9 @@ public class Controller {
             switch (choose) {
                 case 1:
                     iEmployeeService.employeeMenu();
+                    break;
+                case 2:
+                    iCustomerService.customerMenu();
                     break;
                 case 6:
                     check = false;

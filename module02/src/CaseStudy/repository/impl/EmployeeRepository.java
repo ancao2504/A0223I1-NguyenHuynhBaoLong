@@ -1,60 +1,75 @@
 package CaseStudy.repository.impl;
 
+import CaseStudy.common.ReadAndWriteFile;
 import CaseStudy.model.Employee;
 import CaseStudy.repository.IEmployeeRepository;
 
 import java.util.*;
 
 public class EmployeeRepository implements IEmployeeRepository<Employee> {
-    private static List<Employee> employeeList = new ArrayList<>();
-    private static Map<String, Employee> map = new HashMap<>();
+    public static final String SRC_EMPLOYEE = "src/CaseStudy/data/Employee.csv";
     private Scanner scanner = new Scanner(System.in);
 
-    static {
-        employeeList.add(new Employee("long", 1223432, "acs", "b", "12/12/12",
-                "1", "121", "ll", 123, "ádas"));
-        employeeList.add(new Employee("b", 1223432, "acs", "b", "12/12/12",
-                "2", "121", "ll", 123, "ádas"));
-        employeeList.add(new Employee("a", 1223432, "acs", "b", "12/12/12",
-                "3", "121", "ll", 123, "ádas"));
 
-        for (Employee employee : employeeList) {
-            map.put(employee.getID(), employee);
+    @Override
+    public List<Employee> display() {
+        List<Employee> employees = new ArrayList<>();
+        List<String> stringList = ReadAndWriteFile.readFile(SRC_EMPLOYEE);
+        String[] temp;
+        for (String string : stringList) {
+            temp = string.split(",");
+
+            employees.add(new Employee(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5], temp[6], temp[7], Double.parseDouble(temp[8]), temp[9]));
+        }
+        return employees;
+    }
+
+
+    @Override
+    public void add(Employee employee) {
+
+        ReadAndWriteFile.writeFile(SRC_EMPLOYEE, convertToString(employee), true);
+    }
+
+
+
+    @Override
+    public void deleteEmployee(String id) {
+      List<Employee> list = display();
+        for(Employee employee : list){
+            if (employee.getID().equals(id)) {
+                System.out.println("You sure to delete this employee get id: "+id);
+                System.out.println("1. Yes");
+                System.out.println("2.No");
+                int choice = Integer.parseInt(new Scanner(System.in).nextLine());
+                if (choice==1) {
+                    list.remove(employee);
+                    String line = "";
+                    for (Employee newEmployee : list) {
+                        line+=convertToString(newEmployee)+'\n';
+                    }
+                    ReadAndWriteFile.writeFile(SRC_EMPLOYEE,line,false);
+                }
+                break;
+            }
         }
     }
 
     @Override
-    public List display() {
-        return employeeList;
+    public void searchEmployee(String id) {
+        List<Employee> list = display();
+        for (Employee employee :list) {
+            if (employee.getID().equals(id)) {
+                System.out.println(employee.toString());
+                break;
+            }
+        }
+
     }
 
-    @Override
-    public Boolean add(Employee employee) {
-        if (!map.containsKey(employee.getID())) {
-            employeeList.add(employee);
-            map.put(employee.getID(), employee);
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    @Override
-    public Employee edit(String id) {
-        if (!map.containsKey(id)) {
-            return null;
-        } else {
-            return map.get(id);
-        }
-    }
-
-    @Override
-    public Boolean deleteEmployee(String id) {
-        if (!map.containsKey(id)) {
-            return false;
-        } else {
-            employeeList.remove(map.get(id));
-            return true;
-        }
+    private String convertToString(Employee employee) {
+        return employee.getName() + "," + employee.getPhoneNumber() + "," + employee.getEmail() + "," + employee.getGender() + "," + employee.getDateOfBirth() +
+                "," + employee.getID() + "," + employee.getCodeEmployee() + "," + employee.getStandard() + "," + employee.getSalary() +
+                "," + employee.getPosition();
     }
 }
