@@ -1,12 +1,16 @@
 package CaseStudy.service.impl;
 
+import CaseStudy.Exception.NameServiceException;
+import CaseStudy.Exception.ServiceCodeException;
 import CaseStudy.model.Facility;
 import CaseStudy.model.House;
+import CaseStudy.model.Room;
 import CaseStudy.model.Villa;
 import CaseStudy.repository.IFacilityRepository;
 import CaseStudy.repository.impl.FacilityRepository;
 import CaseStudy.service.IFacilityService;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class FacilityService implements IFacilityService {
@@ -34,7 +38,10 @@ public class FacilityService implements IFacilityService {
             }
             switch (choose) {
                 case 1:
-//                    List<Facility> list = iFacilityRepository.display();
+                    List<Facility> list = iFacilityRepository.display();
+                    for (Facility facility : list) {
+                        System.out.println(facility);
+                    }
                     break;
                 case 2:
                     addNewService();
@@ -59,29 +66,96 @@ public class FacilityService implements IFacilityService {
                 case 1:
                     Villa villa = vilaInfo();
                     iFacilityRepository.addNewService(villa);
-                    System.out.println("--------------SUCCESS------------");
                     break;
                 case 2:
-                    Facility house = houseInfo();
+                    House house = (House) houseInfo();
                     iFacilityRepository.addNewService(house);
                     break;
+                case 3:
+                    Room room = roomInfo();
+                    iFacilityRepository.addNewService(room);
+                    break;
+                case 4:
+                    check = false;
+                    break;
             }
-
         }
+    }
+
+    public Room roomInfo() {
+        Room room = new Room();
+        Boolean check = true;
+        do {
+            System.out.print("service code: ");
+            String code = scanner.nextLine();
+            check = ServiceCodeException.checkCode(code);
+            room.setServiceCode(code);
+        } while (check == false);
+        do {
+            System.out.print("name service: ");
+            String name = (scanner.nextLine());
+            check = NameServiceException.checkNameService(name);
+            room.setNameService(name);
+        } while (check == false);
+        double areaPool;
+        do {
+            System.out.print("area use: ");
+            areaPool = Double.parseDouble(scanner.nextLine());
+            room.setAreaUse(areaPool);
+        } while (areaPool < 30);
+        double fee;
+        do {
+            System.out.print("fee: ");
+            fee = Double.parseDouble(scanner.nextLine());
+            room.setFee(fee);
+        } while (fee <= 0);
+        int maxPeople;
+        do {
+            System.out.print("max people: ");
+            maxPeople = (Integer.parseInt(scanner.nextLine()));
+            room.setMaxPeople(maxPeople);
+        } while (maxPeople < 0 || maxPeople > 20);
+        System.out.print("style: ");
+        room.setStyle(scanner.nextLine());
+        System.out.print("free service: ");
+        room.setFreeService(scanner.nextLine());
+
+        return room;
     }
 
     public Facility houseInfo() {
         House house = new House();
-        System.out.print("service code: ");
-        house.setServiceCode(scanner.nextLine());
-        System.out.print("name service: ");
-        house.setNameService(scanner.nextLine());
-        System.out.print("area use: " );
-        house.setAreaUse(Double.parseDouble(scanner.nextLine()));
-        System.out.print("fee: ");
-        house.setFee(Double.parseDouble(scanner.nextLine()));
-        System.out.print("max people: ");
-        house.setMaxPeople(Integer.parseInt(scanner.nextLine()));
+        Boolean check = true;
+        do {
+            System.out.print("service code: ");
+            String code = scanner.nextLine();
+            check = ServiceCodeException.checkCode(code);
+            house.setServiceCode(code);
+        } while (check == false);
+        do {
+            System.out.print("name service: ");
+            String name = (scanner.nextLine());
+            check = NameServiceException.checkNameService(name);
+            house.setNameService(name);
+        } while (check == false);
+        double areaPool;
+        do {
+            System.out.print("area use: ");
+            areaPool = Double.parseDouble(scanner.nextLine());
+            house.setAreaUse(areaPool);
+        } while (areaPool < 30);
+        double fee;
+        do {
+            System.out.print("fee: ");
+            fee = Double.parseDouble(scanner.nextLine());
+            house.setFee(fee);
+        } while (fee <= 0);
+        int maxPeople;
+        do {
+            System.out.print("max people: ");
+            maxPeople = (Integer.parseInt(scanner.nextLine()));
+            house.setMaxPeople(maxPeople);
+        } while (maxPeople < 0 || maxPeople > 20);
         System.out.print("style: ");
         house.setStyle(scanner.nextLine());
         System.out.print("standard room: ");
@@ -94,16 +168,37 @@ public class FacilityService implements IFacilityService {
 
     public Villa vilaInfo() {
         Villa vila = new Villa();
-        System.out.print("service code: ");
-        vila.setServiceCode(scanner.nextLine());
-        System.out.print("name service: ");
-        vila.setNameService(scanner.nextLine());
-        System.out.print("area use: " );
-        vila.setAreaUse(Double.parseDouble(scanner.nextLine()));
-        System.out.print("fee: ");
-        vila.setFee(Double.parseDouble(scanner.nextLine()));
-        System.out.print("max people: ");
-        vila.setMaxPeople(Integer.parseInt(scanner.nextLine()));
+        Boolean check = true;
+        do {
+            System.out.print("service code: ");
+            String code = scanner.nextLine();
+            check = ServiceCodeException.checkCode(code);
+            vila.setServiceCode(code);
+        } while (check == false);
+        do {
+            System.out.print("name service: ");
+            String name = (scanner.nextLine());
+            check = NameServiceException.checkNameService(name);
+            vila.setNameService(name);
+        } while (check == false);
+        double areaPool;
+        do {
+            System.out.print("area use: ");
+            areaPool = Double.parseDouble(scanner.nextLine());
+            vila.setAreaUse(areaPool);
+        } while (areaPool < 30);
+        double fee;
+        do {
+            System.out.print("fee: ");
+            fee = Double.parseDouble(scanner.nextLine());
+            vila.setFee(fee);
+        } while (fee <= 0);
+        int maxPeople;
+        do {
+            System.out.print("max people: ");
+            maxPeople = (Integer.parseInt(scanner.nextLine()));
+            vila.setMaxPeople(maxPeople);
+        } while (maxPeople < 0 || maxPeople > 20);
         System.out.print("style: ");
         vila.setStyle(scanner.nextLine());
         System.out.print("standard room: ");

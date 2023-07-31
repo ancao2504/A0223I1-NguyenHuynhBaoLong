@@ -38,6 +38,6 @@ public class House extends Facility {
                 "maxPeople=" + getMaxPeople() + '\n' +
                 "style='" + getStyle() + '\n' +
                 "standardRoom=" + standardRoom + '\n' +
-                ", floor=" + floor + '\n';
+                "floor=" + floor + '\n';
     }
 }

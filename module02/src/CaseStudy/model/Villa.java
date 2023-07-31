@@ -49,6 +49,6 @@ public class Villa extends Facility{
                 "style='" + getStyle() + '\n'+
                 "standardRoom=" + standardRoom + '\n' +
                 "areaPool=" + areaPool + '\n'+
-                ", floor=" + floor + '\n';
+                "floor=" + floor + '\n';
     }
 }
