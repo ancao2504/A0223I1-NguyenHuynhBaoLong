@@ -1,7 +1,5 @@
 package ss17_IO_Binary.exercise;
 
-
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;

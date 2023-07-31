@@ -5,11 +5,12 @@ public class NameException extends Exception{
         super(mess);
     }
 
-    public Boolean checkName (String name) {
+
+    public static Boolean checkName (String name) {
         String regex = "^[A-Z][a-z]*(\\s[A-Z][a-z]*)*$";
         boolean check = name.matches(regex);
         try {
-            if (!check){
+            if (check == false){
                 throw new NameException("name isn't format: Nguyen Van A");
             }
         }catch (NameException e) {

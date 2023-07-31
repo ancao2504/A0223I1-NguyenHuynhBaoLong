@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c883bec0-e202-40d0-829a-37e0da8d650e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG-DN CaseStudy Furama Resort Module 2_v2.0.docx" beforeDir="false" afterPath="$PROJECT_DIR$/CG-DN CaseStudy Furama Resort Module 2_v2.0.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/Exception/NameException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/Exception/NameException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/IRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/impl/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/impl/EmployeeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/data/Employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/data/Employee.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Facility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Facility.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/EmployeeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss17_IO_Binary/optional/target.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/ss17_IO_Binary/optional/target.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/Exception/NameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/Exception/NameException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CaseStudy/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/repository/IEmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/repository/IEmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/repository/impl/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/repository/impl/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/data/Employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/data/Employee.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/model/Facility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/impl/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/service/impl/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss17_IO_Binary/exercise/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss17_IO_Binary/exercise/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +30,7 @@
         <option value="Enum" />
         <option value="JavaFXApplication" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -63,6 +64,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="Csv.Editor.Settings" />
   </component>
   <component name="RecentsManager">
@@ -72,13 +76,26 @@
       <recent name="ss10_DSA_list.exercise.ArrayList" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss17_IO_Binary.optional.Main" />
+  <component name="RunManager" selected="Application.Crawl">
+    <configuration name="Crawl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss18_Regex.optional.Crawl" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss17_IO_Binary.optional.*" />
+          <option name="PATTERN" value="ss18_Regex.optional.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss18_Regex.practice.validate_email.Main" />
+      <module name="module02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss18_Regex.practice.validate_email.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,11 +104,11 @@
       </method>
     </configuration>
     <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss16_File.exercise.Copy_file.Main" />
+      <option name="MAIN_CLASS_NAME" value="ss18_Regex.practice.validate_acc.Main" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss16_File.exercise.Copy_file.*" />
+          <option name="PATTERN" value="ss18_Regex.practice.validate_acc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,11 +117,11 @@
       </method>
     </configuration>
     <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss16.mvc.view.Main" />
+      <option name="MAIN_CLASS_NAME" value="ss18_Regex.exercise.validate_class.Main" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss16.mvc.view.*" />
+          <option name="PATTERN" value="ss18_Regex.exercise.validate_class.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,24 +130,11 @@
       </method>
     </configuration>
     <configuration name="Main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss17_IO_Binary.exercise.Main" />
+      <option name="MAIN_CLASS_NAME" value="ss18_Regex.exercise.validate_phone_number.Main" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss17_IO_Binary.exercise.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CaseStudy.view.Main" />
-      <module name="module02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="CaseStudy.view.*" />
+          <option name="PATTERN" value="ss18_Regex.exercise.validate_phone_number.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -153,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Crawl" />
         <item itemvalue="Application.Main (5)" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.Main (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -227,6 +231,11 @@
       <workItem from="1690511953064" duration="2255000" />
       <workItem from="1690530712861" duration="2986000" />
       <workItem from="1690544394707" duration="4089000" />
+      <workItem from="1690548798330" duration="5564000" />
+      <workItem from="1690597493915" duration="2095000" />
+      <workItem from="1690770920108" duration="3665000" />
+      <workItem from="1690788570753" duration="1498000" />
+      <workItem from="1690796372150" duration="558000" />
     </task>
     <servers />
   </component>

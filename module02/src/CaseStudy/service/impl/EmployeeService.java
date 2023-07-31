@@ -1,11 +1,12 @@
 package CaseStudy.service.impl;
 
+import CaseStudy.Exception.CodeEmployeeException;
+import CaseStudy.Exception.IDEmployeeException;
 import CaseStudy.Exception.NameException;
 import CaseStudy.model.Employee;
 import CaseStudy.repository.IEmployeeRepository;
 import CaseStudy.repository.impl.EmployeeRepository;
 import CaseStudy.service.IEmployeeService;
-import org.omg.CORBA.UserException;
 
 import java.util.List;
 import java.util.Scanner;
@@ -73,14 +74,19 @@ public class EmployeeService implements IEmployeeService {
 
     private Employee employeeInfo() {
         Employee employee = new Employee();
-        List<Employee> employeeList = iEmployeeRepository.display();
-        if (employeeList.isEmpty()) {
-            employee.setCodeEmployee("NV-00");
-        } else {
-            employee.setCodeEmployee(employeeList.get(employeeList.size() - 1).getCodeEmployee() + 1);
-        }
-        System.out.print("Name: ");
-        employee.setName(scanner.nextLine());
+        Boolean check = true;
+        do {
+            System.out.print("Code employee: ");
+            String code = scanner.nextLine();
+            check = CodeEmployeeException.checkCodeEmployee(code);
+            employee.setCodeEmployee(code);
+        } while (check == false);
+        do {
+            System.out.print("Name: ");
+            String name = scanner.nextLine();
+            check = NameException.checkName(name);
+            employee.setName(name);
+        } while (check == false);
         System.out.print("Phone number: ");
         employee.setPhoneNumber(scanner.nextLine());
         System.out.print("Email: ");
@@ -89,12 +95,24 @@ public class EmployeeService implements IEmployeeService {
         employee.setGender(scanner.nextLine());
         System.out.print("Date of birth: ");
         employee.setDateOfBirth(scanner.nextLine());
-        System.out.print("ID employee:");
-        employee.setID(scanner.nextLine());
+        do {
+            System.out.print("ID employee:");
+            String id =(scanner.nextLine());
+            check = IDEmployeeException.checkID(id);
+            employee.setID(id);
+        }while (check == false);
         System.out.print("Standard: ");
         employee.setStandard(scanner.nextLine());
-        System.out.print("Salary: ");
-        employee.setSalary(Double.parseDouble(scanner.nextLine()));
+        double salary;
+        do {
+            System.out.print("Salary: ");
+             salary = scanner.nextDouble();
+            if (salary > 0) {
+                employee.setSalary(Double.parseDouble(scanner.nextLine()));
+            } else {
+                System.out.println("salary > 0");
+            }
+        }while (salary < 0);
         System.out.print("Position: ");
         employee.setPosition(scanner.nextLine());
 
