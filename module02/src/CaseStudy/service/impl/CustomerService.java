@@ -46,6 +46,9 @@ public class CustomerService implements ICustomerService {
                 case 3:
                     deleteCustomer();
                     break;
+                case 4:
+                    searchInfo();
+                    break;
                 case 5:
                     check=false;
                     break;
@@ -53,8 +56,16 @@ public class CustomerService implements ICustomerService {
     }
 }
 
+    public void searchInfo() {
+        System.out.print("enter name: ");
+        String name = scanner.nextLine();
+        iCustomerReopository.search(name);
+    }
+
     public void deleteCustomer() {
-        System.out.print("Enter ");
+        System.out.print("Enter id: ");
+        String id= scanner.nextLine();
+        iCustomerReopository.delete(id);
     }
 
     public Customer customerInfo() {
@@ -69,6 +80,8 @@ public class CustomerService implements ICustomerService {
         customer.setGender(scanner.nextLine());
         System.out.print("Date of birth: ");
         customer.setDateOfBirth(scanner.nextLine());
+        System.out.print("id: ");
+        customer.setID(scanner.nextLine());
         System.out.print("Type of guest: ");
         customer.setTypeOfCustomer(scanner.nextLine());
         System.out.print("Address: ");

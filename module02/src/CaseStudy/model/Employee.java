@@ -58,10 +58,9 @@ public class Employee extends Person {
                 "date of birth: " + this.getDateOfBirth() + "\n" +
                 "ID:" + this.getID() + '\n' +
                 "codeEmployee=" + this.getCodeEmployee() + '\n' +
-                "standard=" + standard + '\n' +
-                "salary=" + salary + '\n' +
-                " position=" + position + '\n' +
-
+                "standard=" + this.standard + '\n' +
+                "salary=" + this.salary + '\n' +
+                " position=" + this.position + '\n' +
                 "-------------------------------";
     }
 }

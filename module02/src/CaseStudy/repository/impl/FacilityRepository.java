@@ -9,19 +9,39 @@ import CaseStudy.repository.IFacilityRepository;
 import java.util.*;
 
 public class FacilityRepository implements IFacilityRepository<Facility> {
-    private Map<Facility, Integer> facilityLinkedHashMap= new LinkedHashMap<>();
+    private Map<String, Facility> facilityLinkedHashMap= new LinkedHashMap<>();
     private List <Facility> list = new ArrayList<>();
 
     @Override
     public void addNewService(Facility facility) {
-        facilityLinkedHashMap.put(facility,0);
+        facilityLinkedHashMap.put(facility.getNameService(),facility);
         list.add(facility);
+        System.out.println("SUCCESS");
     }
 
     @Override
     public List<Facility> display() {
-        return list;
+        if (list.isEmpty()) {
+            System.out.println("list is empty");
+        }
+            return list;
     }
 
-
+    @Override
+    public void delete(String choice) {
+        if (list.isEmpty()) {
+            System.out.println("list is empty");
+        }
+        Object object =facilityLinkedHashMap.get(choice);
+        System.out.println(object);
+        System.out.println("sure:");
+        System.out.println("1.Yes");
+        System.out.println("2.No");
+        int option = Integer.parseInt(new Scanner(System.in).nextLine());
+        if (option ==1) {
+            list.remove(object);
+            facilityLinkedHashMap.remove(choice);
+            System.out.println("SUCCESS");
+        }
+    }
 }

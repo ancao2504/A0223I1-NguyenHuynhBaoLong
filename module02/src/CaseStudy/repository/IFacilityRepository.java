@@ -9,4 +9,5 @@ public interface IFacilityRepository<E>{
 
     List<E> display();
 
+    void delete(String choice);
 }

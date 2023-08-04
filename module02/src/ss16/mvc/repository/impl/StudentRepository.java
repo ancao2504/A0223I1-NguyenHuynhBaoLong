@@ -35,8 +35,6 @@ public class StudentRepository implements IStudentRepository {
                 break;
             }
         }
-
-//        students.remove(student);
     }
 
     @Override

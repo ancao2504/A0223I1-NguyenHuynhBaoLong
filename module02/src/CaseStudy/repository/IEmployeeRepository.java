@@ -15,4 +15,6 @@ public interface IEmployeeRepository<E> {
     void deleteEmployee(String id);
 
     void searchEmployee(String id);
+
+    boolean edit(String id);
 }

@@ -7,6 +7,7 @@ import CaseStudy.repository.ICustomerReopository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class CustomerRepository implements ICustomerReopository<Customer> {
 
@@ -28,6 +29,40 @@ public class CustomerRepository implements ICustomerReopository<Customer> {
             list.add(new Customer(temp[0],temp[1],temp[2],temp[3],temp[4],temp[5],temp[6],temp[7]));
         }
         return list;
+    }
+
+    @Override
+    public void search(String name) {
+        List<Customer> list = display();
+        for (Customer customer : list) {
+            if (customer.getName().equals(name)) {
+                System.out.println(customer.toString());
+            }
+        }
+    }
+
+    @Override
+    public void delete(String id) {
+        List<Customer> list = display();
+        for(Customer customer : list){
+            if (customer.getID().equals(id)) {
+                System.out.println("You sure to delete this employee get id: "+id);
+                System.out.println("1. Yes");
+                System.out.println("2.No");
+                int choice = Integer.parseInt(new Scanner(System.in).nextLine());
+                if (choice==1) {
+                    list.remove(choice);
+                    String line ="";
+                    for (Customer customer1 : list) {
+                        line+=convertToString(customer1)+"\n";
+                    }
+                    line = line.substring(0, line.length()-1);
+                    ReadAndWriteFile.writeFile(SRC_CUSTOMER,line,false);
+                    System.out.println("xóa thành công");
+                }
+                break;
+            }
+        }
     }
 
     private String convertToString(Customer customer) {

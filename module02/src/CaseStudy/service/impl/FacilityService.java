@@ -46,6 +46,13 @@ public class FacilityService implements IFacilityService {
                 case 2:
                     addNewService();
                     break;
+                case 4:
+                    System.out.print("name service you want delete: ");
+                    String choice = scanner.nextLine();
+                    iFacilityRepository.delete(choice);
+                    break;
+                case 5:
+                    check=false;
             }
         }
     }

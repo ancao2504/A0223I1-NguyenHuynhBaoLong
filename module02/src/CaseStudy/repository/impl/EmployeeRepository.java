@@ -3,12 +3,15 @@ package CaseStudy.repository.impl;
 import CaseStudy.common.ReadAndWriteFile;
 import CaseStudy.model.Employee;
 import CaseStudy.repository.IEmployeeRepository;
+import ss16.mvc.common.ReadWriteFile;
+import ss16.mvc.model.Student;
 
 import java.util.*;
 
 public class EmployeeRepository implements IEmployeeRepository<Employee> {
     public static final String SRC_EMPLOYEE = "src/CaseStudy/data/Employee.csv";
     private Scanner scanner = new Scanner(System.in);
+
 
 
     @Override
@@ -27,11 +30,8 @@ public class EmployeeRepository implements IEmployeeRepository<Employee> {
 
     @Override
     public void add(Employee employee) {
-
         ReadAndWriteFile.writeFile(SRC_EMPLOYEE, convertToString(employee), true);
     }
-
-
 
     @Override
     public void deleteEmployee(String id) {
@@ -44,11 +44,13 @@ public class EmployeeRepository implements IEmployeeRepository<Employee> {
                 int choice = Integer.parseInt(new Scanner(System.in).nextLine());
                 if (choice==1) {
                     list.remove(employee);
-                    String line = "";
+                    String line ="";
                     for (Employee newEmployee : list) {
-                        line+=convertToString(newEmployee)+'\n';
+                        line+=convertToString(newEmployee)+"\n";
                     }
+                    line = line.substring(0, line.length()-1);
                     ReadAndWriteFile.writeFile(SRC_EMPLOYEE,line,false);
+                    System.out.println("xóa thành công");
                 }
                 break;
             }
@@ -67,9 +69,28 @@ public class EmployeeRepository implements IEmployeeRepository<Employee> {
 
     }
 
+    @Override
+    public boolean edit(String id) {
+        List<Employee> list = display();
+        for(Employee employee : list){
+            if (employee.getID().equals(id)) {
+                System.out.println(employee.toString());
+                    list.remove(employee);
+                    String line ="";
+                    for (Employee newEmployee : list) {
+                        line+=convertToString(newEmployee)+"\n";
+                    }
+                    line = line.substring(0, line.length()-1);
+                    ReadAndWriteFile.writeFile(SRC_EMPLOYEE,line,false);
+               return true;
+            }
+        }
+        return false;
+    }
+
     private String convertToString(Employee employee) {
         return employee.getName() + "," + employee.getPhoneNumber() + "," + employee.getEmail() + "," + employee.getGender() + "," + employee.getDateOfBirth() +
-                "," + employee.getID() + "," + employee.getCodeEmployee() + "," + employee.getStandard() + "," + employee.getSalary() +
-                "," + employee.getPosition();
+                "," + employee.getID() + "," + employee.getCodeEmployee() + "," + employee.getStandard() + "," + employee.getSalary() + "," + employee.getPosition();
     }
 }
+

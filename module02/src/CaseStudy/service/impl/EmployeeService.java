@@ -1,8 +1,6 @@
 package CaseStudy.service.impl;
 
-import CaseStudy.Exception.CodeEmployeeException;
-import CaseStudy.Exception.IDEmployeeException;
-import CaseStudy.Exception.NameException;
+import CaseStudy.Exception.*;
 import CaseStudy.model.Employee;
 import CaseStudy.repository.IEmployeeRepository;
 import CaseStudy.repository.impl.EmployeeRepository;
@@ -21,6 +19,7 @@ public class EmployeeService implements IEmployeeService {
             System.out.println("------------Employee Menu-----------");
             System.out.println("1. Display list employees");
             System.out.println("2. Add new employee");
+            System.out.println("3. Edit employee");
             System.out.println("4. Delete employee");
             System.out.println("5. Search by name employee");
             System.out.println("6. Return main menu");
@@ -44,7 +43,9 @@ public class EmployeeService implements IEmployeeService {
                 case 2:
                     Employee addEmployee = employeeInfo();
                     iEmployeeRepository.add(addEmployee);
-                    System.out.println("----------success----------");
+                    break;
+                case 3:
+                    editEmployee();
                     break;
                 case 4:
                     deleteEmployee();
@@ -56,6 +57,15 @@ public class EmployeeService implements IEmployeeService {
                     check = false;
                     break;
             }
+        }
+    }
+
+    public void editEmployee() {
+        System.out.print("Enter id: ");
+        String id = scanner.nextLine();
+        if (iEmployeeRepository.edit(id) == true){
+            Employee addEmployee = employeeInfo();
+            iEmployeeRepository.add(addEmployee);
         }
     }
 
@@ -89,32 +99,43 @@ public class EmployeeService implements IEmployeeService {
         } while (check == false);
         System.out.print("Phone number: ");
         employee.setPhoneNumber(scanner.nextLine());
-        System.out.print("Email: ");
-        employee.setEmail(scanner.nextLine());
-        System.out.print("Gender: ");
-        employee.setGender(scanner.nextLine());
-        System.out.print("Date of birth: ");
-        employee.setDateOfBirth(scanner.nextLine());
+        do {
+            System.out.print("Email: ");
+            String email = (scanner.nextLine());
+            check = EmailException.checkEmail(email);
+            employee.setEmail(email);
+        } while (check == false);
+        do {
+            System.out.print("Gender: ");
+            String gender = (scanner.nextLine());
+            check = GenderException.checkGender(gender);
+            employee.setGender(gender);
+        } while (check == false);
+        do {
+            System.out.print("Date of birth: ");
+            String dateOfBirth = (scanner.nextLine());
+            check = DateOfBirthException.checkDateOfBirth(dateOfBirth);
+            employee.setDateOfBirth(dateOfBirth);
+        } while (check == false);
         do {
             System.out.print("ID employee:");
-            String id =(scanner.nextLine());
+            String id = (scanner.nextLine());
             check = IDEmployeeException.checkID(id);
             employee.setID(id);
-        }while (check == false);
+        } while (check == false);
         System.out.print("Standard: ");
         employee.setStandard(scanner.nextLine());
         double salary;
         do {
             System.out.print("Salary: ");
-             salary = scanner.nextDouble();
-            if (salary > 0) {
-                employee.setSalary(Double.parseDouble(scanner.nextLine()));
-            } else {
+            salary = Double.parseDouble(scanner.nextLine());
+            if (salary < 0) {
                 System.out.println("salary > 0");
             }
-        }while (salary < 0);
+        } while (check == false);
         System.out.print("Position: ");
         employee.setPosition(scanner.nextLine());
+
 
         return employee;
     }

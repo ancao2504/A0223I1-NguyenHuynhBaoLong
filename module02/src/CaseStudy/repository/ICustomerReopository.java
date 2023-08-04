@@ -9,4 +9,8 @@ public interface ICustomerReopository <E> {
     void add(E customer);
 
     List<E> display();
+
+    void search(String name);
+
+    void delete(String id);
 }
