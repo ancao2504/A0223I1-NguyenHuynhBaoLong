@@ -33,11 +33,12 @@ public class Customer extends Person {
     public String toString() {
         return "name= " + this.getName() + '\n' +
                 "phoneNumber= " + this.getPhoneNumber() + '\n' +
-                "email='" + this.getEmail() + '\n' +
-                "gender='" + this.getGender() + '\n' +
-                "dateOfBirth='" + this.getDateOfBirth() + '\n' +
-                "ID='" + this.getID() + '\n' +
-                "typeOfCustomer=" + typeOfCustomer + '\n' +
-                "address=" + address + '\n' ;
+                "email= " + this.getEmail() + '\n' +
+                "gender= " + this.getGender() + '\n' +
+                "dateOfBirth= " + this.getDateOfBirth() + '\n' +
+                "ID= " + this.getID() + '\n' +
+                "typeOfCustomer= " + typeOfCustomer + '\n' +
+                "address= " + address + '\n' +
+                "--------------------------------";
     }
 }

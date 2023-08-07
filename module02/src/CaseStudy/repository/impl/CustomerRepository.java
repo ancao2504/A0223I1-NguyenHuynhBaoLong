@@ -51,7 +51,7 @@ public class CustomerRepository implements ICustomerReopository<Customer> {
                 System.out.println("2.No");
                 int choice = Integer.parseInt(new Scanner(System.in).nextLine());
                 if (choice==1) {
-                    list.remove(choice);
+                    list.remove(customer);
                     String line ="";
                     for (Customer customer1 : list) {
                         line+=convertToString(customer1)+"\n";

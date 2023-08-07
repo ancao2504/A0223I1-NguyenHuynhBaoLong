@@ -1,17 +1,18 @@
 package CaseStudy.service.impl;
 
 import CaseStudy.Exception.*;
+import CaseStudy.common.EmployeeComparator;
 import CaseStudy.model.Employee;
 import CaseStudy.repository.IEmployeeRepository;
 import CaseStudy.repository.impl.EmployeeRepository;
 import CaseStudy.service.IEmployeeService;
 
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class EmployeeService implements IEmployeeService {
     private Scanner scanner = new Scanner(System.in);
     private IEmployeeRepository iEmployeeRepository = new EmployeeRepository();
+    private List<Employee> list = new ArrayList<>();
 
     public void employeeMenu() {
         Boolean check = true;
@@ -35,14 +36,10 @@ public class EmployeeService implements IEmployeeService {
 
             switch (choose) {
                 case 1:
-                    List<Employee> employeeList = iEmployeeRepository.display();
-                    for (Employee employee : employeeList) {
-                        System.out.println(employee);
-                    }
+                    display();
                     break;
                 case 2:
-                    Employee addEmployee = employeeInfo();
-                    iEmployeeRepository.add(addEmployee);
+                    addEmployee();
                     break;
                 case 3:
                     editEmployee();
@@ -60,10 +57,24 @@ public class EmployeeService implements IEmployeeService {
         }
     }
 
+    public void addEmployee() {
+        Employee addEmployee = employeeInfo();
+        iEmployeeRepository.add(addEmployee);
+    }
+
+    public void display() {
+        List<Employee> employeeList = iEmployeeRepository.display();
+        Comparator<Employee> comparator = new EmployeeComparator();
+        Collections.sort(employeeList,comparator);
+        for (Employee employee : employeeList) {
+            System.out.println(employee);
+        }
+    }
+
     public void editEmployee() {
         System.out.print("Enter id: ");
         String id = scanner.nextLine();
-        if (iEmployeeRepository.edit(id) == true){
+        if (iEmployeeRepository.edit(id) == true) {
             Employee addEmployee = employeeInfo();
             iEmployeeRepository.add(addEmployee);
         }
@@ -123,16 +134,14 @@ public class EmployeeService implements IEmployeeService {
             check = IDEmployeeException.checkID(id);
             employee.setID(id);
         } while (check == false);
-        System.out.print("Standard: ");
-        employee.setStandard(scanner.nextLine());
-        double salary;
         do {
-            System.out.print("Salary: ");
-            salary = Double.parseDouble(scanner.nextLine());
-            if (salary < 0) {
-                System.out.println("salary > 0");
-            }
-        } while (check == false);
+            System.out.print("Standard: ");
+            String standard = scanner.nextLine();
+            check = StandardException.checkStandard(standard);
+            employee.setStandard(standard);
+        }while (check == false);
+        System.out.print("salary: ");
+        employee.setSalary(Double.parseDouble(scanner.nextLine()));
         System.out.print("Position: ");
         employee.setPosition(scanner.nextLine());
 
