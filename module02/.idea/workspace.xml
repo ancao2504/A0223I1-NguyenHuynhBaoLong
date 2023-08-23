@@ -2,20 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c883bec0-e202-40d0-829a-37e0da8d650e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/data/Customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/data/Customer.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/data/Employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/data/Employee.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/model/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/impl/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/impl/CustomerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/impl/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/impl/EmployeeRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss12/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/data/Customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/data/Customer.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/end_module/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/end_module/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/DemoSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/controller/StudentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/model/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/model/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/repository/IStudentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/repository/impl/StudentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/service/IStudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/service/impl/StudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/view/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CaseStudy/data/Employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/data/Employee.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/model/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CaseStudy/repository/impl/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/repository/impl/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaseStudy/repository/impl/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/repository/impl/EmployeeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/impl/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/service/impl/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss12/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$-DN CaseStudy Furama Resort Module 2_v2.0.docx" beforeDir="false" afterPath="$PROJECT_DIR$/~$-DN CaseStudy Furama Resort Module 2_v2.0.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/end_module/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/end_module/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/DemoSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/model/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/model/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/repository/IStudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/repository/impl/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/service/IStudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/service/impl/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/view/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/common/ReadWriteFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/data/student.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/data/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/model/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/model/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/model/Teacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/repository/IRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/repository/IStudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/repository/ITeacherRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/repository/impl/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/repository/impl/TeacherRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/service/IStudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/service/impl/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/view/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$-DN CaseStudy Furama Resort Module 2_v2.0.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +100,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
+    <property name="settings.editor.selected.configurable" value="Csv.Editor.Settings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -76,7 +109,7 @@
       <recent name="ss10_DSA_list.exercise.ArrayList" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main (3)">
     <configuration name="Crawl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ss18_Regex.optional.Crawl" />
       <module name="module02" />
@@ -116,12 +149,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss18_Regex.exercise.validate_phone_number.Main" />
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="end_module.view.Main" />
       <module name="module02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss18_Regex.exercise.validate_phone_number.*" />
+          <option name="PATTERN" value="end_module.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Crawl" />
-        <item itemvalue="Application.Main (5)" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +262,15 @@
       <workItem from="1691145743226" duration="5367000" />
       <workItem from="1691153437818" duration="3972000" />
       <workItem from="1691405183974" duration="5776000" />
-      <workItem from="1691413789414" duration="2285000" />
+      <workItem from="1691413789414" duration="3725000" />
+      <workItem from="1691583354445" duration="3561000" />
+      <workItem from="1691590174638" duration="990000" />
+      <workItem from="1691634837998" duration="2353000" />
+      <workItem from="1691678525242" duration="5100000" />
+      <workItem from="1691718722885" duration="488000" />
+      <workItem from="1691740196151" duration="5309000" />
+      <workItem from="1691757295934" duration="6981000" />
+      <workItem from="1691933083285" duration="153000" />
     </task>
     <servers />
   </component>

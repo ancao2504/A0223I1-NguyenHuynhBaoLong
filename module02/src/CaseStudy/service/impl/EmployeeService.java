@@ -58,8 +58,8 @@ public class EmployeeService implements IEmployeeService {
     }
 
     public void addEmployee() {
-        Employee addEmployee = employeeInfo();
-        iEmployeeRepository.add(addEmployee);
+        Employee newEmployee = employeeInfo();
+        iEmployeeRepository.add(newEmployee);
     }
 
     public void display() {
@@ -102,6 +102,7 @@ public class EmployeeService implements IEmployeeService {
             check = CodeEmployeeException.checkCodeEmployee(code);
             employee.setCodeEmployee(code);
         } while (check == false);
+
         do {
             System.out.print("Name: ");
             String name = scanner.nextLine();
