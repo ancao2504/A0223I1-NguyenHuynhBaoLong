@@ -1,32 +1,33 @@
 create database if not exists product_management;
 use product_management;
 
-create table orderer(
-orderer_id int primary key,
-`name` varchar(50),
-address varchar(255) default 'Da Nang',
+create table customer (
+customer_id int primary key,
+`name` varchar(255),
+age int
+);
+
+create table `order`(
+order_id int primary key,
 `date` date,
-phone_number varchar(10) 
+total_price float,
+customer_id int,
+foreign key(customer_id) references customer(customer_id)
 );
 
 create table product(
 product_id int primary key,
 name_product varchar(255),
-unit varchar(50),
-detail text
+price float
 );
 
-create table office (
+create table order_detail(
+order_id int,
 product_id int,
-orderer_id int,
-primary key(product_id,orderer_id),
-quantity int,
-`date` date
+foreign key(order_id) references `order`(order_id),
+foreign key(product_id) references product(product_id),
+primary key(order_id, product_id)
 );
 
-create table customer (
-customer_id int primary key,
-`name` varchar(255),
-address varchar(50),
-`date` date
-);
+
+

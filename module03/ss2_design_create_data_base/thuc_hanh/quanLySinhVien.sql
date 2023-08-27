@@ -1,36 +1,36 @@
 create database quan_ly_sinh_vien;
 use quan_ly_sinh_vien;
 create table class(
-classID int primary key not null auto_increment,
-className varchar(60) not null,
-startDate datetime not null,
+class_id int primary key not null auto_increment,
+class_name varchar(60) not null,
+start_date datetime not null,
 `status` bit
 );
 
 create table student (
-studentID int auto_increment primary key not null,
-studentName varchar(30) not null,
+student_iD int auto_increment primary key not null,
+student_name varchar(30) not null,
 address varchar(50),
 phone varchar(20),
 `status` bit,
-classID int not null,
-foreign key (classID) references class(classID)
+class_id int not null,
+foreign key (class_id) references class(class_id)
 );
 
-create table `Subject` (
-SubID int not null auto_increment primary key,
-SubName varchar(30) not null,
-Credit tinyint not null default 1 check ( credit >=1),
-`Status` bit default 1
+create table `subject` (
+sub_id int not null auto_increment primary key,
+sub_name varchar(30) not null,
+credit tinyint not null default 1 check ( credit >=1),
+`status` bit default 1
 );
 
-create table Mark(
-MarkID int not null auto_increment primary key,
-SubID int not null unique,
-StudentID int not null unique,
-Mark float default 0 check (Mark between 0 and 100),
-ExamTimes tinyint default 1
+create table mark(
+mark_id int not null auto_increment primary key,
+sub_id int not null unique,
+student_id int not null unique,
+mark float default 0 check (mark between 0 and 100),
+exam_times tinyint default 1
 );
-alter table Mark add constraint foreign key (StudentID) references student(StudentID);
-alter table Mark add constraint foreign key (SubID) references `Subject`(SubID);
+alter table mark add constraint foreign key (studentID) references student(studentID);
+alter table mark add constraint foreign key (subID) references `subject`(subID);
 
