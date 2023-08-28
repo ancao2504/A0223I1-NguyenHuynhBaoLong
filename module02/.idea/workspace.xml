@@ -2,53 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c883bec0-e202-40d0-829a-37e0da8d650e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/data/Customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/data/Customer.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/data/Employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/data/Employee.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/impl/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/impl/CustomerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/impl/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/repository/impl/EmployeeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/CaseStudy/service/impl/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/end_module/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module02/end_module/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/DemoSet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/controller/StudentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/model/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/model/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/repository/IStudentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/repository/impl/StudentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/service/IStudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/service/impl/StudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module02/ss10_DemoMVC/mvc/view/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/data/Employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/data/Employee.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/repository/impl/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/repository/impl/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/repository/impl/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/repository/impl/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CaseStudy/service/impl/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaseStudy/service/impl/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/end_module/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/end_module/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/DemoSet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/controller/StudentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/model/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/model/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/repository/IStudentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/repository/impl/StudentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/service/IStudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/service/impl/StudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss10_DemoMVC/mvc/view/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/common/ReadWriteFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/controller/StudentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/data/student.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/data/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/model/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/model/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/model/Teacher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/repository/IRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/repository/IStudentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/repository/ITeacherRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/repository/impl/StudentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/repository/impl/TeacherRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/service/IStudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/service/impl/StudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16/mvc/view/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$-DN CaseStudy Furama Resort Module 2_v2.0.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module03/case_sudy/furama_info.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../module03/case_sudy/furama_info.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module03/case_sudy/query.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../module03/case_sudy/query.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,6 +227,8 @@
       <workItem from="1691740196151" duration="5309000" />
       <workItem from="1691757295934" duration="6981000" />
       <workItem from="1691933083285" duration="153000" />
+      <workItem from="1693183742731" duration="1174000" />
+      <workItem from="1693193305578" duration="673000" />
     </task>
     <servers />
   </component>

@@ -76,6 +76,14 @@ values ('2020-06-01', '2020-06-04', 1000, 3,5,4),
 		('2022-01-01', '2020-01-04', 5000, 3,2,5),           
 		('2022-01-01', '2020-01-04', 5000, 3,3,6);    
        
+insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
+values ('2021-03-01', '2021-03-04', 1000, 3,5,4),       
+		('2021-01-01', '2021-01-04', 2000, 2,4,5);
+        
+insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
+values ('2020-10-01', '2021-10-04', 1000, 3,6,4),       
+		('2021-11-01', '2021-11-04', 2000, 2,4,5);
+        
 insert into detail_contract (quantity, contract_id, accompanied_service_id )
 values (1,7,4),
 		(2,8,5),
@@ -83,8 +91,21 @@ values (1,7,4),
 		(4,8,1);
         
 
-        
+insert into detail_contract (quantity, contract_id, accompanied_service_id )
+values (5,7,4),
+		(4,8,5),
+		(19,9,5),
+		(1,8,1);
+              
+insert into detail_contract (quantity, contract_id, accompanied_service_id )
+values (5,10,4),
+		(4,12,null);
 
+
+insert into detail_contract (quantity, contract_id, accompanied_service_id )
+values (5,15,2),
+		(4,16,3);
+        
 insert into rental_type (name_rental_type) 
 values('dai han'),
 	  ('ngan han');
@@ -92,6 +113,19 @@ values('dai han'),
  insert into rental_type (name_rental_type) 
 values('nguyen can');
 
-     
+update detail_contract
+set quantity =null 
+where detail_contract_id =26;
+
+update contract
+set start_contract = '2020-11-01'
+where contract_id =16;
+
+update contract
+set advance_deposit = null
+where contract_id =14;
+
+alter table detail_contract
+modify column quantity int default 0;
 set sql_safe_updates = 0;
 delete from rental_type ;
