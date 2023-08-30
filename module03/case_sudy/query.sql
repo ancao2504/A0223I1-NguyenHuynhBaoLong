@@ -16,7 +16,8 @@ from customer c
 join type_customer tc on c.type_customer_id = tc.type_customer_id
 join contract ct on c.customer_id = ct.customer_id
 where tc.name_type_customer = 'diamond'
-group by c.customer_id, name_customer;
+group by c.customer_id, name_customer
+order by so_lan;
 
 -- 5 
 select c.customer_id, c.name_customer, tc.name_type_customer, ct.contract_id, ct.start_contract, ct.end_contract, s.name_service,  s.rental_fee + (dct.quantity * acs.price) AS tong_tien
@@ -40,17 +41,22 @@ and year(ct.start_contract) in(2021)
 );
 
 -- 7
--- select s.service_id, s.name_service, s.area, s.max_people, s.rental_fee, ts.name_type_service
--- from service s
--- join type_service ts on s.type_service_id = ts.type_service_id
--- left join contract ct on  ct.service_id = s.service_id
--- where year(ct.start_contract)  in(2020) and  year(ct.start_contract) not in(2021)
--- and s.service_id not in (
--- select ct.service_id 
--- from contract ct 
--- join service s on ct.service_id = s.service_id
--- and year(ct.start_contract) in(2021)
--- );
+select s.service_id, s.name_service, s.area, s.max_people, s.rental_fee, tc.name_type_service
+from service s
+join type_service tc on s.type_service_id = tc.type_service_id
+where s.service_id in (
+select s.service_id 
+from service s
+join contract ctr on s.service_id = ctr.service_id
+where year(ctr.start_contract)='2020' )
+and
+s.service_id not in (
+select s.service_id 
+from service s
+join contract ctr on s.service_id = ctr.service_id
+where year(ctr.start_contract)='2021'
+);
+
 
 -- 8
 select distinct(name_customer) 
@@ -83,14 +89,52 @@ join customer c on c.customer_id = ctr.customer_id
 join type_customer tc on c.type_customer_id = tc.type_customer_id 
 where tc.name_type_customer ='diamond' and (c.address ='quang ngai' or c.address ='vinh');
 
+-- 12
+select ctr.contract_id, e.`name`, c.name_customer, c.phone_number, s.name_service, ctr.advance_deposit
+from service s
+join contract ctr on ctr.service_id = s.service_id
+join customer c on ctr.customer_id = c.customer_id
+join employee e on ctr.employee_id = e.employee_id
+join detail_contract dct on ctr.contract_id = dct.contract_id
+join accompanied_service acc on dct.accompanied_service_id = acc.accompanied_service_id
+where month(ctr.start_contract) in (10,11,12) and  year(ctr.start_contract) ='2020' 
+and s.service_id not in (
+select s.service_id
+from service s
+join contract ctr on ctr.service_id = s.service_id
+join detail_contract dct on ctr.contract_id = dct.contract_id
+join accompanied_service acc on dct.accompanied_service_id = acc.accompanied_service_id
+where month(ctr.start_contract) in (1,2,3,4,5,6)
+ and  year(ctr.start_contract) ='2021'
+);
 
-select ctr.contract_id, e.`name` as ten_nhan_vien ,c.name_customer, c.phone_number, s.name_service, ctr.advance_deposit, sum(dct.quantity)
-from contract ctr
-left join employee e on ctr.employee_id = e.employee_id
-left join customer c on ctr.customer_id = c.customer_id
-left join service s on ctr.service_id = s.service_id
-left join detail_contract dct on dct.contract_id = ctr.contract_id
-left join accompanied_service acc on dct.accompanied_service_id = acc.accompanied_service_id
-where month(start_contract) in (10,11,12) and year(start_contract)=2020 and ctr.advance_deposit is not null
-group by ctr.contract_id, e.`name` ,c.name_customer, c.phone_number, s.name_service, ctr.advance_deposit
+-- 13
+select acc.accompanied_service_id, acc.name_accompanied_service, acc.price, acc.`status`, count(acc.accompanied_service_id) as so_lan_su_dung
+from accompanied_service acc
+join detail_contract dct on acc.accompanied_service_id = dct.accompanied_service_id
+join contract ctr on dct.contract_id = ctr.contract_id
+group by acc.accompanied_service_id, acc.name_accompanied_service, acc.price, acc.`status`
+having so_lan_su_dung = all (select count(acc.accompanied_service_id) from accompanied_service acc );
+
+-- 14
+select ctr.contract_id, acc.name_accompanied_service, count(dct.accompanied_service_id) as so_lan_su_dung
+from accompanied_service acc
+join detail_contract dct on dct.accompanied_service_id = acc.accompanied_service_id
+join contract ctr on ctr.contract_id = dct.contract_id
+join service s on s.service_id = ctr.service_id
+group by ctr.contract_id, acc.name_accompanied_service
+having so_lan_su_dung =1;
+
+
+ select ct_contract.id, sv_services.name as nameServices, ct_services_include.name, count(ct_contract_detail.id_services_include) as amount
+ from  ct_services_include
+ join ct_contract_detail on ct_contract_detail.id_services_include = ct_services_include.id
+ join ct_contract on ct_contract.id = ct_contract_detail.id_contract
+ join sv_services on sv_services.id = ct_contract.id_services
+ group by ct_contract.id
+ having amount = 1;
+
+
+
+
 

@@ -30,11 +30,6 @@ values ('pham xuan dieu', '1992-03-01', '1234567890',120, '0912346789',null,'da 
 	   ('duong van quan', '1998-03-01', '1234567890',120, '0912346789',null,'da nang', 3,2,1),
 	   ('nguyen tam dac', '2002-03-12', '1234567890',120, '0912346789',null,'quang tri', 3,2,1);
        
-insert into employee (`name`, day_of_birth, employee_code, salary, phone_number, email, address, position_id, level_id, part_id ) 
-values ('pham xuan dieu', '1992-03-01', '1234567890',120, '0912346789',null,'da nang', 1,1,1),
-	   ('pham xuan dieu', '1998-03-01', '1234567890',120, '0912346789',null,'da nang', 3,2,1),
-	   ('nguyen tam dac', '2002-03-12', '1234567890',120, '0912346789',null,'quang tri', 3,2,1);
-       
 insert into type_customer (name_type_customer) 
 values('diamond'),
 	  ('platinum'),
@@ -63,69 +58,67 @@ values ('massage', 30, null,'open'),
 		('nước uống', 15, null,'open'),
 		('thuê xe', 40, null,'open');
 
-insert into service (name_service, rental_fee, max_people, standard_room, `description`, area_pool, floor, free_service, rental_type_id, type_service_id) 
-values('villa view beach',2000, 12,'normal', null, 125, 3, null, 6, 1),
-		('house',2000, 12,'big', null, 125, 3, null, 2, 2),
-		('Room twin 01',2000, 12,'normal', null, 125, 3, null, 1, 3);
-
-insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
-values ('2020-06-01', '2020-06-04', 1000, 3,5,4),       
-		('2020-03-01', '2020-03-04', 2000, 2,4,5),       
-		('2021-06-01', '2020-06-04', 3000, 3,1,6),       
-		('2021-06-01', '2020-06-04', 3000, 3,1,4),       
-		('2022-01-01', '2020-01-04', 5000, 3,2,5),           
-		('2022-01-01', '2020-01-04', 5000, 3,3,6);    
-       
-insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
-values ('2021-03-01', '2021-03-04', 1000, 3,5,4),       
-		('2021-01-01', '2021-01-04', 2000, 2,4,5);
-        
-insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
-values ('2020-10-01', '2021-10-04', 1000, 3,6,4),       
-		('2021-11-01', '2021-11-04', 2000, 2,4,5);
-        
-insert into detail_contract (quantity, contract_id, accompanied_service_id )
-values (1,7,4),
-		(2,8,5),
-		(3,9,5),
-		(4,8,1);
-        
-
-insert into detail_contract (quantity, contract_id, accompanied_service_id )
-values (5,7,4),
-		(4,8,5),
-		(19,9,5),
-		(1,8,1);
-              
-insert into detail_contract (quantity, contract_id, accompanied_service_id )
-values (5,10,4),
-		(4,12,null);
-
-
-insert into detail_contract (quantity, contract_id, accompanied_service_id )
-values (5,15,2),
-		(4,16,3);
-        
 insert into rental_type (name_rental_type) 
 values('dai han'),
-	  ('ngan han');
+	  ('ngan han'),
+	  ('nguyen can');
 
- insert into rental_type (name_rental_type) 
-values('nguyen can');
 
-update detail_contract
-set quantity =null 
-where detail_contract_id =26;
 
-update contract
-set start_contract = '2020-11-01'
-where contract_id =16;
+insert into service (name_service, rental_fee, max_people, standard_room, `description`, area_pool, floor, free_service, rental_type_id, type_service_id) 
+values('villa view beach',2000, 12,'normal', null, 125, 3, null, 1, 1),
+		('house',2000, 12,'big', null, 125, 3, null, 2, 2),
+		('Room twin 01',2000, 12,'normal', null, 125, 3, null, 3, 3);
 
-update contract
-set advance_deposit = null
-where contract_id =14;
+insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
+values ('2020-01-01', '2020-01-04', 1000, 3,5,4),       
+		('2020-03-01', '2020-03-04', 2000, 2,4,5),       
+		('2020-06-01', '2020-06-04', 2000, 2,4,5),       
+		('2021-03-01', '2021-06-04', 3000, 3,1,6),       
+		('2021-09-01', '2021-09-04', 3000, 3,1,4),       
+		('2021-10-01', '2021-10-04', 5000, 3,2,5),           
+		('2021-01-01', '2022-11-04', 5000, 3,3,6);    
+       
 
-alter table detail_contract
-modify column quantity int default 0;
-set sql_safe_updates = 0;
-delete from rental_type ;
+insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
+values ('2020-10-01', '2020-10-04', 1000, 3,5,4),       
+		('2020-11-01', '2020-11-04', 2000, 2,4,5),       
+		('2020-12-01', '2020-12-04', 2000, 2,4,5);
+        
+insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
+values ('2021-02-01', '2021-02-04', null, 3,5,4),       
+		('2021-04-01', '2021-04-04', null, 2,4,5),       
+		('2021-06-01', '2021-06-04', null, 2,4,5);
+        
+insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
+values ('2022-02-01', '2022-02-04', null, 3,1,4),     
+		('2022-02-01', '2022-02-04', null, 3,6,4); 
+
+insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
+values ('2021-02-01', '2021-02-04', null, 1,1,4),     
+		('2021-02-01', '2021-02-04', null, 1,6,4); 
+        
+insert into detail_contract (quantity, contract_id, accompanied_service_id )
+values (1,1,4),
+		(2,2,5),
+		(3,3,5),
+		(4,4,1),
+		(4,5,1),
+		(4,6,1),
+		(4,7,null);
+        
+
+insert into detail_contract (quantity, contract_id, accompanied_service_id )
+values (1,8,4),
+		(2,9,5),
+		(3,10,5),
+		(4,11,1),
+		(4,12,1),
+        (1,13,4);
+
+
+
+
+insert into detail_contract (quantity, contract_id, accompanied_service_id )
+values (1,14,2),
+		(2,15,3);

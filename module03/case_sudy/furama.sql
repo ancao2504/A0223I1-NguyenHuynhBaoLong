@@ -51,14 +51,11 @@ type_customer_id int,
 foreign key(type_customer_id) references type_customer(type_customer_id)
 );
 
-alter table type_service 
-drop service_id;
 
-alter table type_service 
-add column type_service_id int primary key auto_increment;
+
 
 create table type_service (
-service_id int primary key auto_increment,
+type_service_id int primary key auto_increment,
 name_type_service varchar(45)
 );
 
@@ -85,7 +82,7 @@ foreign key (type_service_id) references type_service (type_service_id)
 );
 
 create table contract (
-contract int primary key auto_increment,
+contract_id int primary key auto_increment,
 start_contract datetime,
 end_contract datetime, 
 advance_deposit double,
@@ -114,8 +111,6 @@ foreign key (accompanied_service_id) references accompanied_service (accompanied
 foreign key (contract_id) references contract (contract_id)
 );
 
-alter table contract 
-drop column contract,
-add column contract_id int primary key auto_increment;
+
 
 
