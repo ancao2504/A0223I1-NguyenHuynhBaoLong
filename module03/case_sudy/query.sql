@@ -20,7 +20,7 @@ group by c.customer_id, name_customer
 order by so_lan;
 
 -- 5 
-select c.customer_id, c.name_customer, tc.name_type_customer, ct.contract_id, ct.start_contract, ct.end_contract, s.name_service,  s.rental_fee + (dct.quantity * acs.price) AS tong_tien
+select c.customer_id, c.name_customer, tc.name_type_customer, ct.contract_id, ct.start_contract, ct.end_contract, s.name_service,  s.rental_fee + (dct.quantity * acs.price) AS total
 from customer c
 join type_customer tc on c.type_customer_id = tc.type_customer_id
 left join contract ct on c.customer_id = ct.customer_id
@@ -116,23 +116,96 @@ join contract ctr on dct.contract_id = ctr.contract_id
 group by acc.accompanied_service_id, acc.name_accompanied_service, acc.price, acc.`status`
 having so_lan_su_dung = all (select count(acc.accompanied_service_id) from accompanied_service acc );
 
+SET @@sql_mode = SYS.LIST_DROP(@@sql_mode, 'ONLY_FULL_GROUP_BY');
+SELECT @@sql_mode;
+
 -- 14
-select ctr.contract_id, acc.name_accompanied_service, count(dct.accompanied_service_id) as so_lan_su_dung
+select ctr.contract_id, tc.name_type_service , acc.name_accompanied_service, count(dct.accompanied_service_id) as quantity
 from accompanied_service acc
 join detail_contract dct on dct.accompanied_service_id = acc.accompanied_service_id
 join contract ctr on ctr.contract_id = dct.contract_id
 join service s on s.service_id = ctr.service_id
-group by ctr.contract_id, acc.name_accompanied_service
-having so_lan_su_dung =1;
+join type_service tc on tc.type_service_id = s.type_service_id
+group by acc.accompanied_service_id
+having quantity=1 ;
+
+-- 15
+select e.employee_id, e.`name`, e.phone_number, p.`name`, e.address, count(e.employee_id) as quantity
+from employee e
+join position p on p.position_id = e.position_id
+join contract ctr on ctr.employee_id = e.employee_id
+where year(ctr.start_contract) between 2020 and 2021
+group by e.employee_id
+having quantity <= 3;
+
+-- 16 (xóa nhân viên chưa lập được hợp đồng từ 2019 tới 2021)
+
+SET SQL_SAFE_UPDATES = 0;
+delete from employee 
+where employee.employee_id not in(
+select contract.employee_id
+from contract 
+where year(contract.start_contract) between 2019 and 2021
+group by contract.employee_id
+);
+SET SQL_SAFE_UPDATES = 1;
+
+-- 17 (Chi Phí Thuê + Số Lượng * Giá, với Số Lượng và Giá là từ bảng dich_vu_di_kem, hop_dong_chi_tiet) s.rental_fee + (dct.quantity * acs.price) AS total
+update customer 
+set customer.type_customer_id =1
+where customer.type_customer_id =2 
+and customer.customer_id in (
+	select temp.customer_id
+    from(
+    select c.customer_id
+	from customer c
+	join type_customer tc on c.type_customer_id = tc.type_customer_id
+	 join contract ct on c.customer_id = ct.customer_id
+	 join service s on ct.service_id = s.service_id
+	 join detail_contract dct on ct.contract_id = dct.contract_id
+	 join accompanied_service acs on dct.accompanied_service_id = acs.accompanied_service_id
+	and year(ct.start_contract) = 2021
+    and c.type_customer_id =2
+	and  (s.rental_fee + (dct.quantity *  acs.price))  >2100 
+    ) as temp
+);
+
+-- 18
+delete from contract 
+where year(contract.start_contract) < 2021 ;
+
+-- 19
+SET SQL_SAFE_UPDATES = 0;
+update accompanied_service
+set accompanied_service.price =accompanied_service.price *2
+where  accompanied_service.accompanied_service_id in (
+select temp.accompanied_service_id
+from(
+	select acc.accompanied_service_id
+	from accompanied_service acc 
+	join detail_contract dct on dct.accompanied_service_id = acc.accompanied_service_id
+	join contract ctr on ctr.contract_id = dct.contract_id
+	where year(ctr.start_contract) = 2020
+	group by acc.accompanied_service_id, acc.name_accompanied_service,price
+	having sum(dct.quantity)  >=10 
+	) as temp
+);
+SET SQL_SAFE_UPDATES = 1;
+
+-- 20 
+select c.customer_id as id, c.name_customer as `name`, c.email as email, c.phone_number as phone_number, c.day_of_birth as date_of_birth, c.address as address
+from customer c
+union 
+select e.employee_id, e.`name`, e.email, e.phone_number, e.day_of_birth , e.address
+from employee e;
 
 
- select ct_contract.id, sv_services.name as nameServices, ct_services_include.name, count(ct_contract_detail.id_services_include) as amount
- from  ct_services_include
- join ct_contract_detail on ct_contract_detail.id_services_include = ct_services_include.id
- join ct_contract on ct_contract.id = ct_contract_detail.id_contract
- join sv_services on sv_services.id = ct_contract.id_services
- group by ct_contract.id
- having amount = 1;
+-- 21
+create view v_employee as
+select e.*
+from employee e
+join contract ctr on ctr.employee_id = e.employee_id
+where ctr.start_contract ='2019-12-12';
 
 
 

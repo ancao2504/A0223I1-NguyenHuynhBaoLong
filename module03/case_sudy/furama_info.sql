@@ -50,7 +50,7 @@ values('nguyen thi hong dao', '2004-04-10', 0, '09012345612', '0901239871', null
 		('nguyen my ', '1989-03-11', 1, '09012345612', '0901239871', null, 'Vt',2),
 		('ho son duong', '1993-08-12', 0, '09012345612', '0901239871', null, 'da lat',3),
 		('ho son duong', '1993-08-12', 0, '09012345612', '0901239871', null, 'da lat',5);
-        
+
 insert into accompanied_service (name_accompanied_service, price, measure, `status`) 
 values ('massage', 30, null,'open'),
 		('karaoke', 20, null,'open'),
@@ -97,6 +97,10 @@ values ('2022-02-01', '2022-02-04', null, 3,1,4),
 insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
 values ('2021-02-01', '2021-02-04', null, 1,1,4),     
 		('2021-02-01', '2021-02-04', null, 1,6,4); 
+       
+insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
+values ('2019-12-12', '2019-12-12', 1000, 3,5,4),
+		('2019-12-12', '2019-12-12', 1000, 3,5,4);
         
 insert into detail_contract (quantity, contract_id, accompanied_service_id )
 values (1,1,4),
@@ -116,9 +120,10 @@ values (1,8,4),
 		(4,12,1),
         (1,13,4);
 
-
-
-
 insert into detail_contract (quantity, contract_id, accompanied_service_id )
 values (1,14,2),
 		(2,15,3);
+        
+update customer 
+set customer.type_customer_id = 2
+where customer.customer_id = 6
