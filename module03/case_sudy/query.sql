@@ -171,8 +171,43 @@ and customer.customer_id in (
 );
 
 -- 18
-delete from contract 
-where year(contract.start_contract) < 2021 ;
+SET SQL_SAFE_UPDATES = 0;
+SET FOREIGN_KEY_CHECKS=0; -- to disable them
+delete from detail_contract
+where detail_contract.contract_id in (
+select temp.contract_id
+from (
+	select ctr.contract_id
+	from contract ctr 
+	join customer c on c.customer_id = ctr.customer_id
+    join detail_contract dct on dct.contract_id =ctr.contract_id
+	where year(ctr.start_contract) < 2019
+) as temp
+);
+
+delete from contract
+where contract.customer_id in (
+select temp.customer_id
+from (
+	select c.customer_id
+	from contract ctr 
+	join customer c on c.customer_id = ctr.customer_id
+	where year(ctr.start_contract) < 2019
+) as temp
+);
+
+delete from customer
+where customer.customer_id in (
+select temp.customer_id
+from (
+	select c.customer_id
+	from contract ctr 
+	join customer c on c.customer_id = ctr.customer_id
+	where year(ctr.start_contract) < 2019
+) as temp
+);
+SET FOREIGN_KEY_CHECKS=1; -- to disable them
+SET SQL_SAFE_UPDATES = 1;
 
 -- 19
 SET SQL_SAFE_UPDATES = 0;
@@ -205,9 +240,57 @@ create view v_employee as
 select e.*
 from employee e
 join contract ctr on ctr.employee_id = e.employee_id
-where ctr.start_contract ='2019-12-12';
+where ctr.start_contract ='2019-12-12' and e.address = 'hai chau' ;
+
+-- 22
+SET SQL_SAFE_UPDATES = 0;
+update v_employee
+set address ='lien chieu';
+SET SQL_SAFE_UPDATES = 1;
 
 
+-- 23
+DELIMITER //
+CREATE PROCEDURE delete_customer(in id int)
+BEGIN
+	delete from detail_contract
+	where detail_contract.contract_id in (
+	select temp.contract_id
+	from (
+		select ctr.contract_id
+		from contract ctr 
+		join customer c on c.customer_id = ctr.customer_id
+		join detail_contract dct on dct.contract_id =ctr.contract_id
+        where ctr.customer_id = id
+	) as temp
+	);
+    
+    delete from customer where customer.customer_id = id;
+END ;
+//
+DELIMITER ;
 
+call delete_customer(8);
 
+-- 25
+create table `history`(
+total int
+);
+
+DELIMITER //
+
+CREATE TRIGGER tr_delete_contract
+AFTER DELETE ON contract 
+FOR EACH ROW
+BEGIN
+  DECLARE total INT;
+  SET total = (SELECT COUNT(*) FROM contract);
+  INSERT INTO `history` (total) VALUES (total);
+END;
+//
+DELIMITER ;
+
+delete from contract where contract_id = 26;
+
+select * from `history`;
 

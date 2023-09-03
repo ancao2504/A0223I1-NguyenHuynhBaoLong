@@ -29,6 +29,11 @@ insert into employee (`name`, day_of_birth, employee_code, salary, phone_number,
 values ('pham xuan dieu', '1992-03-01', '1234567890',120, '0912346789',null,'da nang', 1,1,1),
 	   ('duong van quan', '1998-03-01', '1234567890',120, '0912346789',null,'da nang', 3,2,1),
 	   ('nguyen tam dac', '2002-03-12', '1234567890',120, '0912346789',null,'quang tri', 3,2,1);
+
+
+insert into employee (`name`, day_of_birth, employee_code, salary, phone_number, email, address, position_id, level_id, part_id ) 
+values ('pham a', '1992-03-01', '1234567890',120, '0912346789',null,'hai chau', 1,1,1),
+	   ('duong b', '1998-03-01', '1234567890',120, '0912346789',null,'hai chau', 3,2,1);
        
 insert into type_customer (name_type_customer) 
 values('diamond'),
@@ -51,6 +56,11 @@ values('nguyen thi hong dao', '2004-04-10', 0, '09012345612', '0901239871', null
 		('ho son duong', '1993-08-12', 0, '09012345612', '0901239871', null, 'da lat',3),
 		('ho son duong', '1993-08-12', 0, '09012345612', '0901239871', null, 'da lat',5);
 
+
+insert into customer (name_customer, day_of_birth, gender, customer_code, phone_number, email, address, type_customer_id)
+values('nguyen van a', '2004-04-10', 0, '09012345612', '0901239871', null, 'quang ngai',1),
+		('nguyen van b', '1999-03-11', 1, '09012345612', '0901239871', null, 'ho chi minh',1);
+        
 insert into accompanied_service (name_accompanied_service, price, measure, `status`) 
 values ('massage', 30, null,'open'),
 		('karaoke', 20, null,'open'),
@@ -102,6 +112,19 @@ insert into contract (start_contract, end_contract, advance_deposit, employee_id
 values ('2019-12-12', '2019-12-12', 1000, 3,5,4),
 		('2019-12-12', '2019-12-12', 1000, 3,5,4);
         
+        
+insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
+values ('2018-12-12', '2018-12-12', 1000, 3,7,4),
+		('2018-12-12', '2018-12-12', 1000, 3,8,4);
+  
+  
+  insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
+values ('2018-12-12', '2018-12-12', 1000, 3,7,4);
+
+update contract
+set employee_id = 8
+where contract_id =25 ;
+
 insert into detail_contract (quantity, contract_id, accompanied_service_id )
 values (1,1,4),
 		(2,2,5),
@@ -123,6 +146,14 @@ values (1,8,4),
 insert into detail_contract (quantity, contract_id, accompanied_service_id )
 values (1,14,2),
 		(2,15,3);
+ 
+ insert into detail_contract (quantity, contract_id, accompanied_service_id )
+values (1,22,2),
+		(2,23,3);
+    
+insert into detail_contract (quantity, contract_id, accompanied_service_id )
+values (1,24,2),
+		(2,25,3);
         
 update customer 
 set customer.type_customer_id = 2
