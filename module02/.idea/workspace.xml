@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c883bec0-e202-40d0-829a-37e0da8d650e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module03/case_sudy/furama_info.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../module03/case_sudy/furama_info.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jxv/jfjd.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../module03/case_sudy/query.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../module03/case_sudy/query.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -229,6 +228,7 @@
       <workItem from="1691933083285" duration="153000" />
       <workItem from="1693183742731" duration="1174000" />
       <workItem from="1693193305578" duration="673000" />
+      <workItem from="1694052802303" duration="706000" />
     </task>
     <servers />
   </component>

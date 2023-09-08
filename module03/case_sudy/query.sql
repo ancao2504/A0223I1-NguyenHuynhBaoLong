@@ -264,13 +264,52 @@ BEGIN
         where ctr.customer_id = id
 	) as temp
 	);
+    delete from contract 
+    where contract_id in (
+    select temp.contract_id 
+    from (
+		select ctr.contract_id 
+        from contract ctr
+		where ctr.customer_id = id
+    ) as temp
+    );
     
     delete from customer where customer.customer_id = id;
 END ;
 //
-DELIMITER ;
+DELIMITER;
 
-call delete_customer(8);
+SET SQL_SAFE_UPDATES = 0;
+SET FOREIGN_KEY_CHECKS=0;
+call delete_customer(5);
+SET SQL_SAFE_UPDATES = 1;
+SET FOREIGN_KEY_CHECKS=1;
+
+-- 24
+DELIMITER //
+CREATE PROCEDURE sp_add_new_contract (in start_contract datetime, in end_contract datetime, in advance_deposit double, in employee_id int, in customer_id int, in service_id int)
+begin 
+	declare v_error_flag BOOLEAN DEFAULT FALSE;
+	if not exists (select 1 from employee where employee_id = employee_id) then 
+        set v_error_flag = true;
+	end if;
+    
+    if not exists (select 1 from customer where customer_id = customer_id) then 
+		set v_error_flag = true;
+	end if;
+    
+      if not exists (select 1 from service where service_id = service_id) then 
+		set v_error_flag = true;
+	end if;
+    
+    if (v_error_flag = false) then 
+		insert into contract (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id)
+		values (start_contract, end_contract, advance_deposit, employee_id, customer_id, service_id);
+	end if;
+end //
+DELIMITER;
+
+call sp_add_new_contract('2015-02-02', '2015-02-05', 1234, 1,2,6)
 
 -- 25
 create table `history`(
@@ -278,19 +317,53 @@ total int
 );
 
 DELIMITER //
-
 CREATE TRIGGER tr_delete_contract
 AFTER DELETE ON contract 
 FOR EACH ROW
 BEGIN
-  DECLARE total INT;
-  SET total = (SELECT COUNT(*) FROM contract);
+  declare total int;
+  set total = (select count(*) from contract);
   INSERT INTO `history` (total) VALUES (total);
-END;
-//
-DELIMITER ;
+END //
+DELIMITER;
 
 delete from contract where contract_id = 26;
-
 select * from `history`;
+
+-- 26
+create table history_update_contract (
+id int auto_increment primary key,
+old_start_contract datetime,
+old_end_contract datetime,
+update_start_contract datetime,
+update_end_contract datetime
+);
+
+delimiter // 
+create trigger tr_update_contract
+after update on contract
+FOR EACH ROW
+begin 
+declare flag boolean default false;
+	if (day(new.end_contract) - day(new.start_contract) >= 2) then 
+		set flag = true;
+	end if;
+    
+    if (flag = true) then 
+		insert into history_update_contract (old_start_contract, old_end_contract, update_start_contract, update_end_contract)
+       VALUES (OLD.start_contract, OLD.end_contract, NEW.start_contract, NEW.end_contract);
+    else
+		SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = ' ngày kết thúc phải lớn hơn ngày làm hợp đồng 2 ngày.';
+    end if;
+end // 
+delimiter ;
+
+update contract 
+set start_contract = '2023-08-04 ',
+end_contract = '2023-08-06 '
+where contract_id = 2;
+
+
+
 
