@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    font-size: larger;
+    background-color: black;
+    color: white;
+    margin: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 5px;
+}
+section {
+    background-color: lightgray;
+    margin: 10px;
+    padding: 10px;
+}
+
+article{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+}

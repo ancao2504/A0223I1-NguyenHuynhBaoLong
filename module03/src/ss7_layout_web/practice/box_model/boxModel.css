@@ -1,0 +1,12 @@
+#content{
+    width: 900px;
+    border: 10px solid;
+    border-color: lightblue purple yellow blue ;
+    padding: 10px;
+
+}
+p{
+    border: 5px red dotted;
+    margin-bottom: 20px;
+
+}
