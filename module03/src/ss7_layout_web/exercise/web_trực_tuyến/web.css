@@ -1,7 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
 
 body {
     font-family: Arial, sans-serif;
@@ -39,7 +39,7 @@ body {
 
 #title {
     background-color: #f5f5f5;
-    border:solid black;
+    border: solid black;
     border-bottom: 1px;
     /*border-bottom: 0px;*/
     /*border-left: 0px;*/
@@ -61,7 +61,7 @@ body {
     /*background-color: #f5f5f5;*/
     grid-area: content;
     width: 100%;
-    min-height:500px;
+    min-height: 500px;
 }
 
 #footer {
@@ -81,18 +81,85 @@ body {
 }
 
 #title a {
-    margin-left:200px;
+    margin-left: 200px;
 }
 
 #content iframe {
-   margin: 20px 150px;
+    margin: 20px 150px;
 }
 
 #sidebar iframe {
     margin-left: 100px;
 }
 
-#footer p{
-    margin-left:50% ;
+#footer p {
+    margin-left: 50%;
 }
+
+@media (min-width: 460px) {
+    #container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: minmax(30px, auto);
+        grid-template-areas:
+    "head head "
+    "title title "
+    "content content"
+    "content content"
+    "comment comment"
+    "left left"
+    "footer footer";
+        row-gap: 2px;
+        column-gap: 5px;
+    }
+
+}
+
+@media (min-width: 1060px) {
+    #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: minmax(30px, auto);
+        grid-template-areas:
+    "head head "
+    "title title "
+    "content content"
+    "content content"
+    "comment comment"
+    "left left"
+    "footer footer";
+        row-gap: 2px;
+        column-gap: 5px;
+    }
+
+    #content iframe {
+        margin: 20px 50px;
+    }
+
+    body {
+        margin-left: 30%;
+    }
+}
+
+@media (min-width: 1760px) {
+    #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: minmax(30px, auto);
+        grid-template-areas:
+    "head head head head"
+    "title title title title"
+    "left content content content"
+    "left content content content"
+    "left comment comment comment"
+    "footer footer footer footer";
+        row-gap: 2px;
+        column-gap: 5px;
+    }
+    body {
+        margin:0px;
+        padding: 20px;
+    }
+}
+
 
