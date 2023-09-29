@@ -16,12 +16,12 @@
             <td><input type="text" name="name" value="${product.getName()}"></td>
         </tr>
         <tr>
-            <td>Date Manufacture: </td>
-            <td><input type="text" name="dateManufacture" value="${product.getDateManufacture()}"></td>
+            <td>Price: </td>
+            <td><input type="text" name="price" value="${product.getPrice()}"></td>
         </tr>
         <tr>
-            <td>Date Expiry: </td>
-            <td><input type="text" name="dateExpiry" value="${product.getDateExpiry()}"></td>
+            <td>Detail: </td>
+            <td><input type="text" name="detail" value="${product.getDetail()}"></td>
         </tr>
         <tr>
             <td>

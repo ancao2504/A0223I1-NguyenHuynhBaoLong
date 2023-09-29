@@ -18,8 +18,8 @@
         <tr>
             <th>Number Orders</th>
             <th>Name</th>
-            <th>date Manufacture</th>
-            <th>date Expiry</th>
+            <th>Price</th>
+            <th>Detail</th>
             <th>edit</th>
             <th>delete</th>
         </tr>
@@ -29,8 +29,8 @@
             <tr>
                 <td>${loop.count}</td>
                 <td><a href="/product-servlet?action=view&id=${p.getId()}">${p.name}</a></td>
-                <td>${p.dateManufacture}</td>
-                <td>${p.dateExpiry}</td>
+                <td>${p.price}</td>
+                <td>${p.detail}</td>
                 <td><a href="/product-servlet?action=edit&id=${p.id}">edit</a></td>
                 <td><a href="/product-servlet?action=delete&id=${p.id}">delete</a></td>
             </tr>

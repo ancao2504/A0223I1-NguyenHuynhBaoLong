@@ -13,10 +13,11 @@ public class RepositoryImpl implements IRepository {
 
     static {
         products = new HashMap<>();
-        products.put(1, new Product("banh", 1, "12/12/1222", "12/12/1223"));
-        products.put(2, new Product("keo", 2, "12/12/1222", "12/12/1223"));
-        products.put(3, new Product("sua", 3, "12/12/1222", "12/12/1223"));
-        products.put(4, new Product("banh", 4, "12/12/1222", "12/12/1223"));
+        products.put(1, new Product("banh", 1, 123.3, "12/12/1223"));
+        products.put(2, new Product("banh", 2, 123.3, "12/12/1223"));
+        products.put(3, new Product("banh", 3, 123.3, "12/12/1223"));
+        products.put(4, new Product("banh", 4, 123.3, "12/12/1223"));
+
     }
 
     @Override
@@ -36,7 +37,7 @@ public class RepositoryImpl implements IRepository {
 
     @Override
     public void update(int id, Product product) {
-        products.put(id,product);
+        products.put(id, product);
     }
 
     @Override

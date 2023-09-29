@@ -16,12 +16,12 @@
             <td><input type="text" name="name"></td>
         </tr>
         <tr>
-            <td>Date Manufacture: </td>
-            <td><input type="text" name="dateManufacture"></td>
+            <td>Price: </td>
+            <td><input type="text" name="price"></td>
         </tr>
         <tr>
-            <td>Date Expiry: </td>
-            <td><input type="text" name="dateExpiry"></td>
+            <td>Detail: </td>
+            <td><input type="text" name="detail"></td>
         </tr>
         <tr>
             <input type="submit" name="create">

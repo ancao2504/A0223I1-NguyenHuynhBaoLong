@@ -43,7 +43,7 @@ public class ProductServlet extends HttpServlet {
     private void viewForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         Product product = services.findById(id);
-        request.setAttribute("product",product);
+        request.setAttribute("product", product);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view.jsp");
         try {
             requestDispatcher.forward(request, response);
@@ -57,7 +57,7 @@ public class ProductServlet extends HttpServlet {
     private void deleteForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         Product product = services.findById(id);
-        request.setAttribute("product",product);
+        request.setAttribute("product", product);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("delete.jsp");
         try {
             requestDispatcher.forward(request, response);
@@ -71,7 +71,7 @@ public class ProductServlet extends HttpServlet {
     private void editForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         Product product = services.findById(id);
-        request.setAttribute("product",product);
+        request.setAttribute("product", product);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("edit.jsp");
         try {
             requestDispatcher.forward(request, response);
@@ -121,8 +121,8 @@ public class ProductServlet extends HttpServlet {
             case "delete":
                 delete(request, response);
                 break;
+        }
     }
-}
 
     private void delete(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
@@ -133,23 +133,23 @@ public class ProductServlet extends HttpServlet {
     private void edit(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
-        String dateManufacture = request.getParameter("dateManufacture");
-        String dateExpiry = request.getParameter("dateExpiry");
+        double price = Double.parseDouble(request.getParameter("price"));
+        String detail = request.getParameter("detail");
 
-        Product product = new Product(name,id, dateManufacture,dateExpiry);
-        services.update(id,product);
-       listProduct(request, response);
+        Product product = new Product(name, id, price, detail);
+        services.update(id, product);
+        listProduct(request, response);
     }
 
     private void create(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
-        String dateManufacture = request.getParameter("dateManufacture");
-        String dateExpiry = request.getParameter("dateExpiry");
+        double price = Double.parseDouble(request.getParameter("price"));
+        String detail = request.getParameter("detail");
 
-        Product product = new Product(name,id, dateManufacture,dateExpiry);
-        request.setAttribute("product",product);
-        services.save(id,product);
-       listProduct(request,response);
+        Product product = new Product(name, id, price, detail);
+        request.setAttribute("product", product);
+        services.save(id, product);
+        listProduct(request, response);
     }
-    }
+}

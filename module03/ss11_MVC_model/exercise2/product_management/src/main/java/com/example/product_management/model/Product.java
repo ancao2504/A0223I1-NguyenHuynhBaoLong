@@ -5,17 +5,17 @@ import java.util.Date;
 public class Product {
     private String name;
     private int id;
-    private String dateManufacture;
-    private String dateExpiry;
+    private double price;
+    private String detail;
 
     public Product() {
     }
 
-    public Product(String name, int id, String dateManufacture, String dateExpiry) {
+    public Product(String name, int id, double price, String detail) {
         this.name = name;
         this.id = id;
-        this.dateManufacture = dateManufacture;
-        this.dateExpiry = dateExpiry;
+        this.price = price;
+        this.detail = detail;
     }
 
     public String getName() {
@@ -34,19 +34,19 @@ public class Product {
         this.id = id;
     }
 
-    public String getDateManufacture() {
-        return dateManufacture;
+    public double getPrice() {
+        return price;
     }
 
-    public void setDateManufacture(String dateManufacture) {
-        this.dateManufacture = dateManufacture;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public String getDateExpiry() {
-        return dateExpiry;
+    public String getDetail() {
+        return detail;
     }
 
-    public void setDateExpiry(String dateExpiry) {
-        this.dateExpiry = dateExpiry;
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 }

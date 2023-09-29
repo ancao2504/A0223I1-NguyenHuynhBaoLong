@@ -17,11 +17,11 @@
         </tr>
         <tr>
             <td>Date Manufacture: </td>
-            <td>${product.getDateManufacture()}</td>
+            <td>${product.getPrice()}</td>
         </tr>
         <tr>
             <td>Date Expiry: </td>
-            <td>${product.getDateExpiry()}</td>
+            <td>${product.getDetail()}</td>
         </tr>
         <tr>
             <td>
