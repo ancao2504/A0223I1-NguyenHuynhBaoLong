@@ -6,8 +6,9 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<a href="/student-servlet" name="action">
+<a href="/student-servlet" name="action" >
     <h1>Danh sách sinh viên</h1>
 </a>
+
 </body>
 </html>

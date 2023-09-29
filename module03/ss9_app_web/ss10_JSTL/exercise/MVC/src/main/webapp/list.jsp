@@ -5,6 +5,9 @@
     <title>list students</title>
 </head>
 <body>
+<p>
+    <a href="/student-servlet?action=create"  > Add New Student</a>
+</p>
 <table border="1px">
     <thead>
     <tr>
@@ -13,12 +16,14 @@
         <th>Gender</th>
         <th>Point</th>
         <th>Rank</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="students" var="s" varStatus="loop">
+    <c:forEach items="${students}" var="s" varStatus="loop">
         <tr>
-            <td>${loop.count}</td>
+            <td>${s.id}</td>
             <td>${s.name}</td>
             <c:if test="${s.gender == true}">
                 <td>nam</td>
@@ -41,13 +46,12 @@
                     <td>Yếu</td>
                 </c:otherwise>
             </c:choose>
+            <td><a href="/student-servlet?action=edit&id=${s.id}">Edit</a></td>
+            <td><a href="/student-servlet?action=delete&id=${s.id}">Delete</a></td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
-<a href="/student-servlet">
-    <button type="submit">add</button>
-</a>
 
 </body>
 </html>
