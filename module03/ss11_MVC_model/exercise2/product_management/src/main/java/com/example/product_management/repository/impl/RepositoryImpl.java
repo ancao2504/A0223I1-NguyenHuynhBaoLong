@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class RepositoryImpl implements IRepository {
     private static Map<Integer, Product> products;
-
+    private static ArrayList<Product> list = new ArrayList();
     static {
         products = new HashMap<>();
         products.put(1, new Product("banh", 1, 123.3, "12/12/1223"));
@@ -23,6 +23,7 @@ public class RepositoryImpl implements IRepository {
     @Override
     public List<Product> findAll() {
         return new ArrayList<>(products.values());
+
     }
 
     @Override
