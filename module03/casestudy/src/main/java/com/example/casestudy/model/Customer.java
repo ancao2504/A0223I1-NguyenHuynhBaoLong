@@ -36,6 +36,11 @@ public class Customer {
         this.address = address;
     }
 
+    public Customer(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public int getId() {
         return id;
     }
@@ -106,5 +111,20 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", idCustomerType=" + idCustomerType +
+                ", name='" + name + '\'' +
+                ", birthDay=" + birthDay +
+                ", gender=" + gender +
+                ", idCard='" + idCard + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 }

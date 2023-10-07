@@ -1,8 +1,14 @@
 package com.example.casestudy.controller;
 
 import com.example.casestudy.model.Customer;
+import com.example.casestudy.model.CustomerType;
+
+import com.example.casestudy.repository.IRepositoryId;
+import com.example.casestudy.repository.impl.CustomerTypeRepo;
 import com.example.casestudy.service.ICustomerService;
+
 import com.example.casestudy.service.impl.CustomerServiceImpl;
+
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -15,6 +21,7 @@ import java.util.List;
 @WebServlet(name = "CustomerServlet", value = "/customer-servlet")
 public class CustomerServlet extends HttpServlet {
     private ICustomerService services = new CustomerServiceImpl();
+    private IRepositoryId iFindRepo = new CustomerTypeRepo();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -39,12 +46,11 @@ public class CustomerServlet extends HttpServlet {
 
 
     private void deleteForm(HttpServletRequest request, HttpServletResponse response) {
-        int id= Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = services.findById(id);
-        System.out.println(id);
-        services.delete(customer);
-       request.setAttribute("customer",customer);
-       RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/delete.jsp");
+
+        request.setAttribute("customer", customer);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/delete.jsp");
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -56,10 +62,10 @@ public class CustomerServlet extends HttpServlet {
 
     private void editForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
+        List<CustomerType> customerType = iFindRepo.findAll();
         Customer customer = services.findById(id);
-        System.out.println(id);
-        System.out.println(customer);
         request.setAttribute("customer", customer);
+        request.setAttribute("customerType", customerType);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/edit.jsp");
         try {
             requestDispatcher.forward(request, response);
@@ -71,7 +77,9 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void createForm(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher requestDispatcher =request.getRequestDispatcher("customer/create.jsp");
+        List<CustomerType> customerTypes = iFindRepo.findAll();
+        request.setAttribute("customerTypes",customerTypes);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/create.jsp");
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -83,7 +91,10 @@ public class CustomerServlet extends HttpServlet {
 
     private void listCustomer(HttpServletRequest request, HttpServletResponse response) {
         List<Customer> customers = services.findAll();
+        List<CustomerType> customerTypes = iFindRepo.findAll();
         request.setAttribute("customers", customers);
+//        CustomerType customerTypes = iCustomerTypeService.findById(customers);
+        request.setAttribute("customerTypes",customerTypes);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/listCustomer.jsp");
         try {
             requestDispatcher.forward(request, response);
@@ -102,7 +113,7 @@ public class CustomerServlet extends HttpServlet {
         }
         switch (action) {
             case "create":
-                create(request,response);
+                create(request, response);
                 break;
             case "edit":
                 edit(request, response);
@@ -120,7 +131,7 @@ public class CustomerServlet extends HttpServlet {
         String name = request.getParameter("name");
         List<Customer> customer = services.findByName(name);
         request.setAttribute("customer", customer);
-        RequestDispatcher requestDispatcher =request.getRequestDispatcher("customer/find.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/find.jsp");
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -131,13 +142,15 @@ public class CustomerServlet extends HttpServlet {
 
     }
 
-    private void delete(HttpServletRequest request, HttpServletResponse response) {
-        int id= Integer.parseInt(request.getParameter("id"));
-        Customer customer =services.findById(id);
-        System.out.println(id);
-        System.out.println(customer);
+    private void delete(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Customer customer = services.findById(id);
         services.delete(customer);
-      listCustomer(request,response);
+        listCustomer(request, response);
+//        System.out.println(id);
+//        System.out.println("--------------delete--------" + customer);
+//        services.delete(customer);
+//        response.sendRedirect("/customer-servlet");
     }
 
     private void edit(HttpServletRequest request, HttpServletResponse response) {
@@ -146,14 +159,14 @@ public class CustomerServlet extends HttpServlet {
         String name = request.getParameter("name");
         String birthDay = request.getParameter("birthDay");
         //2023-05-11
-        Date date =Date.valueOf(birthDay);
+        Date date = Date.valueOf(birthDay);
         Boolean gender = Boolean.valueOf(request.getParameter("gender"));
         String idCard = request.getParameter("idCard");
         String phone = request.getParameter("phone");
         String email = request.getParameter("email");
         String address = request.getParameter("address");
         //int id, int idCustomerType, String name, Date birthDay, boolean gender, String idCard, String phone, String email, String address
-        Customer customer = new Customer(id, idCustomerType, name, date, gender, idCard, phone, email, address );
+        Customer customer = new Customer(id, idCustomerType, name, date, gender, idCard, phone, email, address);
         services.update(customer);
 
         listCustomer(request, response);
@@ -162,10 +175,11 @@ public class CustomerServlet extends HttpServlet {
     private void create(HttpServletRequest request, HttpServletResponse response) {
         //int idCustomerType, String name, Date birthDay, boolean gender, String idCard, String phone, String email, String address
         int idCustomerType = Integer.parseInt(request.getParameter("idCustomerType"));
+        System.out.println("------------id-----------"+idCustomerType);
         String name = request.getParameter("name");
         String birthDay = request.getParameter("birthDay");
         //2023-05-11
-        Date date =Date.valueOf(birthDay);
+        Date date = Date.valueOf(birthDay);
         Boolean gender = Boolean.valueOf(request.getParameter("gender"));
         String idCard = request.getParameter("idCard");
         String phone = request.getParameter("phone");

@@ -2,11 +2,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer list</title>
-<%--    <link rel="stylesheet" href="table.css">--%>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customer List</title>
+    <link rel="stylesheet" href="bootstrap520/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="datatables/css/dataTables.bootstrap5.min.css" />
 </head>
 <body>
 <h2>
@@ -16,49 +16,70 @@
 <form action="/customer-servlet?action=search" method="post">
     <table>
         <tr>
-            <td><input type="text" name="name" ></td>
+            <td><input type="text" name="name"></td>
             <td><input type="submit" name="search" value="search"></td>
         </tr>
     </table>
 </form>
-<table border="1px">
+<table id="customerTable" class="table table striped table-bordered" style="width: 100%;">
     <thead>
-         <tr>
-            <th>Order</th>
-            <th>Name</th>
-            <th>BirthDay</th>
-            <th>gender</th>
-            <th>id Card</th>
-            <th>Phone</th>
-            <th>Email</th>
-            <th>Address</th>
-            <th>Action</th>
-        </tr>
+    <tr>
+        <th>Order</th>
+        <th>Name</th>
+        <th>BirthDay</th>
+        <th>gender</th>
+        <th>id Card</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Type Customer</th>
+        <th>Action</th>
+    </tr>
     </thead>
     <tbody>
-        <c:forEach items="${customers}" var="c" varStatus="loop">
-                <tr>
-                    <td>${loop.count}</td>
-                    <td>${c.name}</td>
-                    <td>${c.birthDay}</td>
-                    <c:if test="${c.gender == false}">
-                        <td>Nữ</td>
+    <c:forEach items="${customers}" var="c" varStatus="loop">
+        <tr>
+            <td>${loop.count}</td>
+            <td>${c.name}</td>
+            <td>${c.birthDay}</td>
+            <c:if test="${c.gender == false}">
+                <td>Nữ</td>
+            </c:if>
+            <c:if test="${c.gender == true}">
+                <td>Nam</td>
+            </c:if>
+            <td>${c.idCard}</td>
+            <td>${c.phone}</td>
+            <td>${c.email}</td>
+            <td>${c.address}</td>
+            <td>
+                <c:forEach items="${customerTypes}" var="ct" varStatus="loop">
+                    <c:if test="${c.idCustomerType == ct.id}">
+                        <option value="${ct.getId()}">${ct.getName()}</option>
                     </c:if>
-                    <c:if test="${c.gender == true}">
-                        <td>Nam</td>
-                    </c:if>
-                    <td>${c.idCard}</td>
-                    <td>${c.phone}</td>
-                    <td>${c.email}</td>
-                    <td>${c.address}</td>
-                    <td>
-                        <a href="/customer-servlet?action=edit&id=${c.id}">edit</a>
-                        <a href="/customer-servlet?action=delete&id=${c.id}">delete</a>
-                    </td>
-                </tr>
-        </c:forEach>
+                </c:forEach>
+            </td>
+            <td>
+                <a href="/customer-servlet?action=edit&id=${c.id}">edit</a>
+                <a href="/customer-servlet?action=delete&id=${c.id}">delete</a>
+            </td>
+        </tr>
+    </c:forEach>
     </tbody>
 </table>
 <a href="index.jsp">Back to main screen</a>
 </body>
+<script src="jquery/jquery-3.5.1.min.js"></script>
+<script src="datatables/js/jquery.dataTables.min.js"></script>
+<script src="datatables/js/dataTables.bootstrap5.min.js"></script>
+</script>
+<script>
+    $(document).ready(function() {
+        $('#customerTable').dataTable( {
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 5
+        } );
+    } );
+</script>
 </html>

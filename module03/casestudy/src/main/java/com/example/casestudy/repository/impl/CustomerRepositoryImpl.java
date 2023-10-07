@@ -2,6 +2,7 @@ package com.example.casestudy.repository.impl;
 
 import com.example.casestudy.database.BaseRepository;
 import com.example.casestudy.model.Customer;
+import com.example.casestudy.model.Division;
 import com.example.casestudy.repository.ICustomerRepository;
 
 import java.sql.*;
@@ -16,8 +17,9 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     public static final String INSERT_CUSTOMER = "INSERT INTO `customer` (`name_customer`, `day_of_birth`, `gender`, `customer_code`, `phone_number`, `email`, `address`, `type_customer_id`) VALUES (?,?,?,?,?,?,?,?);";
     public static final String SELECT_CUSTOMER_WHERE_ID = "SELECT * FROM customer where customer_id=?";
     public static final String UPDATE = "UPDATE `customer` SET `name_customer` = ? ,`day_of_birth` = ?, `gender` = ?, `customer_code` = ?, `phone_number` = ?, `email` =?, `address` = ?, `type_customer_id` = ? WHERE (`customer_id` = ?);";
-    public static final String DELETE = "DELETE FROM `customer` WHERE customer_id = ?;";
+    public static final String DELETE = "call delete_customer(?) ";
     public static final String SELECT_CUSTOMER_WHERE_NAME = "SELECT * FROM customer where `name_customer` like ?;";
+
 
     @Override
     public List<Customer> findAll() {
@@ -47,6 +49,20 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     }
 
     @Override
+    public List<Customer> findName() {
+        Customer customer;
+        List<Customer> list = new ArrayList<>();
+        try {
+            Connection connection = BaseRepository.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM customer where ;");
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
+
+        @Override
     public void save(Customer customer) {
         try {
             Connection connection = BaseRepository.getConnection();
@@ -68,6 +84,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
 
     @Override
     public Customer findById(int id) {
+        System.out.println("id " + id);
         Customer customer = null;
         try {
             Connection connection = BaseRepository.getConnection();
@@ -150,9 +167,9 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
         Boolean rowDelete = false;
         try {
             Connection connection = BaseRepository.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(DELETE);
-            preparedStatement.setInt(1, customer.getId());
-            rowDelete = preparedStatement.executeUpdate() > 0;
+            CallableStatement CallableStatement = connection.prepareCall(DELETE);
+            CallableStatement.setInt(1, customer.getId());
+            rowDelete = CallableStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
         }

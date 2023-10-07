@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -11,8 +12,14 @@
     <table >
 
         <tr>
-            <td>id customer type:</td>
-            <td><input type="text" name="idCustomerType"></td>
+            <td>Name type Customer</td>
+            <td>
+            <select  name="idCustomerType">
+                <c:forEach items="${customerTypes}" var="c" varStatus="loop">
+                <option  value="${c.getId()}">${c.getName()}</option>
+                </c:forEach>
+            </select>
+            </td>
         </tr>
         <tr>
             <td>name:</td>

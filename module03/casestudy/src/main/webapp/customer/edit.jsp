@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -9,13 +10,24 @@
         <legend>Customer information</legend>
         <table>
             <tr>
-                <td>id :</td>
-                ${customer.getId()}
                 <td><input type="hidden" name="id" value="${customer.getId()}"></td>
+
             </tr>
             <tr>
-                <td>id customer type:</td>
-                <td><input type="text" name="idCustomerType" value="${customer.getIdCustomerType()}"></td>
+                <td>Name type customer:</td>
+                <td>
+                    <select  name="idCustomerType">
+                        <c:forEach items="${customerType}" var="ct" varStatus="loop">
+                            <c:if test="${customer.getIdCustomerType() == ct.id}">
+                                <option value="${ct.getId()}" selected>${ct.getName()}</option>
+                            </c:if>
+                            <c:if test="${customer.getIdCustomerType() != ct.id}">
+                                <option value="${ct.getId()}" >${ct.getName()}</option>
+                            </c:if>
+                        </c:forEach>
+                    </select>
+
+                </td>
             </tr>
             <tr>
                 <td>name:</td>
@@ -27,8 +39,15 @@
             </tr>
             <tr>
                 <td>gender:</td>
-                <td><input type="radio" name="gender" value="true">nam</td>
-                <td><input type="radio" name="gender" value="false">nu</td>
+
+                    <c:if test="${customer.isGender() == true}">
+                        <td><input type="radio" name="gender" value="true" checked>nam</td>
+                        <td> <input type="radio" name="gender" value="false">nu</td>
+                    </c:if>
+                <c:if test="${customer.isGender() == false}">
+                    <td><input type="radio" name="gender" value="true" >nam</td>
+                    <td> <input type="radio" name="gender" value="false" checked>nu</td>
+                </c:if>
             </tr>
             <tr>
                 <td>id card:</td>

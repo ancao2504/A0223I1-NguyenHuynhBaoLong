@@ -24,6 +24,17 @@ public class Contract {
         this.idService = idService;
     }
 
+    public Contract(Date startContract, Date endContract, double depositContract, double totalMoney, int idEmployee,
+                    int idCustomer, int idService) {
+        this.startContract = startContract;
+        this.endContract = endContract;
+        this.depositContract = depositContract;
+        this.totalMoney = totalMoney;
+        this.idEmployee = idEmployee;
+        this.idCustomer = idCustomer;
+        this.idService = idService;
+    }
+
     public int getId() {
         return id;
     }

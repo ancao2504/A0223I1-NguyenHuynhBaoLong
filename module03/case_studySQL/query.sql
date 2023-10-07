@@ -251,39 +251,16 @@ SET SQL_SAFE_UPDATES = 1;
 
 -- 23
 DELIMITER //
-CREATE PROCEDURE delete_customer(in id int)
+CREATE PROCEDURE delete_customer(in p_id int)
 BEGIN
-	delete from detail_contract
-	where detail_contract.contract_id in (
-	select temp.contract_id
-	from (
-		select ctr.contract_id
-		from contract ctr 
-		join customer c on c.customer_id = ctr.customer_id
-		join detail_contract dct on dct.contract_id =ctr.contract_id
-        where ctr.customer_id = id
-	) as temp
-	);
-    delete from contract 
-    where contract_id in (
-    select temp.contract_id 
-    from (
-		select ctr.contract_id 
-        from contract ctr
-		where ctr.customer_id = id
-    ) as temp
-    );
+	delete from detail_contract dct where dct.contract_id in (select ctr.contract_id from contract ctr where ctr.customer_id = p_id);
+	delete from contract ctr where ctr.customer_id in (select c.customer_id from customer c where c.customer_id = p_id );
+	delete from customer c where c.customer_id = p_id;
     
-    delete from customer where customer.customer_id = id;
-END ;
-//
-DELIMITER;
+END //
 
-SET SQL_SAFE_UPDATES = 0;
-SET FOREIGN_KEY_CHECKS=0;
-call delete_customer(5);
-SET SQL_SAFE_UPDATES = 1;
-SET FOREIGN_KEY_CHECKS=1;
+DELIMITER //;
+
 
 -- 24
 DELIMITER //

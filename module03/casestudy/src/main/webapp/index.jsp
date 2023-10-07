@@ -24,7 +24,7 @@
         <a href="/employee-servlet" name="action">Employee</a>
     </span>
         <span>
-        <a href="/customer-servlet" name="action">Customer</a>
+        <a href="/contract-servlet " name="action">Contract</a>
     </span>
     </div>
     <div id="left">
