@@ -21,6 +21,7 @@
         </tr>
     </table>
 </form>
+<a href="/customer-servlet?action=customerAreUsing"> list of customers are using service</a>
 <table id="customerTable" class="table table striped table-bordered" style="width: 100%;">
     <thead>
     <tr>
@@ -81,5 +82,6 @@
             "pageLength": 5
         } );
     } );
+
 </script>
 </html>

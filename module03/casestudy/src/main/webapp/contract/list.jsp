@@ -34,6 +34,7 @@
     </tr>
     </thead>
     <tbody>
+
     <c:forEach items="${contracts}" var="c" varStatus="loop">
         <tr>
             <td>${loop.count}</td>
@@ -41,9 +42,27 @@
             <td>${c.endContract}</td>
             <td>${c.depositContract}</td>
             <td>${c.totalMoney}</td>
-            <td>${c.idEmployee}</td>
-            <td>${c.idCustomer}</td>
-            <td>${c.idService}</td>
+            <td>
+                <c:forEach items="${employees}" var="e" varStatus="loop">
+                    <c:if test="${c.idEmployee == e.id}">
+                        <option value="${c.idEmployee}">${e.name}</option>
+                    </c:if>
+                </c:forEach>
+            </td>
+            <td name="idCustomer">
+            <c:forEach items="${customers}" var="cu" varStatus="loop">
+                <c:if test="${c.idCustomer == cu.id}">
+                    <option value="${cu.getId()}">${cu.getName()}</option>
+                </c:if>
+            </c:forEach>
+            </td>
+            <td>
+                <c:forEach items="${services}" var="s" varStatus="loop">
+                    <c:if test="${c.idService == s.id}">
+                        <option value="${s.getId()}">${s.getName()}</option>
+                    </c:if>
+                </c:forEach>
+            </td>
         </tr>
     </c:forEach>
     </tbody>

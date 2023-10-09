@@ -1,20 +1,22 @@
 package com.example.casestudy.controller;
 
-import com.example.casestudy.model.Customer;
-import com.example.casestudy.model.CustomerType;
+import com.example.casestudy.common.Validate;
+import com.example.casestudy.model.*;
 
 import com.example.casestudy.repository.IRepositoryId;
 import com.example.casestudy.repository.impl.CustomerTypeRepo;
-import com.example.casestudy.service.ICustomerService;
+import com.example.casestudy.service.*;
 
-import com.example.casestudy.service.impl.CustomerServiceImpl;
+import com.example.casestudy.service.impl.*;
 
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.sql.Date;
+import java.text.ParseException;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 
@@ -22,6 +24,12 @@ import java.util.List;
 public class CustomerServlet extends HttpServlet {
     private ICustomerService services = new CustomerServiceImpl();
     private IRepositoryId iFindRepo = new CustomerTypeRepo();
+    private IDetailCustomerService detailCustomerService = new DetailCustomerServiceImpl();
+    private IServiceId<AttachService> attachService = new AttachServiceImpl();
+
+    private IServiceId<ServiceType> serviceType = new ServiceTypeImpl();
+    private IService service = new ServiceImpl();
+    private IServiceId<CustomerType> customerType = new CusomerTypeServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -39,8 +47,32 @@ public class CustomerServlet extends HttpServlet {
             case "delete":
                 deleteForm(request, response);
                 break;
+            case "customerAreUsing":
+                listCustomerUsing(request,response);
+                break;
             default:
                 listCustomer(request, response);
+        }
+    }
+
+    private void listCustomerUsing(HttpServletRequest request, HttpServletResponse response) {
+    List<DetailCustomer> detailCustomers = detailCustomerService.list();
+        List<AttachService> attachServices = attachService.findAll();
+        List<ServiceType> ServiceType = serviceType.findAll();
+        List<Service> services = service.findAll();
+        List<CustomerType> customerTypes = customerType.findAll();
+        request.setAttribute("attachServices", attachServices);
+        request.setAttribute("ServiceType", ServiceType);
+        request.setAttribute("services", services);
+    request.setAttribute("detailCustomers",detailCustomers);
+    request.setAttribute("customerTypes",customerTypes);
+    RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/detail.jsp");
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -158,8 +190,13 @@ public class CustomerServlet extends HttpServlet {
         int idCustomerType = Integer.parseInt(request.getParameter("idCustomerType"));
         String name = request.getParameter("name");
         String birthDay = request.getParameter("birthDay");
-        //2023-05-11
-        Date date = Date.valueOf(birthDay);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date();
+        try {
+            date = simpleDateFormat.parse(birthDay);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         Boolean gender = Boolean.valueOf(request.getParameter("gender"));
         String idCard = request.getParameter("idCard");
         String phone = request.getParameter("phone");
@@ -178,17 +215,46 @@ public class CustomerServlet extends HttpServlet {
         System.out.println("------------id-----------"+idCustomerType);
         String name = request.getParameter("name");
         String birthDay = request.getParameter("birthDay");
-        //2023-05-11
-        Date date = Date.valueOf(birthDay);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date();
+        try {
+            date = simpleDateFormat.parse(birthDay);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         Boolean gender = Boolean.valueOf(request.getParameter("gender"));
         String idCard = request.getParameter("idCard");
         String phone = request.getParameter("phone");
         String email = request.getParameter("email");
         String address = request.getParameter("address");
-        Customer customer = new Customer(idCustomerType, name, date, gender, idCard, phone, email, address);
-        request.setAttribute("customer", customer);
-        services.save(customer);
+        boolean flag =true;
+        String errorCode=null;
+        String errorEmail =null;
+        String errorPhone =null;
+//        if ()
+        if (!Validate.checkIdCardCustomer(idCard)) {
+            errorCode="KH-XXXX";
+            flag=false;
+        }
+        if (!Validate.checkEmail(email)) {
+            errorEmail="jame12@gmail.com";
+            flag=false;
+        }
+        if (!Validate.checkPhone(phone)) {
+            errorPhone ="090XXXXXXX || 091XXXXXXX || +8490XXXXXXX || +8491XXXXXXX";
+            flag=false;
+        }
+        if (!flag) {
+            request.setAttribute("errorCode",errorCode);
+            request.setAttribute("errorEmail",errorEmail);
+            request.setAttribute("errorPhone",errorPhone);
+           createForm(request,response);
+        }else {
+            Customer customer = new Customer(idCustomerType, name, date, gender, idCard, phone, email, address);
+            request.setAttribute("customer", customer);
+            services.save(customer);
+            listCustomer(request, response);
+        }
 
-        listCustomer(request, response);
     }
 }

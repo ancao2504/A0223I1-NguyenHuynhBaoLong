@@ -20,11 +20,14 @@
         <span>
         <a href="/service-servlet" name="action">Service</a>
     </span>
-        <span>
+    <span>
         <a href="/employee-servlet" name="action">Employee</a>
     </span>
-        <span>
+    <span>
         <a href="/contract-servlet " name="action">Contract</a>
+    </span>
+        <span>
+        <a href="/detailcontract-Servlet " name="action">detail contract</a>
     </span>
     </div>
     <div id="left">

@@ -69,7 +69,9 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_CUSTOMER);
             //(`name_customer`, `day_of_birth`, `gender`, `customer_code`, `phone_number`, `email`, `address`, `type_customer_id`)
             preparedStatement.setString(1, customer.getName());
-            preparedStatement.setDate(2, customer.getBirthDay());
+//            preparedStatement.setDate(2, customer.getBirthDay());
+            Date sqlDate = new Date(customer.getBirthDay().getTime());
+            preparedStatement.setDate(2,sqlDate);
             preparedStatement.setBoolean(3, customer.isGender());
             preparedStatement.setString(4, customer.getIdCard());
             preparedStatement.setString(5, customer.getPhone());
@@ -146,7 +148,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE);
             preparedStatement.setString(1, customer.getName());
 
-            preparedStatement.setDate(2, customer.getBirthDay());
+            preparedStatement.setDate(2, (java.sql.Date) customer.getBirthDay());
             preparedStatement.setBoolean(3, customer.isGender());
             preparedStatement.setString(4, customer.getIdCard());
             preparedStatement.setString(5, customer.getPhone());

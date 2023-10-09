@@ -4,9 +4,11 @@
 <html>
 <head>
     <title>Title</title>
+
 </head>
 <body>
 <form method="post" action="/customer-servlet?action=create">
+
     <fieldset>
         <legend>Customer information</legend>
     <table >
@@ -35,15 +37,25 @@
             <td><input type="radio" name="gender" value="false">nu</td>
         </tr>
         <tr>
-            <td>id card:</td>
+
+            <td>id card:
+                <c:if test="${errorCode !=null}">
+                    <span style="color: red">${errorCode}</span>
+                </c:if></td>
             <td><input type="text" name="idCard"></td>
         </tr>
         <tr>
-            <td>phone:</td>
+            <td>phone:
+                <c:if test="${errorPhone !=null}">
+                    <span style="color: red">${errorPhone}</span>
+                </c:if></td></td>
             <td><input type="text" name="phone"></td>
         </tr>
         <tr>
-            <td>email:</td>
+            <td>email:
+                <c:if test="${errorEmail !=null}">
+                    <span style="color: red">${errorEmail}</span>
+                </c:if></td></td>
             <td><input type="text" name="email"></td>
         </tr>
         <tr>
@@ -61,4 +73,5 @@
 </form>
 <a href="/customer-servlet">Back the list</a>
 </body>
+
 </html>

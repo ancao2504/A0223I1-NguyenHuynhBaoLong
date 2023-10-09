@@ -1,8 +1,13 @@
 package com.example.casestudy.controller;
 
+import com.example.casestudy.model.RentType;
 import com.example.casestudy.model.Service;
+import com.example.casestudy.model.ServiceType;
 import com.example.casestudy.service.IService;
+import com.example.casestudy.service.IServiceId;
+import com.example.casestudy.service.impl.RentTypeServiceImpl;
 import com.example.casestudy.service.impl.ServiceImpl;
+import com.example.casestudy.service.impl.ServiceTypeImpl;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -13,6 +18,8 @@ import java.util.List;
 @WebServlet(name = "ServiceServlet", value = "/service-servlet")
 public class ServiceServlet extends HttpServlet {
     private IService iService = new ServiceImpl();
+    private IServiceId rentType = new RentTypeServiceImpl();
+    private IServiceId serviceType = new ServiceTypeImpl();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -23,12 +30,6 @@ public class ServiceServlet extends HttpServlet {
             case "create":
                 createForm(request, response);
                 break;
-//            case "edit":
-//                editForm(request, response);
-//                break;
-//            case "delete":
-//                deleteForm(request, response);
-//                break;
             default:
                 listService(request, response);
         }
@@ -47,7 +48,11 @@ public class ServiceServlet extends HttpServlet {
 
     private void listService(HttpServletRequest request, HttpServletResponse response) {
         List<Service> services = iService.findAll();
+        List<RentType> rentTypes = rentType.findAll();
+        List<ServiceType> serviceTypes = serviceType.findAll();
         request.setAttribute("services",services);
+        request.setAttribute("rentTypes",rentTypes);
+        request.setAttribute("serviceTypes",serviceTypes);
         RequestDispatcher requestDispatcher =request.getRequestDispatcher("service/list.jsp");
         try {
             requestDispatcher.forward(request,response);

@@ -110,7 +110,34 @@ accompanied_service_id int,
 foreign key (accompanied_service_id) references accompanied_service (accompanied_service_id),
 foreign key (contract_id) references contract (contract_id)
 );
+-- create table detail_customer (
+-- customer_id int primary key auto_increment,
+-- name_customer varchar(45),
+-- day_of_birth date,
+-- gender bit(1),
+-- customer_code varchar(45),
+-- phone_number varchar(45),
+-- email varchar(45),
+-- address varchar(45),
+-- type_customer_id int,
+-- foreign key(type_customer_id) references type_customer(type_customer_id),
+-- foreign key(type_customer_id) references type_customer(type_customer_id),
+
+-- );
 
 
-
+delimiter //
+create procedure customer_are_using()
+begin
+select c.* ,s.service_id,ts.type_service_id,a.accompanied_service_id from customer c
+join type_customer tc on c.type_customer_id = tc.type_customer_id
+join contract ctr on ctr.customer_id = c.customer_id
+join service s on s.service_id = ctr.service_id
+join type_service ts on ts.type_service_id = s.type_service_id
+join rental_type rt on rt.rental_type_id = s.rental_type_id
+join detail_contract dc on dc.contract_id = ctr.contract_id
+join accompanied_service a on a.accompanied_service_id = dc.accompanied_service_id;
+end //
+delimiter //
+call customer_are_using();
 

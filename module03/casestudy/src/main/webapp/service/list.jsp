@@ -3,13 +3,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service List</title>
+    <link rel="stylesheet" href="bootstrap520/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="datatables/css/dataTables.bootstrap5.min.css" />
 </head>
 <body>
 <h2>
     <a href="/service-servlet?action=create">Create new Service</a>
 </h2>
-<table border="1px">
+<table id="customerTable" class="table table striped table-bordered" style="width: 100%;">
     <thead>
     <tr>
         <th>ID</th>
@@ -43,8 +47,20 @@
             <td>${s.areaService}</td>
            <td>${s.costService}</td>
             <td>${s.maxPeople}</td>
-            <td>${s.idRentType}</td>
-            <td>${s.idTypeService}</td>
+            <td>
+                <c:forEach items="${rentTypes}" var="r">
+                    <c:if test="${s.idRentType == r.id}" >
+                        <option value="${r.id}">${r.name}</option>
+                    </c:if>
+                </c:forEach>
+            </td>
+            <td>
+                <c:forEach items="${serviceTypes}" var="st">
+                    <c:if test="${s.idTypeService == st.id}" >
+                        <option value="${st.id}">${st.name}</option>
+                    </c:if>
+                </c:forEach>
+            </td>
             <td>${s.standardRoom}</td>
             <td>${s.description}</td>
             <td>${s.areaPool}</td>
