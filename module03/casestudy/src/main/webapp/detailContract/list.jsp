@@ -13,7 +13,9 @@
 <h2>
     <a href="/detailcontract-Servlet?action=create">Create new detail contract</a>
 </h2>
-
+<c:if test="${mess != null}" >
+    <h3>${mess}</h3>
+</c:if>
 <table id="detailTable" class="table table striped table-bordered" style="width: 100%;">
     <thead>
     <tr>
@@ -36,12 +38,18 @@
                     </c:if>
                 </c:forEach>
             </td>
-            <td>${c.idContract}</td>
+            <td>${c.idContract}
+<%--                <c:forEach items="${contracts}" var="ct" varStatus="loop">--%>
+<%--                    <c:if test="${c.idContract == ct.id}">--%>
+<%--                        <option value="${a.getId()}">${a.getName()}</option>--%>
+<%--                    </c:if>--%>
+<%--                </c:forEach>--%>
+            </td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
-<a href="index.jsp">Back to main screen</a>
+<a href="main.jsp">Back to main screen</a>
 </body>
 <script src="jquery/jquery-3.5.1.min.js"></script>
 <script src="datatables/js/jquery.dataTables.min.js"></script>

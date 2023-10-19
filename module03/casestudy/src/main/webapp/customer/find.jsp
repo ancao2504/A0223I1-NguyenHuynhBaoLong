@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <table border="1px">
+    <table class="table table striped table-bordered" style="width: 100%;">
         <thead>
         <tr>
             <th>Order</th>

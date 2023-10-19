@@ -13,6 +13,9 @@
 <h2>
     <a href="/service-servlet?action=create">Create new Service</a>
 </h2>
+<c:if test="${mess != null}" >
+    <h3>${mess}</h3>
+</c:if>
 <table id="customerTable" class="table table striped table-bordered" style="width: 100%;">
     <thead>
     <tr>
@@ -42,7 +45,7 @@
     private String description;
     private double areaPool;
     private int floor;      --%>
-            <td>${s.id}</td>
+            <td>${loop.count}</td>
             <td>${s.name}</td>
             <td>${s.areaService}</td>
            <td>${s.costService}</td>
@@ -70,6 +73,6 @@
     </tbody>
 </table>
 
-<a href="index.jsp">Back to main screen</a>
+<a href="main.jsp">Back to main screen</a>
 </body>
 </html>

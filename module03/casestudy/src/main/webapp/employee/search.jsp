@@ -71,7 +71,7 @@
     </tbody>
 </table>
 
-<a href="index.jsp">Back to main screen</a>
+<a href="main.jsp">Back to main screen</a>
 <br>
 <a href="/employee-servlet" name="action">Back to the list</a>
 </body>

@@ -106,7 +106,7 @@
     </c:forEach>
     </tbody>
 </table>
-<a href="index.jsp">Back to main screen</a>
+<a href="main.jsp">Back to main screen</a>
 </body>
 <script src="jquery/jquery-3.5.1.min.js"></script>
 <script src="datatables/js/jquery.dataTables.min.js"></script>

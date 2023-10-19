@@ -2,6 +2,7 @@ package com.example.casestudy.repository.impl;
 
 import com.example.casestudy.database.BaseRepository;
 import com.example.casestudy.model.Employee;
+import com.example.casestudy.model.User;
 import com.example.casestudy.repository.IEmployeeRepository;
 
 import java.sql.*;
@@ -82,7 +83,7 @@ public class EmployeeRepository implements IEmployeeRepository {
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                id =resultSet.getInt("employee_id");
+                id = resultSet.getInt("employee_id");
                 String name = resultSet.getString("name");
                 Date date = resultSet.getDate("day_of_birth");
                 String idCard = resultSet.getString("employee_code");
@@ -96,7 +97,7 @@ public class EmployeeRepository implements IEmployeeRepository {
                 String userName = resultSet.getString("user_name");
 //                int id, int idCard, String name, Date birthDay, double salary, String phone, String email,
 //                    String address, int idPosition, int idEducationDegree, int idDivision, String userName) {
-                employee = new Employee(id,idCard, name, date, salary, phone, email, address, idPosition,
+                employee = new Employee(id, idCard, name, date, salary, phone, email, address, idPosition,
                         idEducationDegree, idDivision, userName);
             }
         } catch (SQLException e) {
@@ -112,11 +113,11 @@ public class EmployeeRepository implements IEmployeeRepository {
         try {
             Connection connection = BaseRepository.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_FROM_EMPLOYEE_WHERE_NAME_LIKE);
-            preparedStatement.setString(1,"%"+name+"%");
-            ResultSet resultSet =preparedStatement.executeQuery();
+            preparedStatement.setString(1, "%" + name + "%");
+            ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                int id =resultSet.getInt("employee_id");
-                 name = resultSet.getString("name");
+                int id = resultSet.getInt("employee_id");
+                name = resultSet.getString("name");
                 Date date = resultSet.getDate("day_of_birth");
                 String idCard = resultSet.getString("employee_code");
                 double salary = resultSet.getDouble("salary");
@@ -129,7 +130,7 @@ public class EmployeeRepository implements IEmployeeRepository {
                 String userName = resultSet.getString("user_name");
 //                int id, int idCard, String name, Date birthDay, double salary, String phone, String email,
 //                    String address, int idPosition, int idEducationDegree, int idDivision, String userName) {
-                employee = new Employee(id,idCard, name, date, salary, phone, email, address, idPosition,
+                employee = new Employee(id, idCard, name, date, salary, phone, email, address, idPosition,
                         idEducationDegree, idDivision, userName);
                 list.add(employee);
             }
@@ -176,5 +177,25 @@ public class EmployeeRepository implements IEmployeeRepository {
             e.printStackTrace();
         }
         return rowDelete;
+    }
+
+    @Override
+    public Boolean checkUser(User user) {
+        boolean flag = false;
+        try {
+            Connection connection = BaseRepository.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from `user` where user_name=? and password=?");
+            preparedStatement.setString(1, user.getUserName());
+            preparedStatement.setString(2, user.getPassWord());
+            ResultSet resultSet = preparedStatement.executeQuery();
+           if (resultSet.next()) {
+               flag=true;
+           } else {
+               flag=false;
+           }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return flag;
     }
 }

@@ -23,6 +23,8 @@ tasks.withType(JavaCompile) {
 
 dependencies {
     compileOnly('javax.servlet:javax.servlet-api:4.0.1')
+    compileJava.options.encoding = 'UTF-8'
+    tasks.withType(JavaCompile) {   options.encoding = 'UTF-8'}
     // Bắt buộc import để sử dụng được thư viện JSTL.
     implementation group: 'jstl', name: 'jstl', version: '1.2'
     // Bắt buộc import để connect với DB.

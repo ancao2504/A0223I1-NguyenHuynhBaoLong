@@ -1,6 +1,6 @@
 package com.example.casestudy.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Contract {
     private int id;

@@ -4,12 +4,15 @@
 <html>
 <head>
     <title>Title</title>
+    <title>Detail Contract List</title>
+    <link rel="stylesheet" href="bootstrap520/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="datatables/css/dataTables.bootstrap5.min.css"/>
 </head>
 <body>
 <form method="post" action="/detailcontract-Servlet?action=create">
     <fieldset>
         <legend>detail contract information</legend>
-        <table >
+        <table class="table table striped table-bordered" style="width: 100%;" >
 <%--   int idContract = Integer.parseInt(request.getParameter("idContract"));
         int idAttachService = Integer.parseInt(request.getParameter("idAttachService"));
         int quantity = Integer.parseInt(request.getParameter("quantity"));--%>

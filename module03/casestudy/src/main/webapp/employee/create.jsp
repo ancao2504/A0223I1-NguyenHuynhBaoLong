@@ -12,7 +12,7 @@
     <form method="post" action="/employee-servlet?action=create">
     <fieldset>
         <legend>Employee information</legend>
-        <table>
+        <table class="table table striped table-bordered" style="width: 100%;">
             <%--                employee = new Employee(id, idCard, name, date, salary, phone, email, address, idPosition,
                                     idEducationDegree, idDivision, userName);--%>
 <%--            String idCard = (request.getParameter("idCard"));
@@ -37,26 +37,39 @@
             </tr>
             <tr>
                 <td>birthday:</td>
-                <td><input type="text" name="birthDay"></td>
+                <td><input type="date" name="birthDay"></td>
             </tr>
             <tr>
-                <td>salary:</td>
+                <td>salary:
+                <c:if test="${errorSalary!=null}">
+                    <spna style="color: red">${errorSalary}</spna>
+                </c:if>
+
+                </td>
                 <td><input type="text" name="salary"></td>
             </tr>
             <tr>
-                <td>phone:</td>
+                <td>phone:
+                <c:if test="${errorPhone != null}">
+                    <span style="color: red">${errorPhone}</span>
+                </c:if>
+                </td>
                 <td><input type="text" name="phone"></td>
             </tr>
             <tr>
-                <td>email:</td>
+                <td>Email:
+                    <c:if test="${errorEmail != null}">
+                        <span style="color: red">${errorEmail}</span>
+                    </c:if>
+                </td>
                 <td><input type="text" name="email"></td>
             </tr>
             <tr>
-                <td>address:</td>
+                <td>Address:</td>
                 <td><input type="text" name="address"></td>
             </tr>
             <tr>
-                <td>idPosition:</td>
+                <td>Position:</td>
                 <td>
                     <select name="idPosition" >
                         <c:forEach items="${positions}" var="p" varStatus="loop" >
@@ -66,7 +79,7 @@
                 </td>
             </tr>
             <tr>
-                <td>idEducationDegree:</td>
+                <td>EducationDegree:</td>
                 <td>
                     <select name="idEducationDegree" >
                         <c:forEach items="${educationDegrees}" var="e" varStatus="loop" >

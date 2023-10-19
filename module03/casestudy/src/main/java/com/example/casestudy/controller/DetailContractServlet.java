@@ -40,9 +40,11 @@ public class DetailContractServlet extends HttpServlet {
 
     private void listDetail(HttpServletRequest request, HttpServletResponse response) {
         List<ContractDetail> contractDetails = detailContractService.findAll();
+        List<AttachService> attachServices = attachService.findAll();
+        List<Contract> contracts = iContractService.findAll();
+        request.setAttribute("attachServices", attachServices);
+        request.setAttribute("contracts", contracts);
         request.setAttribute("contractDetails", contractDetails);
-
-
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("detailContract/list.jsp");
         try {
             requestDispatcher.forward(request, response);
@@ -88,6 +90,7 @@ public class DetailContractServlet extends HttpServlet {
         int idAttachService = Integer.parseInt(request.getParameter("idAttachService"));
         int quantity = Integer.parseInt(request.getParameter("quantity"));
         ContractDetail contractDetai = new ContractDetail(idContract, idAttachService, quantity);
+        request.setAttribute("mess", "Create Success");
         detailContractService.save(contractDetai);
         listDetail(request, response);
 

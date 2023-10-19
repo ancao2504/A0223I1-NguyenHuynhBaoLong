@@ -3,6 +3,7 @@ package com.example.casestudy.model;
 import java.util.Date;
 
 public class Customer {
+
     private int id;
     private int idCustomerType;
     private String name;
@@ -12,6 +13,7 @@ public class Customer {
     private String phone;
     private String email;
     private String address;
+    private Boolean status;
 
     public Customer(int id, int idCustomerType, String name, Date birthDay, boolean gender, String idCard, String phone, String email, String address) {
         this.id = id;
@@ -34,6 +36,18 @@ public class Customer {
         this.phone = phone;
         this.email = email;
         this.address = address;
+    }
+
+    public Customer(int idCustomerType, String name, Date birthDay, boolean gender, String idCard, String phone, String email, String address, Boolean status) {
+        this.idCustomerType = idCustomerType;
+        this.name = name;
+        this.birthDay = birthDay;
+        this.gender = gender;
+        this.idCard = idCard;
+        this.phone = phone;
+        this.email = email;
+        this.address = address;
+        this.status = status;
     }
 
     public Customer(int id, String name) {
@@ -112,19 +126,12 @@ public class Customer {
     public void setAddress(String address) {
         this.address = address;
     }
-
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", idCustomerType=" + idCustomerType +
-                ", name='" + name + '\'' +
-                ", birthDay=" + birthDay +
-                ", gender=" + gender +
-                ", idCard='" + idCard + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", address='" + address + '\'' +
-                '}';
+    public Boolean getStatus() {
+        return status;
     }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
 }

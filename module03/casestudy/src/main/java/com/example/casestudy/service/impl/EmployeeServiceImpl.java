@@ -1,6 +1,7 @@
 package com.example.casestudy.service.impl;
 
 import com.example.casestudy.model.Employee;
+import com.example.casestudy.model.User;
 import com.example.casestudy.repository.IEmployeeRepository;
 import com.example.casestudy.repository.impl.EmployeeRepository;
 import com.example.casestudy.service.IEmployeeService;
@@ -38,5 +39,10 @@ public class EmployeeServiceImpl implements IEmployeeService {
     @Override
     public Boolean delete(Employee employee) {
         return iEmployeeRepository.delete(employee);
+    }
+
+    @Override
+    public Boolean checkUser(User user) {
+        return iEmployeeRepository.checkUser(user);
     }
 }

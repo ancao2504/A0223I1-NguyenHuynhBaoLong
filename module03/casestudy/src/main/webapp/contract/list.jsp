@@ -67,6 +67,6 @@
     </c:forEach>
     </tbody>
 </table>
-<a href="index.jsp">Back to main screen</a>
+<a href="main.jsp">Back to main screen</a>
 </body>
 </html>

@@ -7,6 +7,7 @@ import com.example.casestudy.repository.IContractRepository;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.Date;
 
 public class ContractRepository implements IContractRepository {
 
@@ -55,8 +56,10 @@ public class ContractRepository implements IContractRepository {
         try {
             Connection connection = BaseRepository.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_INTO);
-            preparedStatement.setDate(1, contract.getStartContract());
-            preparedStatement.setDate(2, contract.getEndContract());
+            Date startDate = new Date(contract.getStartContract().getTime());
+            preparedStatement.setDate(1,  startDate);
+            Date endDate = new Date(contract.getEndContract().getTime());
+            preparedStatement.setDate(2, endDate);
             preparedStatement.setDouble(3,contract.getDepositContract());
             preparedStatement.setDouble(4,contract.getTotalMoney());
             preparedStatement.setInt(5,contract.getIdEmployee());

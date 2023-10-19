@@ -20,6 +20,7 @@ public class ServiceServlet extends HttpServlet {
     private IService iService = new ServiceImpl();
     private IServiceId rentType = new RentTypeServiceImpl();
     private IServiceId serviceType = new ServiceTypeImpl();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -50,12 +51,12 @@ public class ServiceServlet extends HttpServlet {
         List<Service> services = iService.findAll();
         List<RentType> rentTypes = rentType.findAll();
         List<ServiceType> serviceTypes = serviceType.findAll();
-        request.setAttribute("services",services);
-        request.setAttribute("rentTypes",rentTypes);
-        request.setAttribute("serviceTypes",serviceTypes);
-        RequestDispatcher requestDispatcher =request.getRequestDispatcher("service/list.jsp");
+        request.setAttribute("services", services);
+        request.setAttribute("rentTypes", rentTypes);
+        request.setAttribute("serviceTypes", serviceTypes);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("service/list.jsp");
         try {
-            requestDispatcher.forward(request,response);
+            requestDispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -71,7 +72,7 @@ public class ServiceServlet extends HttpServlet {
         }
         switch (action) {
             case "create":
-                create(request,response);
+                create(request, response);
                 break;
 //            case "edit":
 //                edit(request, response);
@@ -86,19 +87,37 @@ public class ServiceServlet extends HttpServlet {
     }
 
     private void create(HttpServletRequest request, HttpServletResponse response) {
-            String name = request.getParameter("name");
-             int area = Integer.parseInt(request.getParameter("area"));
-             double fee = Double.parseDouble(request.getParameter("fee"));
-             int maxPeople = Integer.parseInt(request.getParameter("maxPeople"));
-             int idRentType= Integer.parseInt(request.getParameter("idRentType"));
-             int idTypeService = Integer.parseInt(request.getParameter("idTypeService"));
-             String standardRoom = request.getParameter("standardRoom");
-            String description = request.getParameter("description");
-             double areaPool = Double.parseDouble(request.getParameter("areaPool"));
-             int floor = Integer.parseInt(request.getParameter("floor"));
-             Service service =new Service(name, area, fee, maxPeople, idRentType, idTypeService, standardRoom,
-                     description, areaPool, floor);
-             iService.save(service);
-             listService(request, response);
+        String name = request.getParameter("name");
+        int area = Integer.parseInt(request.getParameter("area"));
+        double fee = Double.parseDouble(request.getParameter("fee"));
+        int maxPeople = Integer.parseInt(request.getParameter("maxPeople"));
+        int idRentType = Integer.parseInt(request.getParameter("idRentType"));
+        int idTypeService = Integer.parseInt(request.getParameter("idTypeService"));
+        String standardRoom = request.getParameter("standardRoom");
+        String description = request.getParameter("description");
+        double areaPool = Double.parseDouble(request.getParameter("areaPool"));
+        int floor = Integer.parseInt(request.getParameter("floor"));
+        Boolean flag = true;
+        String errorFloor = null;
+        String errorAmountPeople = null;
+        if (floor < 0) {
+            errorFloor = "Floor > 0";
+            flag = false;
+        }
+        if (maxPeople < 0) {
+            errorAmountPeople = "max people > 0";
+            flag = false;
+        }
+        if (!flag) {
+            request.setAttribute("errorFloor",errorFloor);
+            request.setAttribute("errorAmountPeople",errorAmountPeople);
+        } else {
+            Service service = new Service(name, area, fee, maxPeople, idRentType, idTypeService, standardRoom,
+                    description, areaPool, floor);
+            request.setAttribute("mess", "Create Success");
+            iService.save(service);
+            listService(request, response);
+        }
+
     }
 }

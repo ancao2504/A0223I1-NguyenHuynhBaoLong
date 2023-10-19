@@ -33,6 +33,7 @@ public class CustomerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         String action = request.getParameter("action");
         if (action == null) {
             action = "";
@@ -139,6 +140,7 @@ public class CustomerServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         String action = request.getParameter("action");
         if (action == null) {
             action = "";
@@ -203,16 +205,40 @@ public class CustomerServlet extends HttpServlet {
         String email = request.getParameter("email");
         String address = request.getParameter("address");
         //int id, int idCustomerType, String name, Date birthDay, boolean gender, String idCard, String phone, String email, String address
-        Customer customer = new Customer(id, idCustomerType, name, date, gender, idCard, phone, email, address);
-        services.update(customer);
+        boolean flag =true;
+        String errorCode=null;
+        String errorEmail =null;
+        String errorPhone =null;
 
-        listCustomer(request, response);
+        if (!Validate.checkIdCardCustomer(idCard)) {
+            errorCode="9 số hoặc 12 số";
+            flag=false;
+        }
+        if (!Validate.checkEmail(email)) {
+            errorEmail="jame12@gmail.com";
+            flag=false;
+        }
+        if (!Validate.checkPhone(phone)) {
+            errorPhone ="090XXXXXXX || 091XXXXXXX";
+            flag=false;
+        }
+        if (!flag) {
+            request.setAttribute("errorCode",errorCode);
+            request.setAttribute("errorEmail",errorEmail);
+            request.setAttribute("errorPhone",errorPhone);
+            createForm(request,response);
+        } else {
+            Customer customer = new Customer(id, idCustomerType, name, date, gender, idCard, phone, email, address);
+            services.update(customer);
+            listCustomer(request, response);
+        }
+
     }
 
     private void create(HttpServletRequest request, HttpServletResponse response) {
         //int idCustomerType, String name, Date birthDay, boolean gender, String idCard, String phone, String email, String address
+        Boolean status =true;
         int idCustomerType = Integer.parseInt(request.getParameter("idCustomerType"));
-        System.out.println("------------id-----------"+idCustomerType);
         String name = request.getParameter("name");
         String birthDay = request.getParameter("birthDay");
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -231,9 +257,9 @@ public class CustomerServlet extends HttpServlet {
         String errorCode=null;
         String errorEmail =null;
         String errorPhone =null;
-//        if ()
+
         if (!Validate.checkIdCardCustomer(idCard)) {
-            errorCode="KH-XXXX";
+            errorCode="9 số hoặc 12 số";
             flag=false;
         }
         if (!Validate.checkEmail(email)) {
@@ -241,7 +267,7 @@ public class CustomerServlet extends HttpServlet {
             flag=false;
         }
         if (!Validate.checkPhone(phone)) {
-            errorPhone ="090XXXXXXX || 091XXXXXXX || +8490XXXXXXX || +8491XXXXXXX";
+            errorPhone ="090XXXXXXX || 091XXXXXXX";
             flag=false;
         }
         if (!flag) {
@@ -250,8 +276,9 @@ public class CustomerServlet extends HttpServlet {
             request.setAttribute("errorPhone",errorPhone);
            createForm(request,response);
         }else {
-            Customer customer = new Customer(idCustomerType, name, date, gender, idCard, phone, email, address);
+            Customer customer = new Customer(idCustomerType, name, date, gender, idCard, phone, email, address,status);
             request.setAttribute("customer", customer);
+            request.setAttribute("mess", "Create Success");
             services.save(customer);
             listCustomer(request, response);
         }

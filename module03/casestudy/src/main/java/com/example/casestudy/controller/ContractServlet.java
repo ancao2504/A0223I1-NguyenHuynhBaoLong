@@ -17,15 +17,17 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @WebServlet(name = "ContractServlet", value = "/contract-servlet")
 public class ContractServlet extends HttpServlet {
-    private IContractService services = new ContractService();
+    private IContractService contractService = new ContractService();
     private ICustomerService customerService = new CustomerServiceImpl();
     private IEmployeeService employeeService =  new EmployeeServiceImpl();
-    private IService iService = new ServiceImpl();
+    private IService service = new ServiceImpl();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -42,6 +44,12 @@ public class ContractServlet extends HttpServlet {
     }
 
     private void createForm(HttpServletRequest request, HttpServletResponse response) {
+        List<Employee> employees = employeeService.findAll();
+        List<Customer> customers = customerService.findAll();
+        List<Service>  services = service.findAll();
+        request.setAttribute("employees",employees);
+        request.setAttribute("customers",customers);
+        request.setAttribute("services",services);
     RequestDispatcher requestDispatcher =request.getRequestDispatcher("contract/create.jsp");
         try {
             requestDispatcher.forward(request, response);
@@ -54,10 +62,10 @@ public class ContractServlet extends HttpServlet {
     }
 
     private void listContract(HttpServletRequest request, HttpServletResponse response) {
-        List<Contract> contracts = services.findAll();
+        List<Contract> contracts = contractService.findAll();
         List<Customer> customers = customerService.findAll();
         List<Employee> employees = employeeService.findAll();
-        List<Service> services = iService.findAll();
+        List<Service> services = service.findAll();
         request.setAttribute("contracts",contracts);
         request.setAttribute("customers",customers);
         request.setAttribute("employees",employees);
@@ -90,16 +98,28 @@ public class ContractServlet extends HttpServlet {
         //                    int idEmployee, int idCustomer, int idService
         //(Date startContract, Date endContract, double depositContract, double totalMoney, int idEmployee, int idCustomer, int idService) {
         String start= request.getParameter("startContract");
-        Date startDate =Date.valueOf(start);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+       Date date = new Date();
+        try {
+            date=simpleDateFormat.parse(start);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
         String end= request.getParameter("endContract");
-        Date endDate =Date.valueOf(end);
+        Date endDate = new Date();
+        try {
+            endDate=simpleDateFormat.parse(end);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         double deposit = Double.parseDouble(request.getParameter("depositContract"));
         double total = Double.parseDouble(request.getParameter("totalMoney"));
         int idEmployee= Integer.parseInt(request.getParameter("idEmployee"));
         int idCustomer= Integer.parseInt(request.getParameter("idCustomer"));
         int idService= Integer.parseInt(request.getParameter("idService"));
-        Contract contract = new Contract(startDate, endDate, deposit, total, idEmployee, idCustomer, idService);
-        services.save(contract);
+        Contract contract = new Contract(date, endDate, deposit, total, idEmployee, idCustomer, idService);
+        contractService.save(contract);
         request.setAttribute("mess", "Create Success");
        listContract(request,response);
     }

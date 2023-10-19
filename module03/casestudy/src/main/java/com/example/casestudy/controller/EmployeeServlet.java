@@ -1,9 +1,7 @@
 package com.example.casestudy.controller;
 
-import com.example.casestudy.model.Division;
-import com.example.casestudy.model.EducationDegree;
-import com.example.casestudy.model.Employee;
-import com.example.casestudy.model.Position;
+import com.example.casestudy.common.Validate;
+import com.example.casestudy.model.*;
 import com.example.casestudy.service.IEmployeeService;
 import com.example.casestudy.service.IServiceId;
 import com.example.casestudy.service.impl.DivisionService;
@@ -139,8 +137,40 @@ public class EmployeeServlet extends HttpServlet {
             case "search":
                 search(request, response);
                 break;
+            case "check" :
+                check(request,response);
+                break;
 
         }
+    }
+
+    private void check(HttpServletRequest request, HttpServletResponse response) {
+        String errorLogin =null;
+       String userName= request.getParameter("userName");
+       String password= request.getParameter("password");
+        User user = new User(userName, password);
+       if (services.checkUser(user)){
+           request.setAttribute("userName",user.getUserName());
+           RequestDispatcher requestDispatcher= request.getRequestDispatcher("main.jsp");
+           try {
+               requestDispatcher.forward(request, response);
+           } catch (ServletException e) {
+               e.printStackTrace();
+           } catch (IOException e) {
+               e.printStackTrace();
+           }
+       } else {
+           errorLogin="pass or user name not correct";
+           request.setAttribute("errorLogin",errorLogin);
+           RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
+           try {
+               requestDispatcher.forward(request,response);
+           } catch (ServletException e) {
+               e.printStackTrace();
+           } catch (IOException e) {
+               e.printStackTrace();
+           }
+       }
     }
 
     private void search(HttpServletRequest request, HttpServletResponse response) {
@@ -224,10 +254,33 @@ public class EmployeeServlet extends HttpServlet {
         String userName = request.getParameter("userName");
         //employee = new Employee(id, idCard, name, date, salary, phone, email, address, idPosition,
         //                        idEducationDegree, idDivision, userName);
-        Employee employee = new Employee( idCard, name, date, salary, phone, email, address, idPosition,
-                                        idEducationDegree, idDivision, userName);
-        services.save(employee);
-        request.setAttribute("mess", "Create Success");
-        listEmployee(request,response);
+        String errorEmail =null;
+        String errorPhone =null;
+        String errorSalary=null;
+        Boolean flag =true;
+        if (salary < 0) {
+            errorSalary = "salary > 0";
+            flag = false;
+        }
+        if (!Validate.checkEmail(email)) {
+            errorEmail="jame12@gmail.com";
+            flag=false;
+        }
+        if (!Validate.checkPhone(phone)) {
+            errorPhone ="090XXXXXXX || 091XXXXXXX";
+            flag=false;
+        }
+        if (!flag) {
+            request.setAttribute("errorEmail", errorEmail);
+            request.setAttribute("errorPhone", errorPhone);
+            request.setAttribute("errorSalary", errorSalary);
+        } else {
+            Employee employee = new Employee( idCard, name, date, salary, phone, email, address, idPosition,
+                    idEducationDegree, idDivision, userName);
+            services.save(employee);
+            request.setAttribute("mess", "Create Success");
+            listEmployee(request,response);
+        }
+
     }
 }

@@ -3,15 +3,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Customer</title>
+    <link rel="stylesheet" href="bootstrap520/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="datatables/css/dataTables.bootstrap5.min.css" />
+</head>
 </head>
 <body>
 <form method="post" action="/customer-servlet?action=create">
 
     <fieldset>
         <legend>Customer information</legend>
-    <table >
+    <table class="table table striped table-bordered" style="width: 100%;">
 
         <tr>
             <td>Name type Customer</td>
@@ -29,7 +34,7 @@
         </tr>
         <tr>
             <td>birthday:</td>
-            <td><input type="text" name="birthDay"></td>
+            <td><input type="date" name="birthDay"></td>
         </tr>
         <tr>
             <td>gender:</td>

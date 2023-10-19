@@ -13,6 +13,9 @@
 <h2>
     <a href="/employee-servlet?action=create">Create new Employee</a>
 </h2>
+<c:if test="${mess != null}" >
+    <h3>${mess}</h3>
+</c:if>
 <form action="/employee-servlet?action=search" method="post">
     <table>
         <tr>
@@ -82,7 +85,7 @@
                 </tbody>
             </table>
 
-            <a href="index.jsp">Back to main screen</a>
+            <a href="main.jsp">Back to main screen</a>
 </body>
 <script src="jquery/jquery-3.5.1.min.js"></script>
 <script src="datatables/js/jquery.dataTables.min.js"></script>
