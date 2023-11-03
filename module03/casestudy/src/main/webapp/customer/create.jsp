@@ -30,7 +30,9 @@
         </tr>
         <tr>
             <td>name:</td>
-            <td><input type="text" name="name"></td>
+            <td>
+                <input type="text" name="name">
+            </td>
         </tr>
         <tr>
             <td>birthday:</td>
@@ -46,7 +48,8 @@
             <td>id card:
                 <c:if test="${errorCode !=null}">
                     <span style="color: red">${errorCode}</span>
-                </c:if></td>
+                </c:if>
+            </td>
             <td><input type="text" name="idCard"></td>
         </tr>
         <tr>
