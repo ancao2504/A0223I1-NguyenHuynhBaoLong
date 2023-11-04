@@ -10,11 +10,15 @@ tasks.withType(JavaCompile) {
 }
 
 
-group 'codegym.vn'
+group 'manage_student'
 version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+}
+
+ext {
+    junitVersion = '5.7.1'
 }
 
 dependencies {
@@ -23,6 +27,16 @@ dependencies {
     implementation group: 'org.springframework', name: 'spring-web', version: '5.2.22.RELEASE'
     implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.2.22.RELEASE'
     implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+    compileOnly('javax.servlet:javax.servlet-api:4.0.1')
+    compileJava.options.encoding = 'UTF-8'
+    tasks.withType(JavaCompile) {   options.encoding = 'UTF-8'}
+    // Bắt buộc import để sử dụng được thư viện JSTL.
+    implementation group: 'jstl', name: 'jstl', version: '1.2'
+    // Bắt buộc import để connect với DB.
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
 
 test {

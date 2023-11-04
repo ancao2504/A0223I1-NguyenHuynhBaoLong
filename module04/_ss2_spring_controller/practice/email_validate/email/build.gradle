@@ -10,7 +10,7 @@ tasks.withType(JavaCompile) {
 }
 
 
-group 'codegym.vn'
+group 'email'
 version '1.0-SNAPSHOT'
 
 repositories {
