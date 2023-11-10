@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<h3>Customer</h3>
+
+<table border="1px">
+    <tr>
+       <td><lable>name</lable></td>
+<!--        <td><span th:text="${customers.name}"></span></td>-->
+        <td th:text="${customers.name}"></td>
+    </tr>
+    <tr>
+        <td><lable>address</lable></td>
+        <td th:text="${customers.address}"></td>
+    </tr>
+    <tr>
+        <td><lable>email</lable></td>
+        <td th:text="${customers.email}"></td>
+    </tr>
+</table>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

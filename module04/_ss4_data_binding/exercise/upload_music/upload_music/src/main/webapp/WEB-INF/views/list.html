@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+
+</head>
+<body>
+<p>
+    <a th:href="@{/create}">ADD</a>
+</p>
+<table id="musics">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Music</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="music : ${musicForm}">
+        <td th:field="*{music.name}"></td>
+        <td th:field="*{music.author}"></td>
+        <td th:field="*{music.category}"></td>
+        <td>
+            <audio controls>
+                <source th:src="@{'\upload_music\Death Grips - Get Got.mp3'}" type="audio/ogg">
+            </audio>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<footer th:replace="layout::footer"></footer>
+</body>
+</html>

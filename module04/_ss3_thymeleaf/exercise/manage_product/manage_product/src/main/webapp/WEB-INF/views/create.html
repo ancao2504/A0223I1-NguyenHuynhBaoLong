@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+
+</head>
+<body>
+<div id="form">
+    <form th:action="@{/product/save}" th:object="${product}" method="post" novalidate="novalidate">
+        <tr>
+            <td>ID</td>
+            <td  th:if="${action} == 'create'">
+                <input th:name="id" type="text" th:field="*{id}">
+            </td>
+            <td th:if="${action == 'update'}">
+                <input th:name="id" type="text" th:field="*{id}">
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" th:field="*{name}"></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <input type="text" th:field="*{price}">
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><input type="text" th:field="*{description}"></td>
+        </tr>
+        <tr>
+            <td>Producer</td>
+            <td><input type="text" th:field="*{producer}"></td>
+        </tr>
+        <div th:if="${action} == 'create'" >
+            <input type="submit" name="action" value="create">
+        </div>
+        <div th:if="${action} == 'update'" >
+            <input type="submit" name="action" value="update">
+        </div>
+    </form>
+</div>
+</body>
+</html>
