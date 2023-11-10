@@ -30,8 +30,8 @@ public class MusicController {
 
     @RequestMapping("/home")
     public String home(Model model) {
-        List<Music> musicForm = musicService.findAll();
-        model.addAttribute("musicForm",musicForm);
+        List<Music> musics = musicService.findAll();
+        model.addAttribute("musics",musics);
         return "/list";
     }
     @RequestMapping("/create")
@@ -45,7 +45,7 @@ public class MusicController {
         MultipartFile multipartFile =musicForm.getLink();
         String fileName = multipartFile.getOriginalFilename();
         try {
-            FileCopyUtils.copy(musicForm.getLink().getBytes(), new File(fileUpload + fileName));
+            FileCopyUtils.copy(musicForm.getLink().getBytes(), new File(fileUpload + "\\" + fileName));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

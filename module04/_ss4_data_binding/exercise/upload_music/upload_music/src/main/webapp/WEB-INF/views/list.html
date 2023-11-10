@@ -17,15 +17,11 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="music : ${musicForm}">
-        <td th:field="*{music.name}"></td>
-        <td th:field="*{music.author}"></td>
-        <td th:field="*{music.category}"></td>
-        <td>
-            <audio controls>
-                <source th:src="@{'\upload_music\Death Grips - Get Got.mp3'}" type="audio/ogg">
-            </audio>
-        </td>
+    <tr th:each="music : ${musics}" th:object="${music}">
+        <td th:text="*{name}"></td>
+        <td th:text="*{author}"></td>
+        <td th:text="*{category}"></td>
+        <td th:text="*{link}"></td>
     </tr>
     </tbody>
 </table>
