@@ -53,4 +53,9 @@ public class ProductRepositoryImpl implements IProductRepository {
     public void delete(int id) {
         map.remove(id);
     }
+
+    @Override
+    public Product detail(int id) {
+        return map.get(id);
+    }
 }

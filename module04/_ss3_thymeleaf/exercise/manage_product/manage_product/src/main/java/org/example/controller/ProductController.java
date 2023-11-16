@@ -50,8 +50,8 @@ public class ProductController {
         return "/create";
     }
 
-    @GetMapping("/{id}/delete")
-    public String deleteForm(Model model, @PathVariable int id) {
+    @GetMapping("/delete")
+    public String deleteForm(Model model, @RequestParam("id") int id) {
         Product product = productService.findById(id);
         model.addAttribute("product", product);
         return "/delete";
@@ -62,6 +62,13 @@ public class ProductController {
         System.out.println("delete"+product.getId());
         productService.delete(product.getId());
         return "redirect:/product";
+    }
+
+    @GetMapping("{id}/view")
+    public String detail(@PathVariable int id,Model model) {
+        Product product = productService.detail(id);
+        model.addAttribute("product",product);
+        return "/detail";
     }
 
 }

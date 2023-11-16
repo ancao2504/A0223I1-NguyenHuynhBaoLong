@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/create}" method="post" th:object="${evaluate}">
+    <table >
+        <tr>
+            <td>Rank</td>
+            <td>
+                <select th:field="*{appRank.id}">
+                    <option th:each="rank:${rank}" th:value="${rank.id}" th:text="${rank.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Author</td>
+            <td><input type="text" th:field="*{author}"></td>
+        </tr>
+        <tr>
+            <td>FeedBack</td>
+            <td><input type="text" th:field="*{feedBack}"></td>
+        </tr>
+        <tr>
+            <td><input type="submit"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

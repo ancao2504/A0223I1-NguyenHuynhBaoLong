@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>Music Management</h3>
+<!--<p>-->
+<!--    <a th:href="@{/product/create}">-->
+<!--        ADD-->
+<!--    </a>-->
+<!--</p>-->
+<table id="musics">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Img</th>
+    </tr>
+    <tbody>
+    <tr th:each="product : ${products}">
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.description}"></td>
+        <td><img width="100" height="100" th:src="@{'\file_upload\ '+ ${product.img} }  " alt=""></td>
+    </tr>
+    </tbody>
+    </thead>
+</table>
+</body>
+</html>
