@@ -4,11 +4,10 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
@@ -16,12 +15,8 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.thymeleaf.TemplateEngine;
-import org.thymeleaf.spring5.ISpringTemplateEngine;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
@@ -36,6 +31,7 @@ import java.util.Properties;
 @ComponentScan("org.example")
 @EnableWebMvc
 @EnableTransactionManagement
+@EnableJpaRepositories("org.example.repository")
 public class AppConfiguration extends WebMvcConfigurerAdapter implements ApplicationContextAware  {
 //    @Value("${file-upload}")
 //    private String fileUpload;
@@ -94,7 +90,7 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     public DriverManagerDataSource getDataSource() {
         DriverManagerDataSource datasource = new DriverManagerDataSource();
         datasource.setDriverClassName("com.mysql.jdbc.Driver");
-        datasource.setUrl("jdbc:mysql://localhost:3306/picture?useSSL=false&createDatabaseIfNotExist=true");
+        datasource.setUrl("jdbc:mysql://localhost:3306/province?useSSL=false&createDatabaseIfNotExist=true");
 //        useSSL=false&useUnicode=true&characterEncoding=utf8"
         datasource.setUsername("root");
         datasource.setPassword("Long@1342004");
@@ -104,7 +100,7 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     // Hibernate config
     private Properties hibernateProperties() {
         Properties hibernateProperties = new Properties();
-        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "create"); //create, create-drop
+        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "update"); //create, create-drop
         hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
         hibernateProperties.setProperty("show_sql", "true");
         return hibernateProperties;
