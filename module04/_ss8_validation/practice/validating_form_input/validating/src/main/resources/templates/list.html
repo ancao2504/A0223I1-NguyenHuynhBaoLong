@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a th:href="@{/users/create}">New User</a>
+</p>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Date</th>
+    </thead>
+    <tbody>
+    <tr th:each="row, rowStart : ${users}">
+        <td th:text="${rowStart.count}"></td>
+        <td th:text="${row.name}"></td>
+        <td th:text="${row.age}"></td>
+        <td th:text="*{#dates.format(row.date,'dd-MM-yyyy')}"></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <div>
+        <span th:each="i : ${pageNumbers}">
+        <a th:text="${i}" th:if="${i != users.getNumber() + 1}"
+           th:href="@{/users/list(page=${i},pageSize=${size})}"></a>
+        <span th:if="${i == users.getNumber() + 1}" th:text="${i}"></span>
+        </span>
+    </div>
+</div>
+</body>
+</html>
