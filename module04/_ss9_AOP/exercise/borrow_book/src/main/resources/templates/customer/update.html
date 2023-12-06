@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <form th:action="@{/customers/save}" method="post" th:object="${customer}">
+        <input type="hidden" th:field="*{id}">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" th:field="*{name}"></td>
+            <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></td>
+        </tr>
+        <tr>
+            <td>ID Card</td>
+            <td><input type="text" th:field="*{IDCard}"></td>
+            <td th:if="${#fields.hasErrors('IDCard')}" th:errors="*{IDCard}"></td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td><input type="text" th:field="*{phone}"></td>
+            <td th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></td>
+        </tr>
+        <div th:each="d:${detailBorrows}" th:object="${detailBorrow}">
+            <tr>
+                <td>Borrow Date</td>
+                <td th:if="${id == d.customer.id}"><input type="date" th:field="*{borrowDate}"></td>
+                <td th:if="${#fields.hasErrors('borrowDate')}" th:errors="*{borrowDate}"></td>
+            </tr>
+            <tr>
+                <td>Due Date</td>
+                <td th:if="${id == d.customer.id}"><input type="date" th:field="*{dueDate}"></td>
+                <td th:if="${#fields.hasErrors('dueDate')}" th:errors="*{dueDate}"></td>
+            </tr>
+            <tr>
+                <td>Books Name</td>
+                <td th:each="b, status:${books}">
+                    <input th:if="${d.book.id == b.id}" type="checkbox" checked name="book-selected" id="book-selected"
+                           th:value="${b}" th:attr="data-index=${status.index}">
+                    <input th:if="${d.book.id != b.id}" type="checkbox" name="book-selected" th:value="${b}"
+                           th:attr="data-index=${status.index}">
+                </td>
+            </tr>
+        </div>
+
+        <tr>
+            <td>
+                <input type="submit">
+            </td>
+        </tr>
+
+    </form>
+</table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<table>
+    <h3 th:text="${msg}"></h3>
+    <thead>
+    <th>Ordinal</th>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Choose</th>
+    </thead>
+    <tbody>
+    <tr th:each="book, rowStart:${books}">
+        <td th:text="${rowStart.count}"></td>
+        <td th:text="${book.name}"></td>
+        <td th:text="${book.quantity}"></td>
+        <td>
+            <input type="checkbox" th:value="${book.id}" >
+        </td>
+    </tr>
+    </tbody>
+</table>
+    <button th:attr="onclick=|sendInfor()|">Borrow</button>
+</div>
+</body>
+</html>
+<script>
+
+   function sendInfor(){
+       const selected = Array.from(document.querySelectorAll('input[type=checkbox]:checked'),e =>e.value);
+       let newPath ="/customers/borrow/"+selected.join(',');
+       window.location.href= newPath;
+   }
+</script>
