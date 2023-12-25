@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" id="myTable">
+    <thead>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    </thead>
+    <tbody>
+    <tr th:each="item,i:${cartItems}">
+        <td th:text="${item.product.name}"></td>
+        <td th:text="${item.product.price}"></td>
+        <td>
+            <button th:attr="onclick=|decreaseQuantity('${item.product.name}')|">-</button>
+            <span th:text="${item.quantity}" th:id="${item.product.name}"></span>
+            <button th:attr="onclick=|increaseQuantity('${item.product.name}','${item.product.quantity}')|">+</button>
+        </td>
+        <input type="hidden" th:id="${item.product.getName()}">
+    </tr>
+    </tbody>
+    <tr>
+        <td>
+            <button onclick="total()">Total</button>
+        </td>
+        <td>
+            <span id="result" th:text="${total}"></span>
+        </td>
+    </tr>
+</table>
+<a th:href="@{/products/home}">Back to shop</a>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+
+    function total() {
+        let totalPrice = 0;
+        let table = document.getElementById("myTable");
+        let rows = table.getElementsByTagName("tr");
+        for (let i = 1; i < rows.length - 1; i++) {
+            let cells = rows[i].getElementsByTagName("td");
+            let price = cells[1].innerText;
+            let quantity = parseInt(cells[2].getElementsByTagName("span")[0].innerText);
+            console.log("======quantity========"+quantity);
+            console.log("======price========"+price );
+            totalPrice+=quantity*price;
+        }
+        document.getElementById("result").innerText = totalPrice;
+    }
+
+
+    function increaseQuantity(nameProduct, maxQuantity) {
+        let quantity = document.getElementById(nameProduct).innerText;
+        if (parseInt(quantity) < parseInt(maxQuantity)) {
+            let newQuantity = parseInt(quantity) + 1;
+            document.getElementById(nameProduct).innerText = newQuantity;
+            $.ajax({
+                url: "http://localhost/carts/updateQuantity",
+                data: {
+                    nameProduct: nameProduct,
+                    newQuantity: newQuantity
+                },
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    console.log("===========" + data);
+                }
+            })
+        } else {
+            alert("shop have max " + maxQuantity + " products")
+        }
+
+    }
+
+    function decreaseQuantity(idProduct) {
+        let quantity = document.getElementById(idProduct).innerText
+        if (parseInt(quantity) <= 0) {
+            alert("quantity > 0");
+        } else {
+            let newQuantity = parseInt(quantity) - 1;
+            document.getElementById(idProduct).innerText = newQuantity;
+            $.ajax({
+                url: "http://localhost/carts/updateQuantity",
+                data: {
+                    nameProduct: nameProduct,
+                    newQuantity: newQuantity
+                },
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    alert("===========" + data);
+                }
+            })
+        }
+    }
+</script>
+</body>
+</html>
