@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/practice/count_view_page/demo/src/main/main.iml" filepath="$PROJECT_DIR$/practice/count_view_page/demo/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice/save_name_by_cookie/demo1/src/main/main1.iml" filepath="$PROJECT_DIR$/practice/save_name_by_cookie/demo1/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice/shopping_cart/shopping_cart/src/main/main2.iml" filepath="$PROJECT_DIR$/practice/shopping_cart/shopping_cart/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercise/cart_shopping/cart_shopping_ex/src/main/main3.iml" filepath="$PROJECT_DIR$/exercise/cart_shopping/cart_shopping_ex/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice/shopping_cart/shopping_cart/src/test/test.iml" filepath="$PROJECT_DIR$/practice/shopping_cart/shopping_cart/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice/count_view_page/demo/src/test/test1.iml" filepath="$PROJECT_DIR$/practice/count_view_page/demo/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice/save_name_by_cookie/demo1/src/test/test2.iml" filepath="$PROJECT_DIR$/practice/save_name_by_cookie/demo1/src/test/test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercise/cart_shopping/cart_shopping_ex/src/test/test3.iml" filepath="$PROJECT_DIR$/exercise/cart_shopping/cart_shopping_ex/src/test/test3.iml" />
+    </modules>
+  </component>
+</project>

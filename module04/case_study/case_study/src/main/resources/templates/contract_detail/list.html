@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a th:href="@{/contractDetails/create/{id}(id= ${id})}"> New Contract detail</a>
+</p>
+<table>
+    <thead>
+    <th>Quantity</th>
+    <th>Attach Service</th>
+    <th>Contract code</th>
+    </thead>
+    <tbody>
+        <tr th:each="c:${contractDetails}">
+            <input type="hidden" name="idContract" th:value="${c.contract.id}">
+            <td th:text="${c.quantity}"></td>
+            <td th:text="${c.attachService.name}"></td>
+            <td th:text="${c.contract.code}"></td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    <a th:href="@{/contracts/list}">Back</a>
+</p>
+</body>
+</html>

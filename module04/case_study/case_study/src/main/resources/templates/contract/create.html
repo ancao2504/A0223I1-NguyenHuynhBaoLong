@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <form method="post" th:object="${contract}" th:action="@{/contracts/save}">
+        <tr>
+            <td>Start Date</td>
+            <td>
+                <input type="date" th:field="*{startDate}">
+            </td>
+        </tr>
+        <tr>
+            <td>End Date</td>
+            <td>
+                <input type="date" th:field="*{endDate}">
+            </td>
+        </tr>
+        <tr>
+            <td>Employee</td>
+            <td>
+                <select th:field="*{employee}">
+                    <option th:each="e:${employee}" th:text="${e.name}" th:value="${e.id}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Customer</td>
+            <td>
+               <select th:field="*{customer}">
+                   <option th:each="c:${customer}" th:text="${c.name}" th:value="${c.id}"></option>
+               </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Service</td>
+            <td>
+                <select th:field="*{serviceFurama}">
+                    <option th:each="s:${service}" th:text="${s.name}" th:value="${s.id}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit">
+            </td>
+        </tr>
+    </form>
+</table>
+<p>
+    <a th:href="@{/contracts/list}">Back to list</a>
+</p>
+</body>
+</html>

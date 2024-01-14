@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <form method="post" th:action="@{/contractDetails/save}" th:object="${contractDetail}">
+        <tr>
+            <td>Contract Code</td>
+            <td th:object="${contract}">
+                <input type="hidden" name="idContract" th:value="${id}">
+                <span th:text="*{code}" ></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Quantity</td>
+            <td>
+                <input type="text" th:field="*{quantity}">
+            </td>
+        </tr>
+        <tr>
+            <td>Attach Service</td>
+            <td>
+                <select th:field="*{attachService}">
+                    <option th:each="a:${attachService}" th:text="${a.name}" th:value="${a.id}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit">
+            </td>
+        </tr>
+    </form>
+</table>
+</body>
+</html>

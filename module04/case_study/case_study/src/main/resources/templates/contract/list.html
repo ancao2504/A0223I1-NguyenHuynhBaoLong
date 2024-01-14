@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a th:href="@{/contracts/add}">New Contract</a>
+</p>
+<table>
+    <thead>
+    <th>STT</th>
+    <th>Code</th>
+    <th>Employee</th>
+    <th>Customer</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Service</th>
+    <th>Total Money</th>
+    <th>Detail</th>
+    </thead>
+    <tbody>
+    <tr th:each="c, row:${contracts}">
+        <td th:text="${row.count}"></td>
+        <td th:text="${c.code}"></td>
+        <td th:text="${c.employee.name}"></td>
+        <td th:text="${c.customer.name}"></td>
+        <td th:text="${#dates.format(c.startDate,'dd-MM-yyyy')}"></td>
+        <td th:text="${#dates.format(c.endDate,'dd-MM-yyyy')}"></td>
+        <td th:text="${c.serviceFurama.name}"></td>
+        <td th:text="${c.total}"></td>
+        <td>
+            <a th:href="@{/contractDetails/{id}(id=${c.id})}">Detail</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <span th:each="i:${pageNumbers}">
+        <a th:if="${i != contracts.getNumber() + 1}" th:text="${i}"
+           th:href="@{/contracts/list(page=${i}, pageSize= ${pageSize})}"></a>
+        <span th:if="${i == contracts.getNumber() + 1}" th:text="${i}"></span>
+    </span>
+</div>
+<p>
+    <a th:href="@{/Furama}">Back</a>
+</p>
+</body>
+</html>

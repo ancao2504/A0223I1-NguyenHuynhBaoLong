@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <form method="post" th:action="@{/customers/save}" th:object="${customer}">
+        <input type="hidden" th:field="*{id}">
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" th:field="*{name}">
+                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>ID Card</td>
+            <td>
+                <input type="text" th:field="*{idCard}">
+                <span th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>BirthDay</td>
+            <td>
+                <input type="date" th:field="*{birthday}">
+                <span th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>
+                <input type="text" th:field="*{phone}">
+                <span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="text" th:field="*{email}">
+                <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>
+                <input type="text" th:field="*{address}">
+                <span th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" th:field="*{gender}" th:value="true" checked>Nam
+                <input type="radio" th:field="*{gender}" th:value="false">Nu
+            </td>
+        </tr>
+        <tr>
+            <td>Customer Type</td>
+            <td>
+                <select th:field="*{customerType}">
+                    <option th:each="ct:${customerTypes}" th:text="${ct.name}" th:value="${ct.id}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit">
+
+            </td>
+        </tr>
+    </form>
+</table>
+</body>
+</html>
